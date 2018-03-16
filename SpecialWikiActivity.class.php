@@ -72,7 +72,8 @@ JS
 
 		global $wgJsMimeType, $wgExtensionsPath;
 		$wgOut->addScript("<script type=\"{$wgJsMimeType}\" src=\"{$wgExtensionsPath}/wikia/MyHome/WikiActivity.js\"></script>\n");
-		$wgOut->addExtensionStyle(AssetsManager::getInstance()->getSassCommonURL('extensions/wikia/MyHome/oasis.scss'));
+		// TODO / FIXME: SASS-based style junk
+		//$wgOut->addExtensionStyle(AssetsManager::getInstance()->getSassCommonURL('extensions/wikia/MyHome/oasis.scss'));
 
 		wfRunHooks( 'SpecialWikiActivityExecute', array( $wgOut, $wgUser ));
 
