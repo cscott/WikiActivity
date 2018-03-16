@@ -459,6 +459,8 @@ class DataFeedProvider {
 
 		$key = $res['user'] . '#' . $res['title'] . '#' . $res['comment'];
 
+		// FIXME / TODO: rc_params crap
+		/*
 		if ( is_array( $res['rc_params'] ) && !empty( $res['rc_params']['imageInserts'] ) ) {
 			$key .= json_encode( $res['rc_params']['imageInserts'] );
 		}
@@ -466,6 +468,7 @@ class DataFeedProvider {
 		if ( is_array( $res['rc_params'] ) && !empty( $res['rc_params']['categoryInserts'] ) ) {
 			$key .= json_encode( $res['rc_params']['categoryInserts'] );
 		}
+		*/
 
 		if ( !empty( $res['ns'] ) && !empty( $wgWallNS ) && in_array( MWNamespace::getSubject( $res['ns'] ), $wgWallNS ) ) {
 			$key = $res['title'];
