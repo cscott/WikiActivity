@@ -203,7 +203,7 @@ class FeedRenderer {
 		global $wgLang;
 
 		$ago = time() - strtotime($stamp) + 1;
--
+
 		if ($ago < 60) {
 			// Under 1 min: to the second (ex: 30 seconds ago)
 			$res = wfMessage('myhome-seconds-ago', $ago)->text();
