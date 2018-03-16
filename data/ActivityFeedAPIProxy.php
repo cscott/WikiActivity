@@ -8,7 +8,7 @@ class ActivityFeedAPIProxy implements iAPIProxy {
 		$this->APIparams = array();
 		$this->APIparams['action'] = 'query';
 		$this->APIparams['list'] = 'recentchanges';
-		$this->APIparams['rcprop'] = 'comment|timestamp|ids|title|loginfo|user|wikiamode';
+		$this->APIparams['rcprop'] = 'comment|timestamp|ids|title|loginfo|user';
 		$this->APIparams['rcshow'] = '!bot';
 		if (!is_null($includeNS)) $this->APIparams['rcnamespace'] = $includeNS;
 		if (!empty($userName)) $this->APIparams['rcuser'] = $userName;
