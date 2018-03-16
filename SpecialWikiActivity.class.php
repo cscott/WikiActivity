@@ -35,15 +35,12 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 
 			// not available for anons
 			if($wgUser->isAnon()) {
-				if (get_class(RequestContext::getMain()->getSkin()) == 'SkinOasis') {
-					$wgOut->wrapWikiMsg( '<div class="latest-activity-watchlist-login" >$1</div>', array('oasis-activity-watchlist-login', wfGetReturntoParam()) );
-				}
-				else {
 					$wgOut->wrapWikiMsg( '<div id="myhome-log-in">$1</div>', array('myhome-log-in', wfGetReturntoParam()) );
-				}
 
+				// TODO: probably remove this entirely; wikia-specific for AJAX login
 				//oasis-activity-watchlist-login
 				// RT #23970
+/*
 				$wgOut->addInlineScript(<<<JS
 $(function() {
 	$('#myhome-log-in').find('a').click(function(ev) {
@@ -52,6 +49,7 @@ $(function() {
 });
 JS
 				);
+*/
 				return;
 			}
 			else {
@@ -77,14 +75,8 @@ JS
 
 		$data = $feedProvider->get(50);  // this breaks when set to 60...
 
-		// FIXME: do it in AchievementsII extension
-		global $wgEnableAchievementsInActivityFeed, $wgEnableAchievementsExt;
-		if((!empty($wgEnableAchievementsInActivityFeed)) && (!empty($wgEnableAchievementsExt))){
-			$wgOut->addExtensionStyle("{$wgExtensionsPath}/wikia/AchievementsII/css/achievements_sidebar.css");
-		}
-
 		// use message from MyHome as special page title
-		$wgOut->setPageTitle(wfMessage('oasis-activity-header')->text());
+		$wgOut->setPageTitle(wfMessage('wikiactivity')->text());
 
 		$template = new EasyTemplate(dirname(__FILE__).'/templates');
 		$template->set('data', $data['results']);
