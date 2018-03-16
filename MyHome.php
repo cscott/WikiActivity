@@ -28,16 +28,18 @@ $wgAutoloadClasses['UserContributionsRenderer'] = $dir.'renderers/UserContributi
 $wgAutoloadClasses['EasyTemplate'] = $dir . 'includes/EasyTemplate.php';
 
 // hooks
-$wgHooks['RecentChange_beforeSave'][] = 'MyHome::storeInRecentChanges';
-$wgHooks['EditFilter'][] = 'MyHome::getSectionName';
-$wgHooks['LinksUpdateComplete'][] = 'MyHome::getInserts';
+// FIXME / TODO: disabled these hook functions, which store data we don't currently support in the rc_params column of the recentchanges table
+#$wgHooks['RecentChange_beforeSave'][] = 'MyHome::storeInRecentChanges';
+#$wgHooks['EditFilter'][] = 'MyHome::getSectionName';
+#$wgHooks['LinksUpdateComplete'][] = 'MyHome::getInserts';
 
-$wgWikiaForceAIAFdebug = false;
-if((!empty($wgEnableAchievementsInActivityFeed)) && (!empty($wgEnableAchievementsExt))){
-	$wgHooks['AchievementEarned'][] = 'MyHome::attachAchievementToRc';
-	$wgHooks['RecentChange_beforeSave'][] = 'MyHome::savingAnRc';
-	$wgHooks['RecentChange_save'][] = 'MyHome::savedAnRc';
-}
+// FIXME / TODO: dead code for achievements junk
+#$wgWikiaForceAIAFdebug = false;
+#if((!empty($wgEnableAchievementsInActivityFeed)) && (!empty($wgEnableAchievementsExt))){
+#	$wgHooks['AchievementEarned'][] = 'MyHome::attachAchievementToRc';
+#	$wgHooks['RecentChange_beforeSave'][] = 'MyHome::savingAnRc';
+#	$wgHooks['RecentChange_save'][] = 'MyHome::savedAnRc';
+#}
 
 // i18n
 $wgExtensionMessagesFiles['MyHome'] = $dir . 'MyHome.i18n.php';
@@ -56,14 +58,12 @@ function MyHomeAjax() {
 	$method = $wgRequest->getVal('method', false);
 
 	if (method_exists('MyHomeAjax', $method)) {
-		wfProfileIn(__METHOD__);
-
 		$data = MyHomeAjax::$method();
 		$json = json_encode($data);
 
 		$response = new AjaxResponse($json);
 		$response->setContentType('application/json; charset=utf-8');
-		wfProfileOut(__METHOD__);
+
 		return $response;
 	}
 }

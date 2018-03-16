@@ -13,7 +13,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	}
 
 	function execute($par) {
-		wfProfileIn(__METHOD__);
 		global $wgOut, $wgUser, $wgBlankImgUrl, $wgEditPageFrameOptions;
 
 		$wgEditPageFrameOptions = "SAMEORIGIN";
@@ -53,7 +52,6 @@ $(function() {
 });
 JS
 				);
-				wfProfileOut(__METHOD__);
 				return;
 			}
 			else {
@@ -112,13 +110,13 @@ JS
 		$wgHooks['PageHeaderIndexAfterExecute'][] = array($this, 'addNavigation');
 
 		if ($wgUser->isAnon()) {
-			$this->getOutput()->setSquidMaxage( 3600 ); // 1 hour
-			$this->getOutput()->tagWithSurrogateKeys(
-				MyHome::getWikiActivitySurrogateKey()
-			);
+			// FIXME / TODO: Method is deprecated in 1.27; removed in 1.30
+			//$this->getOutput()->setSquidMaxage( 3600 ); // 1 hour
+			// FIXME/TODO: no such stuff
+			#$this->getOutput()->tagWithSurrogateKeys(
+			#	MyHome::getWikiActivitySurrogateKey()
+			#);
 		}
-
-		wfProfileOut(__METHOD__);
 	}
 
 	/**
@@ -128,7 +126,6 @@ JS
 	 */
 	function addNavigation(&$moduleObject, &$params) {
 		global $wgUser;
-		wfProfileIn(__METHOD__);
 
 		$template = new EasyTemplate(dirname(__FILE__).'/templates');
 
@@ -146,7 +143,6 @@ JS
 		// replace subtitle with navigation for WikiActivity
 		$moduleObject->pageSubtitle = $template->render('navigation.oasis');
 
-		wfProfileOut(__METHOD__);
 		return true;
 	}
 }

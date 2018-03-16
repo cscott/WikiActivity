@@ -15,7 +15,6 @@ extensions/wikia/MyHome/renderers/ActivityFeedRenderer.php
  * @author Maciej Brencz <macbre@wikia-inc.com>
  	 */
  	public static function formatTimestamp($stamp) {
--		wfProfileIn(__METHOD__);
 -		global $wgContLang;
 -
 -		$ago = time() - strtotime($stamp) + 1;
@@ -37,7 +36,6 @@ extensions/wikia/MyHome/renderers/FeedRenderer.php
  * @author Maciej Brencz <macbre@wikia-inc.com>
  	 */
  	public static function formatTimestamp($stamp) {
--		wfProfileIn(__METHOD__);
 -		global $wgLang;
 -
 -		$ago = time() - strtotime($stamp) + 1;

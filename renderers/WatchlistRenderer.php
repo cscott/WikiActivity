@@ -12,8 +12,6 @@ class WatchlistFeedRenderer extends FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function formatTimestamp($stamp) {
-		wfProfileIn(__METHOD__);
-
 		$ago = time() - strtotime($stamp) + 1;
 
 		if ($ago < 7 * 86400 ) {
@@ -22,8 +20,6 @@ class WatchlistFeedRenderer extends FeedRenderer {
 		else {
 			$res = '';
 		}
-
-		wfProfileOut(__METHOD__);
 
 		return $res;
 	}

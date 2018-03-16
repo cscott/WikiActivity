@@ -105,8 +105,6 @@ class EasyTemplate {
 	 * @return string
 	 */
 	public function render( $file ) {
-		wfProfileIn( __METHOD__ );
-
 		if( !strstr($file, ".tmpl.php") ) {
 			$file .= ".tmpl.php";
 		}
@@ -116,7 +114,6 @@ class EasyTemplate {
 		include( $this->mPath . "/" . $file);
 		$contents = ob_get_clean();
 
-		wfProfileOut( __METHOD__ );
 		return $contents;
 	}
 

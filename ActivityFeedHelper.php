@@ -8,7 +8,6 @@ class ActivityFeedHelper {
 	 */
 	static function parseParameters($parametersIn) {
 		global $wgContLang;
-		wfProfileIn(__METHOD__);
 
 		$excludeNamespaces = array();
 		$parameters = array();
@@ -123,7 +122,6 @@ class ActivityFeedHelper {
 			}
 		}
 
-		wfProfileOut(__METHOD__);
 		return $parameters;
 	}
 
@@ -131,7 +129,6 @@ class ActivityFeedHelper {
 	 * @author Maciej Błaszkowski <marooned at wikia-inc.com>
 	 */
 	static function getList($parameters) {
-		wfProfileIn(__METHOD__);
 		$removeDuplicatesType = in_array('shortlist', $parameters['flags']) ? 1 : 0; //remove duplicates using only title for shortlist
 
 		$feedProxy = new ActivityFeedAPIProxy($parameters['includeNamespaces']);
@@ -140,13 +137,11 @@ class ActivityFeedHelper {
 		$feedProvider = new DataFeedProvider($feedProxy, $removeDuplicatesType, $parameters);
 		$feedData = $feedProvider->get($parameters['maxElements']);
 		if(!isset($feedData['results']) || count($feedData['results']) == 0) {
-			wfProfileOut(__METHOD__);
 			return '';
 		}
 
 		$feedHTML = $feedRenderer->render($feedData, false, $parameters);
 		$feedHTML = str_replace("\n", '', $feedHTML);
-		wfProfileOut(__METHOD__);
 		return $feedHTML;
 	}
 
@@ -156,7 +151,6 @@ class ActivityFeedHelper {
 	 */
 	static function getListForWidget($parameters, $userLangEqContent) {
 		global $wgMemc;
-		wfProfileIn(__METHOD__);
 		$key = wfMemcKey('community_widget_v1', $parameters['uselang']);
 		$feedHTML = $wgMemc->get($key);
 		if (empty($feedHTML)) {
@@ -166,7 +160,6 @@ class ActivityFeedHelper {
             $wgMemc->set($key, $feedHTML, /*$userLangEqContent ? 60*60*24 : 60*5*/ 60*5);
 		}
 
-		wfProfileOut(__METHOD__);
 		return $feedHTML;
 	}
 
@@ -234,7 +227,6 @@ $wgAjaxExportList[] = 'ActivityFeedAjax';
  */
 function ActivityFeedAjax() {
 	global $wgRequest, $wgLang;
-	wfProfileIn(__METHOD__);
 	$params = $wgRequest->getVal('params');
 
 	$parameters = ActivityFeedHelper::parseParameters(explode('&', $params));
@@ -250,7 +242,6 @@ function ActivityFeedAjax() {
 	$response = new AjaxResponse($json);
 	$response->setContentType('application/json; charset=utf-8');
 	$response->setCacheDuration(60);
-	wfProfileOut(__METHOD__);
 	return $response;
 }
 
@@ -260,7 +251,6 @@ $wgAjaxExportList[] = 'CommunityWidgetAjax';
  */
 function CommunityWidgetAjax() {
 	global $wgRequest, $wgLang, $wgLanguageCode, $wgContentNamespaces;
-	wfProfileIn(__METHOD__);
 
 	//this should be the same as in /extensions/wikia/WidgetFramework/Widgets/WidgetCommunity/WidgetCommunity.php
 	$parameters = array(
@@ -287,7 +277,7 @@ function CommunityWidgetAjax() {
 	$response = new AjaxResponse($json);
 	$response->setContentType('application/json; charset=utf-8');
 	$response->setCacheDuration($userLangEqContent ? 60*60*24 : 60*5);
-	wfProfileOut(__METHOD__);
+
 	return $response;
 }
 

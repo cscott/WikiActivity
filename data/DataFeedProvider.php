@@ -113,6 +113,7 @@ class DataFeedProvider {
 						$this->filterRedirect( $itemResult, $res, $title );
 					}
 				} else {
+					/*
 					$res['rc_params'] = MyHome::unpackData( $res['rc_params'] );
 					if ( isset( $res['rc_params']['rollback'] ) ) {
 						$itemResult->setInvisibleRevisionId( $res['rc_params']['revId'] );
@@ -130,6 +131,7 @@ class DataFeedProvider {
 							$this->filterEdit( $itemResult, $res, $title );
 						}
 					}
+					*/
 				}
 			}
 		}
@@ -211,12 +213,12 @@ class DataFeedProvider {
 			$item['url'] = $title->getLocalURL();
 			$item['diff'] = $title->getLocalURL( 'diff=' . $res['revid'] . '&oldid=' . $res['old_revid'] );
 
-			if ( isset( $res['rc_params']['sectionName'] ) ) {
+			/*if ( isset( $res['rc_params']['sectionName'] ) ) {
 				$item['section'] = $res['rc_params']['sectionName'];
 				if ( isset( $res['rc_params']['summary'] ) ) {
 					$item['comment'] = $res['rc_params']['summary'];
 				}
-			} elseif ( $res['comment'] != '' && ( defined( 'NS_TOPLIST' ) ? $res['ns'] != NS_TOPLIST : true ) ) {
+			} else*/if ( $res['comment'] != '' && ( defined( 'NS_TOPLIST' ) ? $res['ns'] != NS_TOPLIST : true ) ) {
 				$item['comment'] = $res['comment'];
 			}
 
@@ -289,9 +291,9 @@ class DataFeedProvider {
 		}
 
 		if ( count( $item ) > 1 ) {
-			if ( isset( $res['rc_params']['intro'] ) ) {
+			/*if ( isset( $res['rc_params']['intro'] ) ) {
 				$item['intro'] = $res['rc_params']['intro'];
-			}
+			}*/
 
 			if ( $res['comment'] != '' ) {
 				$item['comment'] = $res['comment'];

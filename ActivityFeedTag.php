@@ -21,7 +21,6 @@ function ActivityFeedTag_render($content, $attributes, $parser, $frame) {
 	if (!class_exists('ActivityFeedHelper')) {
 		return '';
 	}
-	wfProfileIn(__METHOD__);
 
 	$parameters = ActivityFeedHelper::parseParameters($attributes);
 
@@ -53,6 +52,5 @@ function ActivityFeedTag_render($content, $attributes, $parser, $frame) {
 		)
 	);
 
-	wfProfileOut(__METHOD__);
 	return "<div$style>$feedHTML</div>$snippets";
 }
