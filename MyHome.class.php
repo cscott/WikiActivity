@@ -368,8 +368,10 @@ class MyHome {
 	public static function getDefaultView() {
 		wfProfileIn(__METHOD__);
 
-		global $wgUser;
-		$defaultView = $wgUser->getGlobalPreference('myhomedefaultview');
+		// TODO: replace preference?
+		//global $wgUser;
+		//$defaultView = $wgUser->getGlobalPreference('myhomedefaultview');
+		$defaultView = null;
 
 		if (empty($defaultView)) {
 			$defaultView = 'activity';
