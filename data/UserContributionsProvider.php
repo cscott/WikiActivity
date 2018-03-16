@@ -14,7 +14,7 @@ class UserContributionsProvider {
 
 		$api = new ApiMain(new FauxRequest($params));
 		$api->execute();
-		$res = &$api->GetResultData();
+		$res = &$api->getResult()->getResultData();
 
 		$i = -1;
 		foreach ($res['query']['usercontribs'] as &$entry) {

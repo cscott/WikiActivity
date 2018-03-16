@@ -30,7 +30,7 @@ class ApiFeedActivityFeed extends ApiBase {
 			$fauxReq = new FauxRequest($fauxReqArr);
 			$module = new ApiMain($fauxReq);
 			$module->execute();
-			$data = $module->getResultData();
+			$data = $module->getResult()->getResultData();
 
 			$feedItems = array();
 			foreach ((array)$data["query"]["activityfeed"] as $info) {
