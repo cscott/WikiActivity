@@ -382,6 +382,8 @@ class DataFeedProvider {
 		$item['user'] = $this->getUserLink( $res['user'], isset( $res['anon'] ) );
 		$item['username'] = $res['user'];
 
+		// FIXME / TODO: rc_params stuff
+		/*
 		if ( is_array( $res['rc_params'] ) ) {
 
 			$useflags = !empty( $this->parameters['flags'] );
@@ -435,6 +437,7 @@ class DataFeedProvider {
 				$item['Badge'] = $res['rc_params']['Badge'];
 			}
 		}
+		*/
 
 		if ( class_exists( 'Wall' ) && !empty( $item['wall'] ) ) {
 			$wh = new WallHelper();
