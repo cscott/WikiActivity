@@ -674,8 +674,6 @@ class FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function getAddedMediaRow( $row, $type ) {
-		$wg = F::app()->wg;
-
 		$key = "new_{$type}";
 
 		if ( empty($row[$key]) ) {
@@ -688,7 +686,7 @@ class FeedRenderer {
 		foreach ( $row[$key] as $item ) {
 
 			// localised title for popup
-			$popupTitle = $wg->Lang->getNsText($namespace) . ':' . $item['name'];
+			$popupTitle = $wgContLang->getNsText($namespace) . ':' . $item['name'];
 
 			$titleObj = Title::newFromText($item['name'], NS_FILE);
 			if (!$titleObj) {
