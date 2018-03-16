@@ -132,6 +132,10 @@ $messages['qqq'] = array(
 	'myhome-feed-redirect-details' => '{{Identical|Redirect}}',
 	'myhome-feed-inserted-category-details' => '{{Identical|Add category}}',
 	'myhome-hot-spots-number-of-editors' => '{{Identical|Editor}}',
+	'myhome-seconds-ago' => 'Message saying that something happened x seconds ago ($1 is number of seconds)',
+	'myhome-minutes-ago' => 'Message saying that something happened x minutes ago ($1 is number of minutes)',
+	'myhome-hours-ago' => 'Message saying that something happened x hours ago ($1 is number of hours)',
+	'myhome-days-ago' => 'Message saying that something happened x days ago ($1 is number of days)',
 	'myhome-namespace-blog' => '{{Identical|Blog}}',
 	'oasis-myhome-community-corner-edit' => '{{Identical|Edit message}}',
 	'myhome-community-corner-edit' => '{{Identical|Edit message}}',
@@ -183,6 +187,10 @@ $messages['af'] = array(
 	'myhome-feed-inserted-video-details' => "{{PLURAL:$1|Video bygevoeg|Video's bygevoeg}}",
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Kategorie bygevoeg|Kategorieë bygevoeg}}',
 	'myhome-hot-spots-number-of-editors' => 'outeurs',
+	'myhome-days-ago' => "{{PLURAL:$1|'n dag|$1 dae}} gelede",
+	'myhome-hours-ago' => "{{PLURAL:$1|'n uur|$1 ure}} gelede",
+	'myhome-minutes-ago' => "{{PLURAL:$1|'n minuut|$1 minute}} gelede",
+	'myhome-seconds-ago' => "'n minuut gelede",
 	'myhome-log-in' => "<center>Die ''My Tuisblad''-funksie is slegs beskikbaar as u aangemeld is.<br /><br />
 <big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Meld asseblief aan om hierdie bladsy te wys!]</span>'''</big></center>",
 	'myhome-namespace-blog' => 'Blog',
@@ -252,6 +260,10 @@ $messages['ar'] = array(
 الويكي مبنية من قبل المجتمع، و بمجرد النقر على زر "عدل"، تصبح جزءا منه.
 جربه!',
 	'myhome-hot-spots-number-of-editors' => 'محررون',
+	'myhome-days-ago' => 'منذ {{PLURAL:$1|صفر أيام|يوم واحد|يومين|$1 أيام|$1 يوما}}',
+	'myhome-hours-ago' => 'منذ {{PLURAL:$1|صفر ساعات|ساعة واحدة|ساعتان|$1 ساعات|$1 ساعة}}',
+	'myhome-minutes-ago' => 'منذ {{PLURAL:$1|صفر دقائق|دقيقة واحدة|دقيقتان|$1 دقائق|$1 دقيقة}}',
+	'myhome-seconds-ago' => 'قبل دقيقة',
 	'myhome-log-in' => "<center>خاصية \"صفحتي الرئيسية\" غير متوفرة إلا إذا سجلت الدخول. <br /><br /><big>'''[{{fullurl:خاص:Signup|\$1}} الرجاء التسجيل لرؤية هذه الصفحة.]''' </big></center>",
 	'myhome-switch-to-monaco' => 'خاصية نشاط الويكي متوفرة فقط لمستخدمي مظهر ويكيا.
 إذا كنت ترغب في رؤية "صفحتي الرئيسية"، يرجى زيارة [[Special:Preferences|تفضيلاتك]] لتغيير المظهر.',
@@ -425,6 +437,10 @@ $messages['bg'] = array(
 Уики се изгражда от общността, и веднъж щракнали на бутона за редакция, Вие ставате част от общността.
 Опитайте!',
 	'myhome-hot-spots-number-of-editors' => 'редактори',
+	'myhome-days-ago' => 'преди {{PLURAL:$1|един ден|$1 дни}}',
+	'myhome-hours-ago' => 'преди {{PLURAL:$1|един час|$1 часа}}',
+	'myhome-minutes-ago' => 'преди {{PLURAL:$1|една минута|$1 минути}}',
+	'myhome-seconds-ago' => 'преди една минута',
 	'myhome-log-in' => "<center>Функцията Моята начална страница е достъпна само ако сте влезли.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Моля влезте за да видите тази страница!]'''</big></center>",
 	'myhome-namespace-blog' => 'Блог',
 	'oasis-myhome-community-corner-edit' => 'редактиране на съобщението &gt;',
@@ -520,6 +536,10 @@ Ne vern piv a c'hall degas cheñchamantoù, ouzhpennañ titouroù pe reizhañ ur
 Savet eo ar wiki gant ar gumuniezh. Ur wech m'ho po kliket war ar bouton kemmañ e viot ezel eus ar gumuniezh.
 Klaskit eta !",
 	'myhome-hot-spots-number-of-editors' => 'kenlabourerien',
+	'myhome-days-ago' => '{{PLURAL:$1|un devezh|$1 devezh}} zo',
+	'myhome-hours-ago' => '{{PLURAL:$1|un eurvezh|$1 eurvezh}} zo',
+	'myhome-minutes-ago' => '{{PLURAL:$1|ur vunutenn|$1 munutenn}} zo',
+	'myhome-seconds-ago' => 'ur vunutenn zo',
 	'myhome-log-in' => "<center>An arc'hwel Ma Degemer a c'hallit kaout nemet e vefec'h kevreet.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Kevreit, mar plij, evit gwelet ar  bajenn-mañ]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "Ne c'haller kaout an Arc'hwel Ma Degemer nemet e vefe implijet ar fichadenn Monaco ganeoc'h. M'ho peus c'hoant da vont war Ma Degemer, gweladennit'''[[Special:Preferences|ho Tibaboù gwellañ]]''', mar plij, evit kemmañ ho fichadenn.", # Fuzzy
 	'myhome-namespace-blog' => 'Blog',
@@ -605,6 +625,10 @@ Tothom pot fer canvis, afegir informació o corregir un error.
 El wiki és construït per la comunitat, i una vegada que feu clic al botó d\'editar, ja formeu part de la comunitat.
 Proveu-ho!',
 	'myhome-hot-spots-number-of-editors' => 'editors',
+	'myhome-days-ago' => 'fa {{PLURAL:$1|un dia|$1 dies}}',
+	'myhome-hours-ago' => 'fa {{PLURAL:$1|una hora|$1 hores}}',
+	'myhome-minutes-ago' => 'fa {{PLURAL:$1|un minut|$1 minuts}}',
+	'myhome-seconds-ago' => 'fa un minut',
 	'myhome-log-in' => "<center>La Pàgina d'Inici només està disponible si esteu registrats.<br /><br /><big>'' [{{fullurl:Special:Signup| $1 }} Si us plau iniciau la sessió per poder veure aquesta pàgina!]''</big></center>",
 	'myhome-switch-to-monaco' => "La funció ViquiActivitat només està disponible si esteu usant l'aparença Wikia. Si voleu veure la pàgina d'inici, activeu-ho a '''[[Special:Preferences|la vostra pàgina de preferències]]'''",
 	'myhome-namespace-blog' => 'Bloc',
@@ -645,6 +669,10 @@ $messages['ce'] = array(
 	'myhome-feed-edit' => 'нисдар',
 	'myhome-feed-delete' => 'дӀаяьккхина',
 	'myhome-hot-spots-number-of-editors' => 'нисдарш',
+	'myhome-days-ago' => '{{PLURAL:$1|$1 де}} хьалха',
+	'myhome-hours-ago' => '{{PLURAL:$1|$1 сахьт}} хьалха',
+	'myhome-minutes-ago' => '$1 {{PLURAL:$1|минот}} хьалха',
+	'myhome-seconds-ago' => 'минот хьалха',
 );
 
 /** Czech (čeština)
@@ -705,6 +733,10 @@ Každý můe provádět změny, přidávat informace nebo opravovat chyby.
 Wiki je stavěna komunitou, a jakmile kliknete na tlačítko {{int:editthispage}}, stanete se její součástí.
 Zkuste to!',
 	'myhome-hot-spots-number-of-editors' => 'editorů',
+	'myhome-days-ago' => 'před {{PLURAL:$1|dnem|$1 dny}}',
+	'myhome-hours-ago' => 'před {{PLURAL:$1|hodinou|$1 hodinami}}',
+	'myhome-minutes-ago' => 'před {{PLURAL:$1|1 minutou|$1 minutami}}',
+	'myhome-seconds-ago' => 'před minutou',
 	'myhome-log-in' => "<center>Funkce Moje domovská stránka je k dispozici jen přihlášeným uživatelům.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Přihlašte se!]'''</big></center>",
 	'myhome-switch-to-monaco' => 'Aktivita na Wiki je zobrazena pouze v případě, že používáte motiv Wikia.
 Změnu můžete provést v [[Special:Preferences|nastavení]].',
@@ -817,6 +849,10 @@ Jeder kann Seiten ändern, Informationen hinzufügen oder Fehler berichtigen.
 Das Wiki wird durch die Gemeinschaft der Nutzer erstellt, und durch den Klick auf den Bearbeiten-Link wirst du selbst zum Teil dieser Gemeinschaft.
 Probier es einfach aus!',
 	'myhome-hot-spots-number-of-editors' => 'Bearbeiter',
+	'myhome-seconds-ago' => 'vor $1 {{PLURAL:$1|Sekunde|Sekunden}}',
+	'myhome-minutes-ago' => 'vor $1 {{PLURAL:$1|Minute|Minuten}}',
+	'myhome-hours-ago' => 'vor $1 {{PLURAL:$1|Stunde|Stunden}}',
+	'myhome-days-ago' => 'vor $1 {{PLURAL:$1|Tag|Tagen}}',
 	'myhome-log-in' => "<center>Die Startseiten-Funktion ist nur verfügbar wenn du eingeloggt bist.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Bitte melde dich an um diese Seite zu sehen!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Die Wikiaktivitäten-Funktion ist nur für die Wikia-Benutzeroberfläche verfügbar.
 Wenn du deine Startseite sehen möchtest, gehe bitte zu '''[[Special:Preferences|deinen Einstellungen]],''' um deine Benutzeroberfläche zu wechseln.",
@@ -913,6 +949,10 @@ $messages['diq'] = array(
 	'myhome-feed-inserted-image-details' => '{{PLURAL:$1|Resime ke debyay|Resime ke debyay}}',
 	'myhome-feed-inserted-video-details' => '{{PLURAL:$1|Videoye ke debyay|Videoye ke debyay}}',
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Kategoriye ke debyay|Kategoriye ke debyay}}',
+	'myhome-days-ago' => 'Verdê {{PLURAL:$1|$1 rocan|$1 rocan}}',
+	'myhome-hours-ago' => 'Verdê {{PLURAL:$1|$1 seata|$1 seata}}',
+	'myhome-minutes-ago' => 'verdê {{PLURAL:$1|$1 daka|$1 dakan}}',
+	'myhome-seconds-ago' => 'verdê dekana',
 	'myhome-namespace-blog' => 'Qeyd',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|yew mesac|$1 mesaci}}',
 );
@@ -1083,6 +1123,10 @@ $messages['es'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Categoría añadida|Categorías añadidas}}',
 	'myhome-user-contributions-empty' => 'Puedes participar en este wiki haciendo clic en el botón "{{int:editthispage}}" de cualquier artículo, y añadiendo lo que sepas acerca del mismo. Todos podemos hacer cambios, añadir información o corregir un error. El wiki se construye gracias a la comunidad, y una vez hagas clic en el botón de editar, serás parte de la comunidad. ¡Anímate a intentarlo!',
 	'myhome-hot-spots-number-of-editors' => 'editores',
+	'myhome-seconds-ago' => 'hace $1 {{PLURAL:$1|segundo|segundos}}',
+	'myhome-minutes-ago' => 'hace $1 {{PLURAL:$1|minuto|minutos}}',
+	'myhome-hours-ago' => 'hace $1 {{PLURAL:$1|hora|horas}}',
+	'myhome-days-ago' => 'Hace $1 {{PLURAL:$1|día|días}}',
 	'myhome-log-in' => "<center>La página de inicio solo está disponible si estás identificado<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Por favor, ¡identifícate para ver esta página!]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "La función Wiki Actividad solo está disponible si usas la piel Wikia. Si quieres ver \"Mi página de inicio\", por favor, entra en tus '''[[Special:Preferences|tus preferencias]]''' para cambiar la apariencia.",
 	'myhome-namespace-blog' => 'Blog',
@@ -1205,6 +1249,10 @@ Näiteks:
  */
 $messages['eu'] = array(
 	'myhome-user-contributions-feed' => 'Ekarpenak',
+	'myhome-days-ago' => 'Duela {{PLURAL:$1|egun bat|$1 egun}}',
+	'myhome-hours-ago' => 'Duela {{PLURAL:$1|ordu bat|$1 ordu}}',
+	'myhome-minutes-ago' => 'Duela {{PLURAL:$1|minutu bat|$1 minutu}}',
+	'myhome-seconds-ago' => 'duela minutu bat',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|mezu bat|$1 mezu}}',
 );
 
@@ -1268,6 +1316,7 @@ $messages['fa'] = array(
 این ویکی توسط جامعه ساخته شده است، و به محض اینکه بر دکمهٔ ویرایش کلیک کنید، شما بخشی از جامعه هستید.
 بیازمایید!',
 	'myhome-hot-spots-number-of-editors' => 'ویرایشگران',
+	'myhome-seconds-ago' => 'یک دقیقه پیش',
 	'myhome-log-in' => "<center>امکانات خانهٔ من تنها در صورتی در دسترس خواهد بود که وارد شوید.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} لطفاً وارد شوید تا صفحه را ببینید!]'''</big></center>",
 	'myhome-switch-to-monaco' => "ویژگی فعالیت‌ویکی تنها در صورتی در دسترس خواهد بود که شما از پوستهٔ ویکیا (wikia) استفاده کنید.
 اگر دوست دارید صفحهٔ خانگی من را ببینید، لطفاً از '''[[Special:Preferences|ترجیحاتتان]]''' برای تغییر پوسته‌تان استفاده کنید.",
@@ -1364,6 +1413,10 @@ Kaikki voivat tehdä muutoksia, lisätä tietoa tai korjata virheitä.
 Wiki on yhteisön rakentama, ja kun painat muokkausnappia, olet osa yhteisöä.
 Kokeile!',
 	'myhome-hot-spots-number-of-editors' => 'muokkaajaa',
+	'myhome-days-ago' => '{{PLURAL:$1|päivä|$1 päivää}} sitten',
+	'myhome-hours-ago' => '{{PLURAL:$1|tunti|$1 tuntia}} sitten',
+	'myhome-minutes-ago' => '{{PLURAL:$1|minuutti|$1 minuuttia}} sitten',
+	'myhome-seconds-ago' => 'minuutti sitten',
 	'myhome-log-in' => "<center>Kotisivutoiminto on saatavilla vain, kun olet kirjautunut sisään.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Ole hyvä ja kirjaudu sisään nähdäksesi tämän sivun!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Viimeisimmät tapahtumat ominaisuus on käytössä vain jos käytät Wikian teemaa.
 Jos haluat nähdä My Homen, käy '''[[Special:Preferences|asetuksissasi]]''' vaihtaaksesi teemaa.",
@@ -1456,6 +1509,10 @@ Tout le monde peut faire des modifications, ajouter des informations ou corriger
 Le wiki est construit par la communauté, et une fois que vous aurez cliqué sur le bouton de modification, vous ferez partie de la communauté.
 Essayez donc !",
 	'myhome-hot-spots-number-of-editors' => 'contributeurs',
+	'myhome-seconds-ago' => 'il y a $1 {{PLURAL:$1|seconde|secondes}}',
+	'myhome-minutes-ago' => 'il y a $1 {{PLURAL:$1|minute|minutes}}',
+	'myhome-hours-ago' => 'il y a $1 {{PLURAL:$1|heure|heures}}',
+	'myhome-days-ago' => 'il y a $1 {{PLURAL:$1|jour|jours}}',
 	'myhome-log-in' => "<center>La fonction Mon Accueil n'est disponible que si vous êtes connecté{{GENDER:||e|}}.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Veuillez vous connecter pour voir cette page !]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "La fonction « Activité du wiki » n'est disponible que si vous utilisez l'apparence Wikia.
 Si vous voulez accéder à Mon Accueil, veuillez modifier '''[[Special:Preferences|vos Préférences]]''' pour changer l'apparence.",
@@ -1548,6 +1605,10 @@ Todos poden facer cambios, engadir información ou corrixir un erro.
 O wiki está construído pola comunidade, e unha vez que faga clic no botón de edición converterase en parte dela.
 Anímese a intentalo!',
 	'myhome-hot-spots-number-of-editors' => 'editores',
+	'myhome-days-ago' => 'hai {{PLURAL:$1|un día|$1 días}}',
+	'myhome-hours-ago' => 'hai {{PLURAL:$1|unha hora|$1 horas}}',
+	'myhome-minutes-ago' => 'hai {{PLURAL:$1|un minuto|$1 minutos}}',
+	'myhome-seconds-ago' => 'hai un minuto',
 	'myhome-log-in' => "<center>A función \"A miña páxina de inicio\" só está dispoñible se antes accedeu ao sistema.<br /><br /><big>'''[{{fullurl:Special:Signup|\$1}} Por favor, conéctese para ollar esta páxina!]'''</big></center>",
 	'myhome-switch-to-monaco' => "A función \"Actividade do wiki\" só está dispoñible se emprega a aparencia Wikia.
 Se quere ver \"A miña páxina de inicio\", visite as '''[[Special:Preferences|súas preferencias]]''' para cambiar a súa aparencia.",
@@ -1721,6 +1782,10 @@ Bárki módosíthat, hozzáadhat adatokat vagy kijavíthat egy tévedést.
 A wikit a közösség építi, s amint rákattintasz a szerkesztés gombjára, a közösség tagjává válsz.
 Próbáld ki!',
 	'myhome-hot-spots-number-of-editors' => 'szerkesztők',
+	'myhome-days-ago' => '{{PLURAL:$1|egy|$1}} nappal ezelőtt',
+	'myhome-hours-ago' => '{{PLURAL:$1|egy|$1}} órával ezelőtt',
+	'myhome-minutes-ago' => '{{PLURAL:$1|egy|$1}} perccel ezelőtt',
+	'myhome-seconds-ago' => 'egy perccel ezelőtt',
 	'myhome-log-in' => "<center>A \"Kezdőlapom\" szolgáltatás csak akkor érhető el, ha bejelentkeztél.<br /><br /><big>'''[{{fullurl:Special:Signup| \$1 }} Kérlek, jelentkezz be ezen az oldalon!]'' '</big></center>",
 	'myhome-switch-to-monaco' => "A Wiki tevékenység szolgáltatás csak a Wikia felületstílusban érhető el.
 Amennyiben szeretnéd látni, változtasd meg az alapértelmezett felületedet '''[[Special:Preferences|a beállításaidban]]'''.",
@@ -1808,6 +1873,10 @@ $messages['ia'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Categoria|Categorias}} addite',
 	'myhome-user-contributions-empty' => 'Tu pote participar in iste wiki per cliccar super "{{int:editthispage}}" in omne pagina de articulo, e adder lo que tu sape. Tote le mundo pote facer modificationes, adder informationes o corriger errores. Le wiki es construite per le communitate, e un vice que tu clicca super le button de modification, tu face parte del communitate. Proba lo!',
 	'myhome-hot-spots-number-of-editors' => 'contributores',
+	'myhome-days-ago' => '{{PLURAL:$1|un die|$1 dies}} retro',
+	'myhome-hours-ago' => '{{PLURAL:$1|un hora|$1 horas}} retro',
+	'myhome-minutes-ago' => '{{PLURAL:$1|un minuta|$1 minutas}} retro',
+	'myhome-seconds-ago' => 'un minuta retro',
 	'myhome-log-in' => "<center>Tu pagina initial es solmente disponibile si tu es authenticate.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Aperi un session pro vider iste pagina!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Le function WikiActivity es solmente disponibile si tu usa le apparentia \"Wikia\".
 Si tu vole vider \"Mi pagina initial\", visita le '''[[Special:Preferences|preferentias]]''' pro cambiar de apparentia.",
@@ -1983,6 +2052,10 @@ $messages['it'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Categoria aggiunta|Categorie aggiunte}}',
 	'myhome-user-contributions-empty' => 'Puoi iniziare a collaborare in questo wiki selezionando "{{int:editthispage}}" presente su ogni articolo, e aggiungi ciò che conosci. Chiunque può effettuare modifiche, aggiungere informazioni o correggere un errore. Il wiki è costruito dalla comunità, e una volta cliccato sul pulsante modifica, diventerai parte della comunità. Provaci!',
 	'myhome-hot-spots-number-of-editors' => 'editori',
+	'myhome-seconds-ago' => '$1 {{PLURAL:$1|secondo|secondi}} fa',
+	'myhome-minutes-ago' => '$1 {{PLURAL:$1|minuto|minuti}} fa',
+	'myhome-hours-ago' => '$1 {{PLURAL:$1|ora|ore}} fa',
+	'myhome-days-ago' => '$1 {{PLURAL:$1|giorno|giorni}} fa',
 	'myhome-log-in' => "<center>Il servizio My Home è disponibile solo se effettui il log in. <br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Accedi per vedere la pagina!]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "ll servizio Wiki Activity è disponibile solo se stai usando lo skin Wikia. Se vuoi visualizzare My Home, modifica le '''[[Special:Preferences|tue Preferenze]]''' per cambiare l'aspetto grafico.",
 	'myhome-namespace-blog' => 'Blog',
@@ -2065,6 +2138,10 @@ $messages['ja'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|カテゴリの追加}}',
 	'myhome-user-contributions-empty' => '各ページにある"{{int:editthispage}}"をクリックして記述を追加することで、あなたもこのウィキに参加できます。だれでも、記述の変更・情報の追加や誤りの修正ができます。ウィキはコミュニティによって作られ、編集ボタンをクリックするとあなたもその一員となります。',
 	'myhome-hot-spots-number-of-editors' => 'editors',
+	'myhome-days-ago' => '$1日前',
+	'myhome-hours-ago' => '$1時間前',
+	'myhome-minutes-ago' => '$1分前',
+	'myhome-seconds-ago' => '1分前',
 	'myhome-log-in' => "<center>My Home を利用するにはログインする必要があります。<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} このページを閲覧するためにログインしてください！]'''</big></center>",
 	'myhome-switch-to-monaco' => 'ウィキアクティビティはウィキアのスキンでのみ利用できます。ウィキアクティビティを閲覧したいのであれば、[[Special:Preferences|スキンの設定を変更]]してください。',
 	'myhome-namespace-blog' => 'Blog',
@@ -2108,6 +2185,10 @@ $messages['ka'] = array(
 	'myhome-feed-inserted-image-details' => '{{PLURAL:$1|დამატებული ფოტო|დამატებული ფოტოები}}',
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|დამატებული კატეგორია|დამატებული კატეგორიები}}',
 	'myhome-hot-spots-number-of-editors' => 'რედაქტორი',
+	'myhome-days-ago' => '$1 დღის წინ',
+	'myhome-hours-ago' => '$1 საათის წინ',
+	'myhome-minutes-ago' => '$1 წუთის წინ',
+	'myhome-seconds-ago' => '1 წუთის წინ',
 	'myhome-community-corner-header' => 'განცხადებები',
 	'oasis-myhome-community-corner-edit' => 'განცხადების რედაქტირება &gt;',
 	'myhome-hot-spots-definition' => 'გვერდები, რომლებსაც ბოლო $1 დღის მანძილზე ყველაზე მეტი რედაქტორი ჰყავდათ.',
@@ -2193,6 +2274,10 @@ $messages['ko'] = array(
 위키는 공동체에 의해 만들어지며, 당신이 '편집' 링크를 클릭하는 것만으로 당신은 공동체의 일부가 됩니다.
 지금 바로 시도해보세요!",
 	'myhome-hot-spots-number-of-editors' => '편집자',
+	'myhome-days-ago' => '$1일 전',
+	'myhome-hours-ago' => '$1시간 전',
+	'myhome-minutes-ago' => '$1분 전',
+	'myhome-seconds-ago' => '방금',
 	'myhome-log-in' => "<center>마이 홈 기능은 로그인한 상태에서만 이용하실 수 있습니다.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} 먼저 로그인해 주세요!]'''</big></center>",
 	'myhome-switch-to-monaco' => "위키 활동 내역 기능은 위키아 스킨을 사용 중일 때만 사용할 수 있습니다.
 마이 홈을 보고 싶으실 땐 '''[[Special:Preferences|환경설정]]'''에서 스킨을 변경해 주세요.",
@@ -2258,6 +2343,7 @@ $messages['lb'] = array(
 	'myhome-feed-new-blog-comment-details' => 'Bemierkung',
 	'myhome-feed-new-article-comment-details' => 'Bemierkung',
 	'myhome-feed-redirect-details' => 'Viruleedung',
+	'myhome-seconds-ago' => 'virun enger Minutt',
 	'tooltip-pt-myhome' => 'Op meng Haaptsäit goen',
 );
 
@@ -2342,6 +2428,10 @@ $messages['mk'] = array(
 Секој може да прави измени, да додава информации и да поправа грешки. 
 Викито го гради заедницата, и штом еднаш ќе го стиснете копчето за уредување, веќе станувате дел од таа заедница. Испробајте!',
 	'myhome-hot-spots-number-of-editors' => 'уредници',
+	'myhome-days-ago' => 'пред {{PLURAL:$1|еден ден|$1 дена}}',
+	'myhome-hours-ago' => 'пред {{PLURAL:$1|еден час|$1 часа}}',
+	'myhome-minutes-ago' => 'пред {{PLURAL:$1|една минута|$1 минути}}',
+	'myhome-seconds-ago' => 'пред една минута',
 	'myhome-log-in' => "<center>Функцијата „Мојата домашна страница“ е достапна само ако сте најавени.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Најавете се за да ја видите страницата!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Функцијата ВикиАктивност е достапна само ако го користите рувото „Викија“.
 Ако сакате да ја погледате Мојата домашна страница, одете на '''[[Special:Preferences|нагодувањата]]''' и сменете го рувото.",
@@ -2463,6 +2553,10 @@ Klik '''[[Special:CreatePage|New page]]''' untuk bermula menulis!",
 	'myhome-user-contributions-empty' => 'Anda boleh melibatkan diri dalam wiki ini dengan mengklik "{{int:editthispage}}" di mana-mana laman, lalu menyumbangkan pengetahuan anda. Semua orang akan membuat perubahan, menambah maklumat atau membetulkan kesilapan. Wiki ini dibina oleh komuniti, dan sebaik sahaja anda mengklik butang sunting, anda sudah menyertai komuniti ini.
 Cubalah!',
 	'myhome-hot-spots-number-of-editors' => 'penyunting',
+	'myhome-days-ago' => '{{PLURAL:$1|sehari|$1 hari}} yang lalu',
+	'myhome-hours-ago' => '{{PLURAL:$1|sejam|$1 jam}} lalu',
+	'myhome-minutes-ago' => '{{PLURAL:$1|seminit|$1 minit}} yang lalu',
+	'myhome-seconds-ago' => 'seminit lalu',
 	'myhome-log-in' => "<center>Ciri My Home hanya untuk yang log masuk.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Sila log masuk untuk melihat laman ini!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Ciri Kegiatan Wiki hanya tersedia jika anda menggunakan kulit Wikia. Jika anda ingin melihat My Home, sila ke '''[[Special:Preferences|Keutamaan anda]]''' untuk menukarkan kulit anda.",
 	'myhome-namespace-blog' => 'Blog',
@@ -2583,6 +2677,10 @@ Alle kan gjøre endringer, legge til informasjon eller korrigere en feil.
 Wikien er bygd av fellesskapet og når du klikker på redigeringsknappen er du medlem av dette fellesskapet.
 Prøv det!',
 	'myhome-hot-spots-number-of-editors' => 'bidragsytere',
+	'myhome-days-ago' => 'for {{PLURAL:$1|én dag|$1 dager}} siden',
+	'myhome-hours-ago' => 'for {{PLURAL:$1|én time|$1 timer}} siden',
+	'myhome-minutes-ago' => 'for {{PLURAL:$1|ett minutt|$1 minutter}} siden',
+	'myhome-seconds-ago' => 'for et øyeblikk siden',
 	'myhome-log-in' => "<center>Mitt hjem-funksjonen er kun tilgjengelig om du er logget inn.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Logg inn for å se denne siden.]'''</big></center>",
 	'myhome-switch-to-monaco' => "WikiAktivitet-funksjonen er bare tilgjengelig om du bruker Wikia-utseendet.
 Hvis du vil se Mitt hjem, vennligst gå til '''[[Special:Preferences|innstillingene dine]]''' for å endre utseendet.",
@@ -2680,6 +2778,10 @@ Iedereen kan wijzigingen maken, informatie toevoegen of een fout verbeteren.
 De wiki is gebouwd door de gemeenschap, en zo gauw u op de knop "{{int:editthispage}}" klikt, maakt u ook onderdeel uit van de gemeenschap.
 Probeer het maar!',
 	'myhome-hot-spots-number-of-editors' => 'bewerkers',
+	'myhome-seconds-ago' => '$1 {{PLURAL:$1|seconde|seconden}} geleden',
+	'myhome-minutes-ago' => '$1 {{PLURAL:$1|minuut|minuten}} geleden',
+	'myhome-hours-ago' => '$1 {{PLURAL:$1|uur|uur}} geleden',
+	'myhome-days-ago' => '$1 {{PLURAL:$1|dag|dagen}} geleden',
 	'myhome-log-in' => "<center>De functie Mijn Startpagina is alleen beschikbaar als u bent aangemeld.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Meld u aan om deze pagina te bekijken!]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "De functie \"Mijn startpagina\" is alleen beschikbaar als uw de Wikia-vormgeving gebruikt.
 Als u \"Mijn startpagina\" wilt bekijken, wijzig in '''[[Special:Preferences|uw voorkeuren]]''' het siteuiterlijk.",
@@ -2775,6 +2877,10 @@ $messages['oc'] = array(
 	'myhome-feed-move-details' => 'Nom novèl',
 	'myhome-feed-redirect-details' => 'Redireccion',
 	'myhome-hot-spots-number-of-editors' => 'contributors',
+	'myhome-days-ago' => '{{PLURAL:$1|la velha|i a $1 jorns}}',
+	'myhome-hours-ago' => 'i a {{PLURAL:$1|una ora|$1 oras}}',
+	'myhome-minutes-ago' => 'i a {{PLURAL:$1|una minuta|$1 minutas}}',
+	'myhome-seconds-ago' => 'i a una minuta',
 	'myhome-namespace-blog' => 'Blog',
 	'myhome-community-corner-header' => 'Messatges de la comunautat',
 	'oasis-myhome-community-corner-edit' => 'modificar lo messatge &gt;',
@@ -2915,6 +3021,10 @@ Wszyscy mogą zmieniać artykuły, dodawać informacje i poprawiać błędy.
 Wiki jest kreowana przez swoją społeczność, klikając na przycisk edycji stajesz się jej częścią.
 Spróbuj!',
 	'myhome-hot-spots-number-of-editors' => 'edytorów',
+	'myhome-days-ago' => '{{PLURAL:$1|dzień|$1 dni}} temu',
+	'myhome-hours-ago' => '{{PLURAL:$1|godzinę|$1 godziny|$1 godzin}} temu',
+	'myhome-minutes-ago' => '{{PLURAL:$1|minutę|$1 minuty|$1 minut}} temu',
+	'myhome-seconds-ago' => 'minutę temu',
 	'myhome-log-in' => "<center>Funkcjonalność Twojej strony domowej dostępna jest wyłącznie gdy jesteś zalogowany.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Zaloguj się aby zobaczyć tę stronę!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Funkcjonalność WikiActivity dostępna jest wyłącznie jeśli używasz skórki Wikia.
 Jeśli chcesz widzieć swoją własną stronę startową zmień '''[[Special:Preferences|w preferencjach]]''' używaną skórkę.",
@@ -2998,6 +3108,10 @@ $messages['pms'] = array(
 	'myhome-user-contributions-empty' => "A peul anserisse an sta wiki-sì an sgnacand \"{{int:editthispage}}\" su qualsëssìa pàgina, e giontand lòn ch'a sa. Tuti a peulo fé 'd modìfiche, gionté dj'anformassion o corege dj'eror. 
 La wiki a l'é fàita da la comunità, e na vira ch'a sgnaca ël boton ëd modìfica, chiel a l'é part ëd la comunità. Ch'a fasa la preuva!",
 	'myhome-hot-spots-number-of-editors' => 'editor',
+	'myhome-days-ago' => '{{PLURAL:$1|un di|$1 di}} fà',
+	'myhome-hours-ago' => "{{PLURAL:$1|n'ora|$1 ore}} fà",
+	'myhome-minutes-ago' => '{{PLURAL:$1|na minuta|$1 minute}} fà',
+	'myhome-seconds-ago' => 'na minuta fà',
 	'myhome-log-in' => "<center>La funsion Mia Intrada a l'é disponìbil mach s'a l'é intrà ant ël sistema.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Ch'a intra ant ël sistema për vëdde sta pàgina-sì!]'''</big></center>",
 	'myhome-switch-to-monaco' => "La funsion WikiActivity a l'é mach disponìbil s'a deuvra la pel Wikia. S'a vorèissa vardé Mia Intrada, për piasì ch'a vìsita ij '''[[Special:Preferences|sò Gust]]''' për cangé soa pel.",
 	'myhome-namespace-blog' => 'Scartari',
@@ -3064,6 +3178,10 @@ $messages['ps'] = array(
 	'myhome-feed-inserted-video-details' => '{{PLURAL:$1|ورگډه شوې ويډيو|ورگډې شوې ويډيوگانې}}',
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|ورگډه شوې وېشنيزه|ورگډې شوې وېشنيزې}}',
 	'myhome-hot-spots-number-of-editors' => 'سمونگران',
+	'myhome-days-ago' => '{{PLURAL:$1|يوه ورځ|$1 ورځې}} دمخه',
+	'myhome-hours-ago' => '{{PLURAL:$1|يو گړۍ|$1 گړۍ}} دمخه',
+	'myhome-minutes-ago' => '{{PLURAL:$1|يوه دقيقه|$1 دقيقې}} دمخه',
+	'myhome-seconds-ago' => 'يوه دقيقه دمخه',
 	'myhome-namespace-blog' => 'بلاگ',
 	'myhome-community-corner-header' => 'د ټولنې پيغام',
 	'myhome-community-corner-edit' => 'پيغام سمول',
@@ -3148,6 +3266,10 @@ Todos podem fazer alterações, adicionar informação ou corrigir um erro.
 Esta wiki é criada pela comunidade e, ao clicar o botão para editar, torna-se parte desta comunidade.
 Experimente!',
 	'myhome-hot-spots-number-of-editors' => 'editores',
+	'myhome-days-ago' => '{{PLURAL:$1|um dia|$1 dias}} atrás',
+	'myhome-hours-ago' => '{{PLURAL:$1|uma hora|$1 horas}} atrás',
+	'myhome-minutes-ago' => '{{PLURAL:$1|um minuto|$1 minutos}} atrás',
+	'myhome-seconds-ago' => 'um minuto atrás',
 	'myhome-log-in' => "<center>A funcionalidade A Minha Casa só fica disponível se estiver autenticado.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Autentique-se para ver esta página!]'''</big></center>",
 	'myhome-switch-to-monaco' => "A funcionalidade Atividade na Wiki só fica disponível se estiver a usar o tema da Wikia.
 Se quer ver A Minha Casa, visite '''[[Special:Preferences|as suas Preferências]]''' para mudar de tema, por favor.",
@@ -3302,6 +3424,10 @@ $messages['roa-tara'] = array(
 	'myhome-feed-inserted-video-details' => '{{PLURAL:$1|Video aggiunge|Video aggiunge}}',
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Categorije aggiunde|Categorije aggiunde}}',
 	'myhome-hot-spots-number-of-editors' => 'editure',
+	'myhome-days-ago' => "{{PLURAL:$1|'nu sciurne|$1 sciurne}} fà",
+	'myhome-hours-ago' => "{{PLURAL:$1|'n'ore|$1 ore}} fà",
+	'myhome-minutes-ago' => "{{PLURAL:$1|'nu minute|$1 minute}} fà",
+	'myhome-seconds-ago' => "'nu minute fà",
 	'myhome-namespace-blog' => 'Blog',
 	'oasis-myhome-community-corner-edit' => "cange 'u messagge &gt;",
 	'myhome-community-corner-edit' => "cange 'u messagge",
@@ -3366,6 +3492,10 @@ $messages['ru'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Добавлена категория|Добавлены категории}}',
 	'myhome-user-contributions-empty' => 'Вы можете принять участие в редактировании вики, если нажмёте ссылку «{{int:editthispage}}» на любой странице. Любой может делать изменения, добавлять информацию и исправлять ошибки. Вики создана сообществом участников, и вы станете частью этого сообщества, единожды нажав на ссылку редактирования. Попробуйте сами!',
 	'myhome-hot-spots-number-of-editors' => 'правки',
+	'myhome-seconds-ago' => '$1 {{PLURAL:$1|секунда|секунды|секунд}} назад',
+	'myhome-minutes-ago' => '$1 {{PLURAL:$1|минута|минуты|минут}} назад',
+	'myhome-hours-ago' => '$1 {{PLURAL:$1|час|часа|часов}} назад',
+	'myhome-days-ago' => '$1 {{PLURAL:$1|день|дня|дней}} назад',
 	'myhome-log-in' => "<center>Функционал «Личный кабинет» будет доступен, только если вы представитесь системе.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Для просмотра этой страницы необходимо представиться системе!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Страница вики-деятельности доступна только при использовании оболочки Викия.
 Если вы хотите увидеть личный кабинет, пожалуйста, посетите страницу '''[[Special:Preferences|личных настроек]]''' и измените оболочку.",
@@ -3490,6 +3620,9 @@ $messages['sr-ec'] = array(
 Викија се гради од стране заједнице. Чим кликнете на дугме за уређивање, постаћете део ње.
 Придружите нам се!',
 	'myhome-hot-spots-number-of-editors' => 'уређивачи',
+	'myhome-days-ago' => 'Пре {{PLURAL:$1|један дан|$1 дана|$1 дана}}',
+	'myhome-hours-ago' => 'Пре {{PLURAL:$1|сат времена|$1 сата|$1 сати}}',
+	'myhome-seconds-ago' => 'пре минут',
 	'myhome-log-in' => "<center>Мој Дом је доступан само пријављеним корисницима.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Пријавите се да бисте видели ову страницу!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Активност на викији је доступна само ако користите пресвлаку Викија.
 Ако желите да погледајте Мој Дом, посетите '''[[Special:Preferences|подешавања]]''' и промените пресвлаку.",
@@ -3579,6 +3712,10 @@ Alla kan göra ändringar, lägga till information eller rätta till ett misstag
 Wikin är byggd av gemenskapen, och när du klickar på knappen Redigera, är du en del av gemenskapen.
 Prova det!',
 	'myhome-hot-spots-number-of-editors' => 'redigerare',
+	'myhome-seconds-ago' => '$1 {{PLURAL:$1|sekund|sekunder}} sedan',
+	'myhome-minutes-ago' => '$1 {{PLURAL:$1|minut|minuter}} sedan',
+	'myhome-hours-ago' => '$1 {{PLURAL:$1|timme|timmar}} sedan',
+	'myhome-days-ago' => '$1 {{PLURAL:$1|dag|dagar}} sedan',
 	'myhome-log-in' => "<center>Funktionen 'Mitt hem' är bara tillgänglig om du är inloggad.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Vänligen logga in för att se denna sida!]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "Funktionen WikiAktivitet är bara tillgänglig om du använder Wikia-utseendet.
 Om du vill se Mitt hem, går du till '''[[Special:Preferences|dina Inställningar]]''' för att ändra din utseende.",
@@ -3681,6 +3818,10 @@ $messages['te'] = array(
 	'myhome-feed-new-article-comment-details' => 'వ్యాఖ్య',
 	'myhome-feed-move-details' => 'పేరు మార్చబడింది',
 	'myhome-feed-redirect-details' => 'దారిమార్పు',
+	'myhome-days-ago' => '{{PLURAL:$1|ఒక రోజు|$1 రోజుల}} క్రితం',
+	'myhome-hours-ago' => '{{PLURAL:$1|ఒక గంట|$1 గంటల}} క్రితం',
+	'myhome-minutes-ago' => '{{PLURAL:$1|ఒక నిమిషం|$1 నిమిషాల}} క్రితం',
+	'myhome-seconds-ago' => 'ఒక నిమిషం క్రితం',
 	'myhome-namespace-blog' => 'బ్లాగు',
 );
 
@@ -3748,6 +3889,10 @@ Maaaring gumawa ng mga pagbabago ang lahat ng mga tao, magdagdag ng kabatiran o 
 Binuo ng pamayanan ang wiki, at kapag pinindot ma ang pindutang pambago, bahagi ka na ng pamayanan.
 Subukan ito!',
 	'myhome-hot-spots-number-of-editors' => 'mga patnugot',
+	'myhome-days-ago' => '{{PLURAL:$1|isang araw|$1 mga araw}} na ang nakalipas',
+	'myhome-hours-ago' => '{{PLURAL:$1|isang horas|$1 mga oras}} na ang nakalilipas',
+	'myhome-minutes-ago' => '{{PLURAL:$1|isang minuto|$1 mga minuto}} na ang nakalipas',
+	'myhome-seconds-ago' => 'isang minuto na ang nakalipas',
 	'myhome-log-in' => "<center>Makukuha lamang ang kasangkapang-katangiang Tahanan Ko kung nakalagda ka.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Mangyaring lumagda upang makitang ang pahinang ito!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Makukuha lamang ang tampok na Gawain ng Wiki kung ginagamit mo ang pabalat na Wikia.
 Kung nais mong makita ang Tahanan Ko, mangyaring dumalaw sa '''[[Special:Preferences|mga Nais mo]]''' upang mabago ang pabalat mo.",
@@ -3932,6 +4077,7 @@ $messages['tt-cyrl'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Төркем өстәлгән|Төркемнәр өстәлгән}}',
 	'myhome-user-contributions-empty' => 'Сез теләсә кайсы биттәге «{{int:editthispage}}»  сылтамасына басып, бу викины төзәтүдә катнаша аласыз. Һәркем үзгәртү ясарга, мәгълүмат өстәргә һәм хаталар төзәтергә хокуклы. Вики катнашучылар җәмгыяте тарафыннан ясалган, һәм сез, әгәр үзгәртү сылтамасына бассагыз, бу җәмгыятьнең бер әгъзасы булачаксыз. Эшләп карагыз әле!',
 	'myhome-hot-spots-number-of-editors' => 'үзгәртүләр',
+	'myhome-minutes-ago' => '{{PLURAL:$1|$1 минут|$1 минут|$1 минут}} элек',
 	'myhome-log-in' => "<center>Шәхси кабинет функционалы сез системага кергәч кенә мөмкин булачак. <br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Бу битне ачыр өчен, системага керергә кирәк!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Вики-эшчәнлек сәхифәсе Викия тышлыгын кулланганда гына мөмкин булачак. 
 Әгәр шәхси кабинетыгызны күресегез килсә, '''[[Special:Preferences|шәхси көйләнмәләр]]''' битенә керегез һәм тышлыкны төзәтегез.",
@@ -4068,6 +4214,10 @@ $messages['uk'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Додано категорію|Додані категорії}}',
 	'myhome-user-contributions-empty' => 'Ви можете взяти участь у редагуванні вікі, якщо натиснете посилання „{{int:editthispage}}“ на будь-якій сторінці. Будь-хто може робити зміни, додавати інформацію і виправляти помилки. Вікі створена спільнотою учасників, і ви станете частиною цієї спільноти, одного разу натиснувши на посилання редагування. Спробуйте самі!',
 	'myhome-hot-spots-number-of-editors' => 'редактори',
+	'myhome-days-ago' => '{{PLURAL:$1|день|$1 дні|$1 днів}} тому',
+	'myhome-hours-ago' => '{{PLURAL:$1|годину|$1 години|$1 годин}} тому',
+	'myhome-minutes-ago' => '{{PLURAL:$1|хвилину|$1 хвилини|$1 хвилин}} тому',
+	'myhome-seconds-ago' => 'хвилину тому',
 	'myhome-log-in' => "<center>Можливості \"Моєї домашньої сторінки\" доступні тільки після входу в систему.<br /><br /><big>'''[{{fullurl:Special:Signup|\$1}} Будь ласка, увійдіть, щоб побачити цю сторінку!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Сторінка вікі-діяльності доступна тільки при використанні оболонки Вікія.
 Якщо ви хочете побачити особистий кабінет, будь ласка, відвідайте сторінку '''[[Special:Preferences|ваших налаштувань]]''' і змініть оболонку.",
@@ -4158,6 +4308,10 @@ Mọi người đều có thể tạo ra sửa đổi, thêm thông tin và ch�
 Wiki được xây dựng bởi cộng đồng, và chỉ với một lần nhấp vào nút sửa đổi, bạn đã trở thành một phần của cộng đồng này.
 Hãy thử xem!',
 	'myhome-hot-spots-number-of-editors' => 'biên tập viên',
+	'myhome-days-ago' => '{{PLURAL:$1|một ngày|$1 ngày}} trước',
+	'myhome-hours-ago' => '{{PLURAL:$1|một giờ|$1 giờ}} trước',
+	'myhome-minutes-ago' => '{{PLURAL:$1|một phút|$1 phút}} trước',
+	'myhome-seconds-ago' => 'một phút trước',
 	'myhome-log-in' => "<center>Tính năng My Home là chỉ khả dụng nếu bạn đang đăng nhập.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Xin vui lòng đăng nhập để xem trang này!]'' '</big></center>",
 	'myhome-switch-to-monaco' => "Tính năng WikiActivity là chỉ khả dụng nếu bạn đang sử dụng giao diện Wikia.
 Nếu bạn muốn xem My Home, vui lòng truy cập '''[[Special:Preferences|tùy chọn của bạn]]'' ' để thay đổi giao diện của bạn.",
@@ -4258,6 +4412,10 @@ $messages['zh-hans'] = array(
 维基是由社团建立的，一旦您点击“编辑”按钮，您也是社团的一部分。
 试试吧！',
 	'myhome-hot-spots-number-of-editors' => '编辑者',
+	'myhome-days-ago' => '{{PLURAL:$1|1天|$1天}}前',
+	'myhome-hours-ago' => '{{PLURAL:$1|1个小时|$1个小时}}前',
+	'myhome-minutes-ago' => '{{PLURAL:$1|1分钟|$1分钟}}前',
+	'myhome-seconds-ago' => '1分钟前',
 	'myhome-log-in' => "<center>“我的主页”功能仅在您登录后可用。<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} 请登录后查看本页！]'''</big></center>",
 	'myhome-switch-to-monaco' => "“维基活动”功能仅在使用 Wikia 皮肤时可用。
 如果想看“我的主页”，请访问'''[[Special:Preferences|您的首选项]]'''改变皮肤。",
@@ -4349,6 +4507,10 @@ $messages['zh-hant'] = array(
 此 Wiki 是由社群所建立，當您點選編輯按鈕，您即成為社群的一員。
 嘗試看看！',
 	'myhome-hot-spots-number-of-editors' => '編輯者',
+	'myhome-days-ago' => '{{PLURAL:$1|1天|$1天}}前',
+	'myhome-hours-ago' => '{{PLURAL:$1|1小時|$1小時}}前',
+	'myhome-minutes-ago' => '{{PLURAL:$1|1分鐘|$1分鐘}}前',
+	'myhome-seconds-ago' => '1分鐘前',
 	'myhome-log-in' => "<center>我的首頁功能只有在登入後才可使用。<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} 請登入後查看本頁！]'''</big></center>",
 	'myhome-switch-to-monaco' => "WikiActivity 功能只在您使用 Wikia 外觀時可使用。
 若您希望看到我的首頁，請至 '''[[Special:Preferences|您的偏好設定]]''' 更改您所使用的外觀。",
