@@ -15,7 +15,6 @@ class ActivityFeedAPIProxy implements iAPIProxy {
 	}
 
 	public function get($limit, $start = null) {
-		wfProfileIn(__METHOD__);
 		if(!empty($start)) {
 			$this->APIparams['rcstart'] = $start;
 		} else {
@@ -36,7 +35,6 @@ class ActivityFeedAPIProxy implements iAPIProxy {
 			$out['query-continue'] = $res['query-continue']['recentchanges']['rcstart'];
 		}
 
-		wfProfileOut(__METHOD__);
 		return $out;
 	}
 
