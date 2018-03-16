@@ -56,8 +56,6 @@ class FeedRenderer {
 	 * @return string
 	 */
 	public function render( $data, $wrap = true, $parameters = array() ) {
-		wfProfileIn(__METHOD__);
-
 		$template = 'feed';
 		if ( isset($parameters['flags']) && in_array('shortlist', $parameters['flags']) ) {
 			$template = 'feed.simple';
@@ -98,7 +96,6 @@ class FeedRenderer {
 			$content = $this->wrap($content, $showMore);
 
 		}
-		wfProfileOut(__METHOD__);
 
 		return $content;
 	}
@@ -155,8 +152,6 @@ class FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function getActionLabel( $row ) {
-		wfProfileIn(__METHOD__);
-
 		switch ( $row['type'] ) {
 			case 'new':
 				$ns = $row['ns'];
@@ -193,8 +188,6 @@ class FeedRenderer {
 
 		$res = wfMessage("myhome-feed-{$msgType}-by", self::getUserPageLink($row))->text()  . ' ';
 
-		wfProfileOut(__METHOD__);
-
 		return $res;
 	}
 
@@ -207,7 +200,42 @@ class FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function formatTimestamp( $stamp ) {
-		return wfTimeFormatAgo($stamp);
+		global $wgLang;
+
+		$ago = time() - strtotime($stamp) + 1;
+-
+		if ($ago < 60) {
+			// Under 1 min: to the second (ex: 30 seconds ago)
+			$res = wfMessage('myhome-seconds-ago', $ago)->text();
+		}
+		else if ($ago < 3600) {
+			// Under 1 hr: to the minute (3 minutes ago)
+			$res = wfMessage('myhome-minutes-ago', floor($ago / 60))->text();
+		}
+		else if ($ago < 86400) {
+			// Under 24 hrs: to the hour (4 hours ago)
+			$res = wfMessage('myhome-hours-ago', floor($ago / 3600))->text();
+		}
+		else if ($ago < 30 * 86400) {
+			// Under 30 days: to the day (5 days ago)
+			$res = wfMessage('myhome-days-ago', floor($ago / 86400))->text();
+		}
+		else if ($ago < 365 * 86400) {
+			// Under 365 days: date, with no year (July 26)
+			$pref = $wgLang->dateFormat(true);
+			if($pref == 'default' || !isset($wgLang->dateFormats["$pref date"])) {
+				$pref = $wgLang->defaultDateFormat;
+			}
+			//remove year from user's date format
+			$format = trim($wgLang->dateFormats["$pref date"], ' ,yY');
+			$res = $wgLang->sprintfDate($format, wfTimestamp(TS_MW, $stamp));
+		}
+		else {
+			// Over 365 days: date, with a year (July 26, 2008)
+			$res = $wgLang->date(wfTimestamp(TS_MW, $stamp));
+		}
+
+		return $res;
 	}
 
 	/**
@@ -220,8 +248,6 @@ class FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function formatIntro( $intro ) {
-		wfProfileIn(__METHOD__);
-
 		// remove newlines
 		$intro = str_replace("\n", ' ', $intro);
 
@@ -233,8 +259,6 @@ class FeedRenderer {
 				$intro = substr($intro, 0, $last_space) . wfMessage('ellipsis')->text();
 			}
 		}
-
-		wfProfileOut(__METHOD__);
 
 		return $intro;
 	}
@@ -251,8 +275,6 @@ class FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function formatDetailsRow( $type, $content, $encodeContent = true, $count = false ) {
-		wfProfileIn(__METHOD__);
-
 		if ( is_numeric($count) ) {
 			$msg = wfMessage("myhome-feed-{$type}-details", $count)->text();
 		} else {
@@ -271,8 +293,6 @@ class FeedRenderer {
 
 		// indent
 		$html = "\n\t\t\t{$html}";
-
-		wfProfileOut(__METHOD__);
 
 		return $html;
 	}
@@ -403,8 +423,6 @@ class FeedRenderer {
 			return false;
 		}
 
-		wfProfileIn(__METHOD__);
-
 		$type = false;
 
 		switch ( $row['type'] ) {
@@ -484,8 +502,6 @@ class FeedRenderer {
 				break;
 		}
 
-		wfProfileOut(__METHOD__);
-
 		return $type;
 	}
 
@@ -503,8 +519,6 @@ class FeedRenderer {
 		if ( $type === false ) {
 			return '';
 		}
-
-		wfProfileIn(__METHOD__);
 
 		switch ( $type ) {
 		 	case self::FEED_SUN_ICON:
@@ -547,8 +561,6 @@ class FeedRenderer {
 		$alt = wfMessage("myhome-feed-{$msg}")->text();
 		$ret = Xml::expandAttributes( array('alt' => $alt, 'title' => $alt) );
 
-		wfProfileOut(__METHOD__);
-
 		return $ret;
 	}
 
@@ -578,8 +590,6 @@ class FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function getDetails( $row ) {
-		wfProfileIn(__METHOD__);
-
 		$html = '';
 		//
 		// let's show everything we have :)
@@ -651,8 +661,6 @@ class FeedRenderer {
 		// added video)s)
 		$html .= self::getAddedMediaRow($row, 'videos');
 
-		wfProfileOut(__METHOD__);
-
 		return $html;
 	}
 
@@ -673,8 +681,6 @@ class FeedRenderer {
 		if ( empty($row[$key]) ) {
 			return '';
 		}
-
-		wfProfileIn(__METHOD__);
 
 		$thumbs = array();
 		$namespace = NS_FILE;
@@ -732,8 +738,6 @@ class FeedRenderer {
 
 		// wrap them
 		$html = self::formatDetailsRow('inserted-'.($type == 'images' ? 'image' : 'video'), $html, false, count($thumbs));
-
-		wfProfileOut(__METHOD__);
 
 		return $html;
 	}

@@ -12,6 +12,17 @@ class ActivityFeedRenderer extends FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function formatTimestamp($stamp) {
-		return wfTimeFormatAgoOnlyRecent($stamp);
+		global $wgContLang;
+
+		$ago = time() - strtotime($stamp) + 1;
+
+		if ($ago < 7 * 86400 ) {
+			$res = parent::formatTimestamp($stamp);
+		}
+		else {
+			$res = '';
+		}
+
+		return $res;
 	}
 }

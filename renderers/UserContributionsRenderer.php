@@ -7,8 +7,6 @@ class UserContributionsRenderer extends FeedRenderer {
 	}
 
 	public function render($data, $wrap = true) {
-		wfProfileIn(__METHOD__);
-
 		$this->template->set('data', $data);
 
 		// render feed
@@ -19,8 +17,6 @@ class UserContributionsRenderer extends FeedRenderer {
 			$content = $this->wrap($content, false);
 		}
 
-		wfProfileOut(__METHOD__);
-
 		return $content;
 	}
 
@@ -30,22 +26,17 @@ class UserContributionsRenderer extends FeedRenderer {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function getIconType($item) {
-		wfProfileIn(__METHOD__);
-
 		$type = false;
 
 		if (MWNamespace::isTalk($item['namespace'])) {
-			wfProfileOut(__METHOD__);
 			return self::FEED_TALK_ICON;
 		}
 
 		if (defined('NS_BLOG_ARTICLE_TALK') && $item['namespace'] == NS_BLOG_ARTICLE_TALK) {
-			wfProfileOut(__METHOD__);
 			return self::FEED_COMMENT_ICON;
 		}
 		//video namespace
 		if ($item['namespace'] == 400) {
-			wfProfileOut(__METHOD__);
 			return self::FEED_FILM_ICON;
 		}
 
@@ -56,8 +47,6 @@ class UserContributionsRenderer extends FeedRenderer {
 			default:
 				$type = $item['new'] == '1' ? self::FEED_SUN_ICON : self::FEED_PENCIL_ICON;
 		}
-
-		wfProfileOut(__METHOD__);
 
 		return $type;
 	}

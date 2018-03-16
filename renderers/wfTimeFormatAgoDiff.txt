@@ -27,8 +27,6 @@ extensions/wikia/MyHome/renderers/ActivityFeedRenderer.php
 -			$res = '';
 -		}
 -
--		wfProfileOut(__METHOD__);
--
 -		return $res;
 +		return wfTimeFormatAgoOnlyRecent($stamp);
  	}
@@ -74,8 +72,6 @@ extensions/wikia/MyHome/renderers/FeedRenderer.php
 -			// Over 365 days: date, with a year (July 26, 2008)
 -			$res = $wgLang->date(wfTimestamp(TS_MW, $stamp));
 -		}
--
--		wfProfileOut(__METHOD__);
 -
 -		return $res;
 +		return wfTimeFormatAgo($stamp);
