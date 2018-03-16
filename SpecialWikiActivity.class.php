@@ -19,13 +19,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$wgEditPageFrameOptions = "SAMEORIGIN";
 		$this->setHeaders();
 
-		// not available for skins different than Oasis
-		if (!F::app()->checkSkin('oasis')) {
-			$wgOut->addWikiMsg( 'myhome-switch-to-monaco' );
-			wfProfileOut(__METHOD__);
-			return;
-		}
-
 		// choose default view (RT #68074)
 		if ($wgUser->isLoggedIn()) {
 			$this->defaultView = MyHome::getDefaultView();
