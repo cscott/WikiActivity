@@ -1,0 +1,122 @@
+extensions/wikia/MyHome/MyHome.i18n.php
+@@ -54,11 +54,6 @@
+  	'myhome-hot-spots-number-of-editors' => 'editors',
+ 
+-	'myhome-seconds-ago' => '$1 {{PLURAL:$1|second|seconds}} ago',
+-	'myhome-minutes-ago' => '$1 {{PLURAL:$1|minute|minutes}} ago',
+-	'myhome-hours-ago' => '$1 {{PLURAL:$1|hour|hours}} ago',
+-	'myhome-days-ago' => '$1 {{PLURAL:$1|day|days}} ago',
+-
+ 	'myhome-log-in' => "<center>The My Home feature is only available if you're logged in.<br><br><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|$1}} Please log in to see this page!]</span>'''</big></center>",
+ 	'myhome-switch-to-monaco' => "The My Home feature is only available if you're using the Monaco skin. If you'd like to see My Home, please visit '''[[Special:Preferences|your Preferences]]''' to change your skin.",
+ 
+extensions/wikia/MyHome/renderers/ActivityFeedRenderer.php
+@@ -12,20 +12,6 @@ public function __construct() {
+ * @author Maciej Brencz <macbre@wikia-inc.com>
+ 	 */
+ 	public static function formatTimestamp($stamp) {
+-		wfProfileIn(__METHOD__);
+-		global $wgContLang;
+-
+-		$ago = time() - strtotime($stamp) + 1;
+-
+-		if ($ago < 7 * 86400 ) {
+-			$res = parent::formatTimestamp($stamp);
+-		}
+-		else {
+-			$res = '';
+-		}
+-
+-		wfProfileOut(__METHOD__);
+-
+-		return $res;
++		return wfTimeFormatAgoOnlyRecent($stamp);
+ 	}
+ }
+
+extensions/wikia/MyHome/renderers/FeedRenderer.php
+@@ -189,45 +189,7 @@ public static function getActionLabel($row) {
+ * @author Maciej Brencz <macbre@wikia-inc.com>
+ 	 */
+ 	public static function formatTimestamp($stamp) {
+-		wfProfileIn(__METHOD__);
+-		global $wgLang;
+-
+-		$ago = time() - strtotime($stamp) + 1;
+-
+-		if ($ago < 60) {
+-			// Under 1 min: to the second (ex: 30 seconds ago)
+-			$res = wfMsgExt('myhome-seconds-ago', array('parsemag'), $ago);
+-		}
+-		else if ($ago < 3600) {
+-			// Under 1 hr: to the minute (3 minutes ago)
+-			$res = wfMsgExt('myhome-minutes-ago', array('parsemag'), floor($ago / 60));
+-		}
+-		else if ($ago < 86400) {
+-			// Under 24 hrs: to the hour (4 hours ago)
+-			$res = wfMsgExt('myhome-hours-ago', array('parsemag'), floor($ago / 3600));
+-		}
+-		else if ($ago < 30 * 86400) {
+-			// Under 30 days: to the day (5 days ago)
+-			$res = wfMsgExt('myhome-days-ago', array('parsemag'), floor($ago / 86400));
+-		}
+-		else if ($ago < 365 * 86400) {
+-			// Under 365 days: date, with no year (July 26)
+-			$pref = $wgLang->dateFormat(true);
+-			if($pref == 'default' || !isset($wgLang->dateFormats["$pref date"])) {
+-				$pref = $wgLang->defaultDateFormat;
+-			}
+-			//remove year from user's date format
+-			$format = trim($wgLang->dateFormats["$pref date"], ' ,yY');
+-			$res = $wgLang->sprintfDate($format, wfTimestamp(TS_MW, $stamp));
+-		}
+-		else {
+-			// Over 365 days: date, with a year (July 26, 2008)
+-			$res = $wgLang->date(wfTimestamp(TS_MW, $stamp));
+-		}
+-
+-		wfProfileOut(__METHOD__);
+-
+-		return $res;
++		return wfTimeFormatAgo($stamp);
+ 	}
+ 
+ 	/*
+
+includes/wikia/GlobalFunctions.php
+@@ -845,19 +845,19 @@ function wfTimeFormatAgo($stamp){
+ 	if ($ago < 60) {
+ 		// Under 1 min: to the second (ex: 30 seconds ago)
+-		$res = wfMsgExt('myhome-seconds-ago', array('parsemag'), $ago);
++		$res = wfMsgExt('wikia-seconds-ago', array('parsemag'), $ago);
+ 	}
+ 	else if ($ago < 3600) {
+ 		// Under 1 hr: to the minute (3 minutes ago)
+-		$res = wfMsgExt('myhome-minutes-ago', array('parsemag'), floor($ago / 60));
++		$res = wfMsgExt('wikia-minutes-ago', array('parsemag'), floor($ago / 60));
+ 	}
+ 	else if ($ago < 86400) {
+ 		// Under 24 hrs: to the hour (4 hours ago)
+-		$res = wfMsgExt('myhome-hours-ago', array('parsemag'), floor($ago / 3600));
++		$res = wfMsgExt('wikia-hours-ago', array('parsemag'), floor($ago / 3600));
+ 	}
+ 	else if ($ago < 30 * 86400) {
+ 		// Under 30 days: to the day (5 days ago)
+-		$res = wfMsgExt('myhome-days-ago', array('parsemag'), floor($ago / 86400));
++		$res = wfMsgExt('wikia-days-ago', array('parsemag'), floor($ago / 86400));
+ 	}
+ 	else if ($ago < 365 * 86400) {
+ 		// Under 365 days: date, with no year (July 26)
+
+languages/messages/wikia/MessagesEn.php
+@@ -892,4 +892,10 @@
+ # Wikia.php
+ 'rcshowhidelogs' => '$1 logs',
+ 
++# Wikia timestamps
++'wikia-seconds-ago' => '$1 {{PLURAL:$1|second|seconds}} ago',
++'wikia-minutes-ago' => '$1 {{PLURAL:$1|minute|minutes}} ago',
++'wikia-hours-ago' => '$1 {{PLURAL:$1|hour|hours}} ago',
++'wikia-days-ago' => '$1 {{PLURAL:$1|day|days}} ago',
++
+ ));
