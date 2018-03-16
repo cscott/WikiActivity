@@ -1,6 +1,6 @@
 <?/*<div class="activityfeed reset clearfix">*/?>
 
-<h2 class="dark_text_2"><?= wfMsg("myhome-{$type}-feed") ?></h2>
+<h2 class="dark_text_2"><?= wfMessage("myhome-{$type}-feed")->text() ?></h2>
 
 <?php
 	echo $defaultSwitch;
@@ -13,7 +13,7 @@
 <?php
 	if (!empty($showMore)) {
 ?>
-	<div class="myhome-feed-more"><a id="myhome-<?= $type ?>-feed-more" onclick="MyHome.fetchMore(this)" rel="nofollow"><?= wfMsg('myhome-activity-more') ?></a></div>
+	<div class="myhome-feed-more"><a id="myhome-<?= $type ?>-feed-more" onclick="MyHome.fetchMore(this)" rel="nofollow"><?= wfMessage('myhome-activity-more')->text() ?></a></div>
 <?php
 	}
 ?>

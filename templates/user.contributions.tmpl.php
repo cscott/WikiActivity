@@ -18,5 +18,5 @@ if (count($data)) {
 	</ul>
 <?php
 } else {
-	echo wfMsgExt('myhome-user-contributions-empty', array('parse'));
+	echo wfMessage('myhome-user-contributions-empty')->parseAsBlock();
 }

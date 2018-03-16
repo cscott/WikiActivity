@@ -1,6 +1,6 @@
 <?php
 if(count($data) == 5) {
-	echo wfMsg('myhome-hot-spots-newest')
+	echo wfMessage('myhome-hot-spots-newest')->text()
 ?>
 <ul class="clearfix" style="margin-top: 5px;">
 <?php foreach($data as $item) { ?>
@@ -10,7 +10,7 @@ if(count($data) == 5) {
 <?php } ?>
 </ul>
 <?php } else if(count($data) == 2) {
-	echo '<p style="margin-bottom: 5px">'.wfMsgExt('myhome-hot-spots-definition','parsemag',$data['interval']).'</p>';
+	echo '<p style="margin-bottom: 5px">'.wfMessage('myhome-hot-spots-definition', $data['interval'])->text().'</p>';
 	$hotSpotSeverity = 1; //used to set background color heat level. 1 (hottest) - 5 (coolest).
 	$hotSpotLast = Array(); //used to compare the last rendered item to current.
 	$hotSpotFire = '';
@@ -29,7 +29,7 @@ if(count($data) == 5) {
 			<div class="myhome-hot-spots-fire">
 				<div class="hot-spot-severity-<?=$thisSeverity?>">
 					<big><?= $row['count'] ?></big>
-					<small><?= wfMsg('myhome-hot-spots-number-of-editors') ?></small>
+					<small><?= wfMessage('myhome-hot-spots-number-of-editors')->text() ?></small>
 				</div>
 			</div>
 

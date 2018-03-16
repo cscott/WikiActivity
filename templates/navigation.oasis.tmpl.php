@@ -15,7 +15,7 @@
 ?>
 	<p>
 		<input type="checkbox" id="wikiactivity-default-view-switch" data-type="<?= $type ?>" disabled="disabled">
-		<label for="wikiactivity-default-view-switch"><?= wfMsg('myhome-default-view-checkbox', wfMsg("myhome-{$type}-feed")) ?></label>
+		<label for="wikiactivity-default-view-switch"><?= wfMessage('myhome-default-view-checkbox', wfMessage("myhome-{$type}-feed")->text())->text() ?></label>
 	</p>
 <?php
 	}

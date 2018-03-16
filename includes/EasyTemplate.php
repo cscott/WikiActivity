@@ -148,9 +148,9 @@ class EasyTemplate {
 	}
 
 	/**
-	 * simple wrapper for wfMsg
+	 * simple wrapper for wfMessage
 	 */
 	public function msg( $message ) {
-		echo wfMsg( $message );
+		echo wfMessage( $message )->text();
 	}
 };

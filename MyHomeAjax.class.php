@@ -82,7 +82,7 @@ class MyHomeAjax {
 
 		// this method will perfrom extra check
 		if (MyHome::setDefaultView($defaultView)) {
-			return array('msg' => wfMsg('myhome-default-view-success'));
+			return array('msg' => wfMessage('myhome-default-view-success')->text());
 		}
 		else {
 			return array();

@@ -76,7 +76,7 @@ class FeedRenderer {
 
 		// handle message to be shown when given feed is empty
 		if ( empty($data['results']) ) {
-			$this->template->set('emptyMessage', wfMsgExt("myhome-{$this->type}-feed-empty", array( 'parse' )));
+			$this->template->set('emptyMessage', wfMessage("myhome-{$this->type}-feed-empty")->parseAsBlock());
 		}
 
 		$tagid = isset($parameters['tagid']) ? $parameters['tagid'] : 'myhome-activityfeed';
@@ -140,7 +140,7 @@ class FeedRenderer {
 		));
 		$html .= Xml::element('label', array(
 			'for' => 'myhome-feed-switch-default-checkbox'
-		), wfMsg('myhome-default-view-checkbox', wfMsg("myhome-{$this->type}-feed")));
+		), wfMessage('myhome-default-view-checkbox', wfMessage("myhome-{$this->type}-feed")->text())->text());
 		$html .= Xml::closeElement('div');
 
 		return $html;
@@ -191,7 +191,7 @@ class FeedRenderer {
 				}
 		}
 
-		$res = wfMsg("myhome-feed-{$msgType}-by", self::getUserPageLink($row))  . ' ';
+		$res = wfMessage("myhome-feed-{$msgType}-by", self::getUserPageLink($row))->text()  . ' ';
 
 		wfProfileOut(__METHOD__);
 
@@ -230,7 +230,7 @@ class FeedRenderer {
 			$last_space = strrpos($intro, ' ');
 
 			if ( $last_space > 0 ) {
-				$intro = substr($intro, 0, $last_space) . wfMsg('ellipsis');
+				$intro = substr($intro, 0, $last_space) . wfMessage('ellipsis')->text();
 			}
 		}
 
@@ -254,9 +254,9 @@ class FeedRenderer {
 		wfProfileIn(__METHOD__);
 
 		if ( is_numeric($count) ) {
-			$msg = wfMsgExt("myhome-feed-{$type}-details", array('parsemag'), $count);
+			$msg = wfMessage("myhome-feed-{$type}-details", $count)->text();
 		} else {
-			$msg = wfMsg("myhome-feed-{$type}-details");
+			$msg = wfMessage("myhome-feed-{$type}-details")->text();
 		}
 
 		$html = Xml::openElement('tr', array('data-type' => $type));
@@ -375,7 +375,7 @@ class FeedRenderer {
 		$html = Xml::openElement('a', array(
 			'class' => 'activityfeed-diff',
 			'href' => $row['diff'],
-			'title' => wfMsg('myhome-feed-diff-alt'),
+			'title' => wfMessage('myhome-feed-diff-alt')->text(),
 			'rel' => 'nofollow',
 		));
 		$html .= Xml::element('img', array(
@@ -544,7 +544,7 @@ class FeedRenderer {
 				break;
 		}
 
-		$alt = wfMsg("myhome-feed-{$msg}");
+		$alt = wfMessage("myhome-feed-{$msg}")->text();
 		$ret = Xml::expandAttributes( array('alt' => $alt, 'title' => $alt) );
 
 		wfProfileOut(__METHOD__);

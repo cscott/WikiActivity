@@ -51,8 +51,8 @@ class ActivityFeedHelper {
 					case 'exclude':	//only from tag
 						if (!empty($val)) {
 							$namespaces = explode(',', $val);
-							$blankNamespace = wfMsgForContent('blanknamespace');
-							$blankNamespace = wfEmptyMsg('blanknamespace', $blankNamespace) ? null : $wgContLang->lc($blankNamespace);
+							$blankNamespace = wfMessage( 'blanknamespace' )->inContentLanguage()->text();
+							$blankNamespace = wfMessage( 'blanknamespace' )->inContentLanguage()->isBlank() ? null : $wgContLang->lc($blankNamespace);
 							foreach ($namespaces as $namespace) {
 								$namespace = trim($namespace);
 								if (($namespaceIndex = $wgContLang->getNsIndex($namespace)) !== false && $namespaceIndex >= 0) {
