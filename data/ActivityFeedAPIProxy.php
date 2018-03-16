@@ -37,7 +37,7 @@ class ActivityFeedAPIProxy implements iAPIProxy {
 		}
 
 		// haleyjd: remove metadata keys from query results
-		ApiResult::stripMetadata($out);
+		$out = ApiResult::stripMetadata($out);
 		
 		return $out;
 	}
