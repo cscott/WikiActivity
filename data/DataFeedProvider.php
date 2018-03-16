@@ -481,7 +481,7 @@ class DataFeedProvider {
 			$userLink = false;
 
 			if ( $anon ) {
-				$userLink = Xml::element( 'a', [ 'href' => Skin::makeSpecialUrl( 'Contributions' ) . '/' . $username, 'rel' => 'nofollow' ], wfMsg( 'masthead-anonymous-user' ) );
+				$userLink = Xml::element( 'a', [ 'href' => Skin::makeSpecialUrl( 'Contributions' ) . '/' . $username, 'rel' => 'nofollow' ], wfMessage( 'masthead-anonymous-user' )->text() );
 			} else {
 				$ut = Title::newFromText( $username, NS_USER );
 				if ( !empty( $ut ) ) {

@@ -38,7 +38,7 @@ class UserContributionsProvider {
 			}
 
 			if (defined('NS_BLOG_ARTICLE_TALK') && $entry['ns'] == NS_BLOG_ARTICLE_TALK) {
-				$result[$i]['title'] = wfMsg('myhome-namespace-blog') . ':' . $result[$i]['title'];
+				$result[$i]['title'] = wfMessage('myhome-namespace-blog')->text() . ':' . $result[$i]['title'];
 			}
 
 			if ($entry['ns'] == NS_FILE) {
