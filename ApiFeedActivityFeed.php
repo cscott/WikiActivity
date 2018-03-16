@@ -32,6 +32,9 @@ class ApiFeedActivityFeed extends ApiBase {
 			$module->execute();
 			$data = $module->getResult()->getResultData();
 
+			// haleyjd: remove metadata keys from query results
+			$data = ApiResult::stripMetadata($data);
+
 			$feedItems = array();
 			foreach ((array)$data["query"]["activityfeed"] as $info) {
 				$feedItems[] = $this->createFeedItem($info);
