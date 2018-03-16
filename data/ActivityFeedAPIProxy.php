@@ -31,10 +31,14 @@ class ActivityFeedAPIProxy implements iAPIProxy {
 			$out['results'] = $res['query']['recentchanges'];
 		}
 
+		// FIXME: this is not how query continuation works any longer AFAIK
 		if(isset($res['query-continue'])) {
 			$out['query-continue'] = $res['query-continue']['recentchanges']['rcstart'];
 		}
 
+		// haleyjd: remove metadata keys from query results
+		ApiResult::stripMetadata($out);
+		
 		return $out;
 	}
 
