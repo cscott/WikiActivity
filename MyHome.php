@@ -24,6 +24,9 @@ $wgAutoloadClasses['WatchlistFeedRenderer'] = $dir.'renderers/WatchlistRenderer.
 $wgAutoloadClasses['HotSpotsRenderer'] = $dir.'renderers/HotSpotsRenderer.php';
 $wgAutoloadClasses['UserContributionsRenderer'] = $dir.'renderers/UserContributionsRenderer.php';
 
+// EasyTemplate
+$wgAutoloadClasses['EasyTemplate'] = $dir . 'includes/EasyTemplate.php';
+
 // hooks
 $wgHooks['RecentChange_beforeSave'][] = 'MyHome::storeInRecentChanges';
 $wgHooks['EditFilter'][] = 'MyHome::getSectionName';
