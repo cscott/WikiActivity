@@ -173,15 +173,16 @@ class MyHome {
 		//user must be logged in and have redirect enabled;
 		//this is not used for Corporate Sites where Wikia Visualization is enabled
 		if( $wgUser->isLoggedIn() && empty($wgEnableWikiaHomePageExt) ) {
-			$value = $wgUser->getGlobalPreference(UserPreferencesV2::LANDING_PAGE_PROP_NAME);
-			switch($value) {
-				case UserPreferencesV2::LANDING_PAGE_WIKI_ACTIVITY:
-					$title = SpecialPage::getTitleFor('WikiActivity');
-					break;
-				case UserPreferencesV2::LANDING_PAGE_RECENT_CHANGES:
-					$title = SpecialPage::getTitleFor('RecentChanges');
-					break;
-			}
+			// FIXME / TODO: implemented using wikia-specific stuff; make standard
+			#$value = $wgUser->getGlobalPreference(UserPreferencesV2::LANDING_PAGE_PROP_NAME);
+			#switch($value) {
+			#	case UserPreferencesV2::LANDING_PAGE_WIKI_ACTIVITY:
+			#		$title = SpecialPage::getTitleFor('WikiActivity');
+			#		break;
+			#	case UserPreferencesV2::LANDING_PAGE_RECENT_CHANGES:
+			#		$title = SpecialPage::getTitleFor('RecentChanges');
+			#		break;
+			#}
 		}
 
 		return true;
@@ -303,12 +304,13 @@ class MyHome {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function onGetPreferences($user, &$preferences) {
+		// FIXME / TODO: implemented using wikia-specific stuff; rewrite to use standard prefs?
 		//we've changed 'myhomedisableredirect' to 'userlandingpage' during work on fb#51756
-		$preferences[UserPreferencesV2::LANDING_PAGE_PROP_NAME] = array(
-			'type' => 'toggle',
-			'section' => 'misc/myhome',
-			'label-message' => 'tog-userlandingpage',
-		);
+		#$preferences[UserPreferencesV2::LANDING_PAGE_PROP_NAME] = array(
+		#	'type' => 'toggle',
+		#	'section' => 'misc/myhome',
+		#	'label-message' => 'tog-userlandingpage',
+		#);
 
 		return true;
 	}
@@ -325,11 +327,12 @@ class MyHome {
 		$values = array('activity', 'watchlist');
 
 		if (in_array($defaultView, $values)) {
-			$wgUser->setGlobalPreference('myhomedefaultview', $defaultView);
-			$wgUser->saveSettings();
+			// FIXME / TODO: implemented using wikia-specific stuff
+			#$wgUser->setGlobalPreference('myhomedefaultview', $defaultView);
+			#$wgUser->saveSettings();
 
-			$dbw = wfGetDB( DB_MASTER );
-			$dbw->commit(__METHOD__);
+			#$dbw = wfGetDB( DB_MASTER );
+			#$dbw->commit(__METHOD__);
 
 			return true;
 		}
@@ -343,7 +346,7 @@ class MyHome {
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
 	 */
 	public static function getDefaultView() {
-		// TODO: replace preference?
+		// FIXME / TODO: replace preference?
 		//global $wgUser;
 		//$defaultView = $wgUser->getGlobalPreference('myhomedefaultview');
 		$defaultView = null;
