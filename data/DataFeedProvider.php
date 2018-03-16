@@ -113,25 +113,26 @@ class DataFeedProvider {
 						$this->filterRedirect( $itemResult, $res, $title );
 					}
 				} else {
+					// FIXME / TODO: rc_params crap
 					/*
 					$res['rc_params'] = MyHome::unpackData( $res['rc_params'] );
 					if ( isset( $res['rc_params']['rollback'] ) ) {
 						$itemResult->setInvisibleRevisionId( $res['rc_params']['revId'] );
-					} else {
+					} else { */
 						$itemResult->setRevisionId( $res['revid'] );
 						$hidenewpages = !empty( $this->parameters['flags'] ) && in_array( 'hidenewpages', $this->parameters['flags'] );
 
+						// FIXME / TODO: rc_params crap
 						//do not show hidden categories (see RT#32015)
-						if ( isset( $res['rc_params']['categoryInserts'] ) ) {
+						/*if ( isset( $res['rc_params']['categoryInserts'] ) ) {
 							$res['rc_params']['categoryInserts'] = $this->filterHiddenCategories( $res['rc_params']['categoryInserts'] );
-						}
+						}*/
 						if ( $res['type'] == 'new' && !$hidenewpages ) {
 							$this->filterNew( $itemResult, $res, $title );
 						} elseif ( $res['type'] == 'edit' ) {
 							$this->filterEdit( $itemResult, $res, $title );
 						}
-					}
-					*/
+					/*}*/
 				}
 			}
 		}
