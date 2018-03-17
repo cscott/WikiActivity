@@ -158,7 +158,13 @@ class MyHome {
 	 * http://muppet.wikia.com -> http://muppet.wikia.com/wiki/Special:WikiActivity (happens for logged-in only)
 	 *
 	 * @author Maciej Brencz <macbre@wikia-inc.com>
+	 *
+	 * NOTE: it is not possible to do this with standard unpatched core MediaWiki, as the InitialQueriesMainPage
+	 * hook does not exist. If you want a bare URL to redirect to Special:WikiActivity as described above, you will
+	 * have to set that up through your web server configuration, such as via a 302 redirect in Apache's .htaccess
+	 * file. That doesn't allow for user preferences, of course.
 	 */
+	/*
 	public static function getInitialMainPage(Title &$title) {
 		global $wgUser, $wgTitle, $wgRequest, $wgEnableWikiaHomePageExt;
 
@@ -173,20 +179,20 @@ class MyHome {
 		//user must be logged in and have redirect enabled;
 		//this is not used for Corporate Sites where Wikia Visualization is enabled
 		if( $wgUser->isLoggedIn() && empty($wgEnableWikiaHomePageExt) ) {
-			// FIXME / TODO: implemented using wikia-specific stuff; make standard
-			#$value = $wgUser->getGlobalPreference(UserPreferencesV2::LANDING_PAGE_PROP_NAME);
-			#switch($value) {
-			#	case UserPreferencesV2::LANDING_PAGE_WIKI_ACTIVITY:
-			#		$title = SpecialPage::getTitleFor('WikiActivity');
-			#		break;
-			#	case UserPreferencesV2::LANDING_PAGE_RECENT_CHANGES:
-			#		$title = SpecialPage::getTitleFor('RecentChanges');
-			#		break;
-			#}
+			$value = $wgUser->getGlobalPreference(UserPreferencesV2::LANDING_PAGE_PROP_NAME);
+			switch($value) {
+				case UserPreferencesV2::LANDING_PAGE_WIKI_ACTIVITY:
+					$title = SpecialPage::getTitleFor('WikiActivity');
+					break;
+				case UserPreferencesV2::LANDING_PAGE_RECENT_CHANGES:
+					$title = SpecialPage::getTitleFor('RecentChanges');
+					break;
+			}
 		}
 
 		return true;
 	}
+	*/
 
 	/**
 	 * Store list of images, videos and categories added to an article

@@ -214,6 +214,7 @@ class DataFeedProvider {
 			$item['url'] = $title->getLocalURL();
 			$item['diff'] = $title->getLocalURL( 'diff=' . $res['revid'] . '&oldid=' . $res['old_revid'] );
 
+			// FIXME / TODO: rc_params
 			/*if ( isset( $res['rc_params']['sectionName'] ) ) {
 				$item['section'] = $res['rc_params']['sectionName'];
 				if ( isset( $res['rc_params']['summary'] ) ) {
@@ -292,6 +293,7 @@ class DataFeedProvider {
 		}
 
 		if ( count( $item ) > 1 ) {
+			// FIXME / TODO: rc_params
 			/*if ( isset( $res['rc_params']['intro'] ) ) {
 				$item['intro'] = $res['rc_params']['intro'];
 			}*/

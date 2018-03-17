@@ -16,6 +16,8 @@ $wgSpecialPageGroups['WikiActivity'] = 'changes';
 $wgExtensionMessagesFiles['WikiActivityAliases'] = "$dir/SpecialWikiActivity.alias.php";
 
 // hooks
-$wgHooks['InitialQueriesMainPage'][] = 'MyHome::getInitialMainPage';
+
+// NB: see notes in MyHome.class.php on why this is disabled.
+//$wgHooks['InitialQueriesMainPage'][] = 'MyHome::getInitialMainPage';
 $wgHooks['GetPreferences'][] = 'MyHome::onGetPreferences';
 $wgHooks['RevisionInsertComplete'][] = 'MyHome::onRevisionInsertComplete';
