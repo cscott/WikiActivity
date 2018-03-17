@@ -33,14 +33,6 @@ $wgAutoloadClasses['EasyTemplate'] = $dir . 'includes/EasyTemplate.php';
 #$wgHooks['EditFilter'][] = 'MyHome::getSectionName';
 #$wgHooks['LinksUpdateComplete'][] = 'MyHome::getInserts';
 
-// FIXME / TODO: dead code for achievements junk
-#$wgWikiaForceAIAFdebug = false;
-#if((!empty($wgEnableAchievementsInActivityFeed)) && (!empty($wgEnableAchievementsExt))){
-#	$wgHooks['AchievementEarned'][] = 'MyHome::attachAchievementToRc';
-#	$wgHooks['RecentChange_beforeSave'][] = 'MyHome::savingAnRc';
-#	$wgHooks['RecentChange_save'][] = 'MyHome::savedAnRc';
-#}
-
 // i18n
 $wgExtensionMessagesFiles['MyHome'] = $dir . 'MyHome.i18n.php';
 
