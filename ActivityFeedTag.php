@@ -16,8 +16,6 @@ function ActivityFeedTag_setup(Parser $parser) {
 }
 
 function ActivityFeedTag_render($content, $attributes, $parser, $frame) {
-	global $wgEnableAchievementsInActivityFeed, $wgEnableAchievementsExt;
-
 	if (!class_exists('ActivityFeedHelper')) {
 		return '';
 	}
@@ -36,10 +34,6 @@ function ActivityFeedTag_render($content, $attributes, $parser, $frame) {
 	$timestamp = wfTimestampNow();
 
 	$snippetsDependencies = array('/extensions/wikia/MyHome/ActivityFeedTag.js', '/extensions/wikia/MyHome/ActivityFeedTag.css');
-
-	if((!empty($wgEnableAchievementsInActivityFeed)) && (!empty($wgEnableAchievementsExt))){
-		array_push($snippetsDependencies, '/extensions/wikia/AchievementsII/css/achievements_sidebar.css');
-	}
 
 	$snippets = JSSnippets::addToStack(
 		$snippetsDependencies,
