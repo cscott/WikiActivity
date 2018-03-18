@@ -1,5 +1,13 @@
 <?php
 
+// haleyjd: use ResourceLoader to load JavaScript
+$wgResourceModules['ext.SpecialWikiActivity'] = array(
+	'position'      => 'bottom',
+	'scripts'       => 'WikiActivity.js',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'WikiActivity',
+);
+
 class SpecialWikiActivity extends UnlistedSpecialPage {
 	var $activeTab;
 	var $classWatchlist;
@@ -13,19 +21,20 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	}
 
 	function execute($par) {
-		global $wgOut, $wgUser, $wgBlankImgUrl, $wgEditPageFrameOptions;
+		// FIXME: wikia-specific global resource variable
+		global $wgBlankImgUrl;
+		$out  = $this->getOutput();
+		$user = $this->getUser();
 
-		$wgEditPageFrameOptions = "SAMEORIGIN";
 		$this->setHeaders();
 
 		// choose default view (RT #68074)
-		if ($wgUser->isLoggedIn()) {
+		if ($user->isLoggedIn()) {
 			$this->defaultView = MyHome::getDefaultView();
 			if ($par == '') {
 				$par = $this->defaultView;
 			}
-		}
-		else {
+		} else {
 			$this->defaultView = false;
 		}
 
@@ -34,31 +43,16 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 			$this->classWatchlist = "selected";
 
 			// not available for anons
-			if($wgUser->isAnon()) {
-					$wgOut->wrapWikiMsg( '<div id="myhome-log-in">$1</div>', array('myhome-log-in', wfGetReturntoParam()) );
-
-				// TODO: probably remove this entirely; wikia-specific for AJAX login
-				//oasis-activity-watchlist-login
-				// RT #23970
-/*
-				$wgOut->addInlineScript(<<<JS
-$(function() {
-	$('#myhome-log-in').find('a').click(function(ev) {
-		openLogin(ev);
-	});
-});
-JS
-				);
-*/
+			if($user->isAnon()) {
+				$out->wrapWikiMsg( '<div id="myhome-log-in">$1</div>', array('myhome-log-in', wfGetReturntoParam()) );
 				return;
-			}
-			else {
+			} else {
 				$this->feedSelected = 'watchlist';
 				$feedProxy = new WatchlistFeedAPIProxy();
 				$feedRenderer = new WatchlistFeedRenderer();
 			}
 		} else {
-		//for example: wiki-domain.com/wiki/Special:WikiActivity
+			//for example: wiki-domain.com/wiki/Special:WikiActivity
 			$this->feedSelected = 'activity';
 			$feedProxy = new ActivityFeedAPIProxy();
 			$feedRenderer = new ActivityFeedRenderer();
@@ -66,17 +60,19 @@ JS
 
 		$feedProvider = new DataFeedProvider($feedProxy);
 
-		global $wgJsMimeType, $wgExtensionsPath;
-		$wgOut->addScript("<script type=\"{$wgJsMimeType}\" src=\"{$wgExtensionsPath}/wikia/MyHome/WikiActivity.js\"></script>\n");
+		// haleyjd: use ResourceLoader
+		$out->addModules('ext.SpecialWikiActivity');
+		//global $wgJsMimeType, $wgExtensionsPath;
+		//$out->addScript("<script type=\"{$wgJsMimeType}\" src=\"{$wgExtensionsPath}/wikia/MyHome/WikiActivity.js\"></script>\n");
 		// TODO / FIXME: SASS-based style junk
-		//$wgOut->addExtensionStyle(AssetsManager::getInstance()->getSassCommonURL('extensions/wikia/MyHome/oasis.scss'));
+		//$out->addExtensionStyle(AssetsManager::getInstance()->getSassCommonURL('extensions/wikia/MyHome/oasis.scss'));
 
-		wfRunHooks( 'SpecialWikiActivityExecute', array( $wgOut, $wgUser ));
+		wfRunHooks( 'SpecialWikiActivityExecute', array( $out, $user ));
 
 		$data = $feedProvider->get(50);  // this breaks when set to 60...
 
 		// use message from MyHome as special page title
-		$wgOut->setPageTitle(wfMessage('wikiactivity')->text());
+		$out->setPageTitle(wfMessage('wikiactivity')->text());
 
 		$template = new EasyTemplate(dirname(__FILE__).'/templates');
 		$template->set('data', $data['results']);
@@ -95,13 +91,13 @@ JS
 			'wgBlankImgUrl' => $wgBlankImgUrl,
 		));
 
-		$wgOut->addHTML($template->render('activityfeed.oasis'));
+		$out->addHTML($template->render('activityfeed.oasis'));
 
 		// page header: replace subtitle with navigation
 		global $wgHooks;
 		$wgHooks['PageHeaderIndexAfterExecute'][] = array($this, 'addNavigation');
 
-		if ($wgUser->isAnon()) {
+		if ($user->isAnon()) {
 			// FIXME / TODO: Method is deprecated in 1.27; removed in 1.30
 			//$this->getOutput()->setSquidMaxage( 3600 ); // 1 hour
 			// FIXME/TODO: no such stuff
@@ -117,17 +113,17 @@ JS
 	 * @author macbre
 	 */
 	function addNavigation(&$moduleObject, &$params) {
-		global $wgUser;
+		$user = $this->getUser();
 
 		$template = new EasyTemplate(dirname(__FILE__).'/templates');
 
 		// RT #68074: show default view checkbox for logged-in users only
-		$showDefaultViewSwitch = $wgUser->isLoggedIn() && ($this->defaultView != $this->feedSelected);
+		$showDefaultViewSwitch = $user->isLoggedIn() && ($this->defaultView != $this->feedSelected);
 
 		$template->set_vars(array(
 			'classWatchlist' => $this->classWatchlist,
 			'defaultView' => $this->defaultView,
-			'loggedIn' => $wgUser->isLoggedIn(),
+			'loggedIn' => $user->isLoggedIn(),
 			'showDefaultViewSwitch' => $showDefaultViewSwitch,
 			'type' => $this->feedSelected,
 		));
