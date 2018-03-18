@@ -22,7 +22,10 @@ class WatchlistFeedAPIProxy implements iAPIProxy {
 
 		$api = new ApiMain(new FauxRequest($this->APIparams));
 		$api->execute();
-		$res = &$api->getResult()->getResultData();
+		$res = $api->getResult()->getResultData();
+
+		// haleyjd: strip metadata from query results
+		$res = ApiResult::stripMetadata($res);
 
 		$out = array();
 
