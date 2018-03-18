@@ -395,7 +395,7 @@ class FeedRenderer {
 			'rel' => 'nofollow',
 		));
 		$html .= Xml::element('img', array(
-			'src' => $wgExtensionsPath . '/wikia/MyHome/images/diff.png',
+			'src' => $wgExtensionsPath . '/WikiActivity/images/diff.png',
 			'width' => 16,
 			'height' => 16,
 			'alt' => 'diff',
