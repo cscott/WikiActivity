@@ -1,13 +1,5 @@
 <?php
 
-// haleyjd: use ResourceLoader to load JavaScript
-$wgResourceModules['ext.SpecialWikiActivity'] = array(
-	'position'      => 'bottom',
-	'scripts'       => 'WikiActivity.js',
-	'localBasePath' => '',
-	'remoteExtPath' => 'WikiActivity',
-);
-
 class SpecialWikiActivity extends UnlistedSpecialPage {
 	var $activeTab;
 	var $classWatchlist;

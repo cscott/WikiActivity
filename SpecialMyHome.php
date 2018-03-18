@@ -9,6 +9,14 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $dir = dirname(__FILE__) . '/';
 
+// haleyjd: use ResourceLoader to load JavaScript
+$wgResourceModules['ext.SpecialWikiActivity'] = array(
+	'position'      => 'bottom',
+	'scripts'       => 'WikiActivity.js',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'WikiActivity',
+);
+
 // Special:WikiActivity
 $wgAutoloadClasses['SpecialWikiActivity'] = $dir.'SpecialWikiActivity.class.php';
 $wgSpecialPages['WikiActivity'] = 'SpecialWikiActivity';
