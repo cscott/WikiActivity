@@ -6,7 +6,7 @@ if (count($data)) {
 	foreach($data as $row) {
 ?>
 		<li class="activity-type-<?= UserContributionsRenderer::getIconType($row) ?>">
-			<?php print FeedRenderer::getSprite( $row, $assets['blank'] ) ?>
+			<?php print FeedRenderer::getSprite( $row ) ?>
 			<a href="<?= htmlspecialchars($row['url']) ?>" class="title" rel="nofollow"><?= htmlspecialchars($row['title'])  ?></a>
 			<cite><?= FeedRenderer::formatTimestamp($row['timestamp']); ?></cite>
 			<?= FeedRenderer::getDiffLink($row) ?>

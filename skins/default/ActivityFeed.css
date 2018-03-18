@@ -1,0 +1,105 @@
+/*
+	Default styling for Special:WikiActivity
+*/
+
+#wikiactivity-main {
+	color: #3a3a3a;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+#wikiactivity-main a {
+	color: #0148c2;
+	text-decoration: none;
+}
+
+#wikiactivity-main a:hover {
+	text-decoration: underline;
+}
+
+#wikiactivity-main a.new, #wikiactivity-main a.new:visited {
+	color: #cc2200;
+}
+
+#wikiactivity-main img {
+	vertical-align: middle;
+}
+
+#wikiactivity-main .sprite {
+	background-color: transparent;
+	background-image: url(../../images/sprite.png);
+	background-repeat: no-repeat;
+}
+
+#wikiactivity-main ul.activityfeed {
+	margin-left: 0;
+}
+
+#wikiactivity-main .dark_text_2 {
+	color: #0148c2;
+}
+
+.activityfeed .autocomment {
+	color: gray;
+}
+
+.activityfeed img.sprite {
+	margin-left: -30px;
+	margin-right: 8px;
+}
+
+.activityfeed > li {
+	padding-bottom: 7px;
+	padding-top: 10px;
+	margin-bottom: 0;
+	padding-left: 30px;
+	list-style: none;
+}
+
+.activityfeed > li:not(:first-child) {
+	border-top: 1px solid #cccccc;
+}
+
+.activityfeed strong {
+	font-size: 14px;
+}
+
+.activityfeed cite {
+	font-size: 12px;
+}
+
+.activityfeed .subtle {
+	color: gray;
+}
+
+.activityfeed table td {
+	vertical-align: top;
+	text-align: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.activityfeed td.activityfeed-details-label {
+	white-space: nowrap;
+}
+
+.activityfeed table ul {
+	margin-left: 0;
+}
+
+.activityfeed .activityfeed-inserted-media {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-left: 8px !important;
+}
+
+.activityfeed .activityfeed-inserted-media li {
+	list-style: none;
+}
+
+.activity-feed-more {
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 20px;
+	text-align: center;
+}

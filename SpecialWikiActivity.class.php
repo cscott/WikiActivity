@@ -13,8 +13,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	}
 
 	function execute($par) {
-		// FIXME: wikia-specific global resource variable
-		global $wgBlankImgUrl;
 		$out  = $this->getOutput();
 		$user = $this->getUser();
 
@@ -80,7 +78,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$template->set_vars(array(
 			'showMore' => $showMore,
 			'type' => $this->feedSelected,
-			'wgBlankImgUrl' => $wgBlankImgUrl,
 		));
 
 		$out->addHTML($template->render('activityfeed.oasis'));

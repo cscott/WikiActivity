@@ -24,11 +24,7 @@ class FeedRenderer {
 
 		$this->template = new EasyTemplate(dirname(__FILE__) . '/../templates');
 
-		global $wgBlankImgUrl;
 		$this->template->set_vars(array(
-			'assets' => array(
-				'blank' => $wgBlankImgUrl,
-			),
 			'type' => $this->type,
 		));
 	}
@@ -572,6 +568,10 @@ class FeedRenderer {
 	 * @return string HTML for an appropriate sprite, based on $row.
 	 */
 	public static function getSprite( $row, $src = '' ) {
+		if ( $src === '' ) {
+			// haleyjd: use a blank image via data URI if $src is empty
+			$src = 'data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D';
+		}
 		$r = '';
 		$r .= '<img'.
 			' class="' . self::getIconType( $row ) . ' sprite"'.

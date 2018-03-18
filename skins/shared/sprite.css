@@ -1,0 +1,51 @@
+/*
+	Shared style for piclets in images/sprite.png
+*/
+
+.activityfeed .sprite.edit {
+	background-position: -16px -48px;
+	width: 19px;
+	height: 20px;
+}
+
+.activityfeed .sprite.new {
+	background-position: -24px -32px;
+	width: 22px;
+	height: 16px;
+}
+
+.activityfeed .sprite.move {
+	background-position: -48px -32px;
+	width: 22px;
+	height: 16px;
+}
+
+.activityfeed .sprite.categorization {
+	background-position: -72px -32px;
+	width: 22px;
+	height: 16px;
+}
+
+.activityfeed .sprite.talk {
+	background-position: -80px -48px;
+	width: 16px;
+	height: 20px;
+}
+
+.activityfeed .sprite.photo {
+	background-position: -96px -32px;
+	width: 26px;
+	height: 16px;
+}
+
+.activityfeed .sprite.video {
+	background-position: -128px -32px;
+	width: 21px;
+	height: 16px;
+}
+
+.activityfeed .sprite.delete {
+	background-position: -128px -48px;
+	width: 13px;
+	height: 16px;
+}

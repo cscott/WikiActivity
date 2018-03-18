@@ -11,7 +11,7 @@ if( isset( $emptyMessage ) ) {
  		$title = str_replace('/', '/&#8203;', htmlspecialchars( $row['title'] ));
 ?>
 		<li class="activity-type-<?php print FeedRenderer::getIconType( $row ) ?> activity-ns-<?php print $row['ns'] ?>">
-			<?php print FeedRenderer::getSprite( $row, $assets['blank'] ) ?>
+			<?php print FeedRenderer::getSprite( $row ) ?>
 <?php
 		if (isset($row['url'])) {
 ?>

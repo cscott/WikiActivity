@@ -4,7 +4,7 @@
 	<ul class="activityfeed reset" id="<?php print $tagid ?>">
 	<?php foreach($data as $row) { ?>
 		<li class="activity-type-<?php print FeedRenderer::getIconType($row) ?> activity-ns-<?php print $row['ns'] ?>">
-		<?php print FeedRenderer::getSprite( $row, $assets['blank'] )	?>
+		<?php print FeedRenderer::getSprite( $row )	?>
 		<?php if( isset( $row['url'] ) ) { ?>
 			<strong><a class="title" href="<?php print htmlspecialchars($row['url']) ?>"><?php print htmlspecialchars($row['title'])  ?></a></strong><br />
 		<?php } else { ?>

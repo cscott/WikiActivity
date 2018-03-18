@@ -9,10 +9,17 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $dir = dirname(__FILE__) . '/';
 
+// haleyjd: skinnable appearance
+$wgSpecialWikiActivitySkin = 'default';
+
 // haleyjd: use ResourceLoader to load JavaScript
 $wgResourceModules['ext.SpecialWikiActivity'] = array(
 	'position'      => 'bottom',
 	'scripts'       => 'WikiActivity.js',
+	'styles'        => array(
+		"skins/shared/sprite.css",
+		"skins/{$wgSpecialWikiActivitySkin}/ActivityFeed.css",
+	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'WikiActivity',
 );

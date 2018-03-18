@@ -10,7 +10,7 @@ if ( isset( $emptyMessage ) ) {
 	foreach( $data as $row ) {
 ?>
 		<li class="activity-type-<?php print FeedRenderer::getIconType($row) ?> activity-ns-<?php print $row['ns'] ?>">
-			<?php print FeedRenderer::getSprite( $row, $assets['blank'] ) ?>
+			<?php print FeedRenderer::getSprite( $row ) ?>
 <?php
 			if( isset( $row['url'] ) ) {
 ?>
