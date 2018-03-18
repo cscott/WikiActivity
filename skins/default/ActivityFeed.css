@@ -39,6 +39,18 @@
 	color: #0148c2;
 }
 
+#wikiactivity-main strong {
+	font-weight: bold;
+}
+
+#wikiactivity-main em {
+	font-style: italic;
+}
+
+.activityfeed em {
+	font-weight: bold;
+}
+
 .activityfeed .autocomment {
 	color: gray;
 }
