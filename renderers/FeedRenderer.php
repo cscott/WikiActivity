@@ -386,7 +386,7 @@ class FeedRenderer {
 			return '';
 		}
 
-		global $wgExtensionsPath;
+		global $wgExtensionAssetsPath;
 
 		$html = Xml::openElement('a', array(
 			'class' => 'activityfeed-diff',
@@ -395,7 +395,7 @@ class FeedRenderer {
 			'rel' => 'nofollow',
 		));
 		$html .= Xml::element('img', array(
-			'src' => $wgExtensionsPath . '/WikiActivity/images/diff.png',
+			'src' => $wgExtensionAssetsPath . '/WikiActivity/images/diff.png',
 			'width' => 16,
 			'height' => 16,
 			'alt' => 'diff',
