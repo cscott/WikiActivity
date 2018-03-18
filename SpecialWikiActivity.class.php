@@ -4,7 +4,7 @@
 $wgResourceModules['ext.SpecialWikiActivity'] = array(
 	'position'      => 'bottom',
 	'scripts'       => 'WikiActivity.js',
-	'localBasePath' => __DIR__,
+	'localBasePath' => '',
 	'remoteExtPath' => 'WikiActivity',
 );
 
@@ -25,9 +25,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		global $wgBlankImgUrl;
 		$out  = $this->getOutput();
 		$user = $this->getUser();
-
-		// haleyjd: use ResourceLoader
-		$out->addModules('ext.SpecialWikiActivity');
 
 		$this->setHeaders();
 
@@ -63,6 +60,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 
 		$feedProvider = new DataFeedProvider($feedProxy);
 
+		// haleyjd: use ResourceLoader
+		$out->addModules('ext.SpecialWikiActivity');
 		//global $wgJsMimeType, $wgExtensionsPath;
 		//$out->addScript("<script type=\"{$wgJsMimeType}\" src=\"{$wgExtensionsPath}/wikia/MyHome/WikiActivity.js\"></script>\n");
 		// TODO / FIXME: SASS-based style junk
