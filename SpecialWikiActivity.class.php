@@ -50,12 +50,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 
 		$feedProvider = new DataFeedProvider($feedProxy);
 
-		// haleyjd: use ResourceLoader
+		// haleyjd: use ResourceLoader for scripts and styles
 		$out->addModules('ext.SpecialWikiActivity');
-		//global $wgJsMimeType, $wgExtensionsPath;
-		//$out->addScript("<script type=\"{$wgJsMimeType}\" src=\"{$wgExtensionsPath}/wikia/MyHome/WikiActivity.js\"></script>\n");
-		// TODO / FIXME: SASS-based style junk
-		//$out->addExtensionStyle(AssetsManager::getInstance()->getSassCommonURL('extensions/wikia/MyHome/oasis.scss'));
 
 		wfRunHooks( 'SpecialWikiActivityExecute', array( $out, $user ));
 

@@ -5,9 +5,9 @@
 		<ul class="activityfeed reset" id="myhome-activityfeed">
 		<?php foreach($data as $row): ?>
 			<li class="activity-type-<?php print FeedRenderer::getIconType($row) ?> activity-ns-<?php print $row['ns'] ?>">
-			<?php print FeedRenderer::getSprite($row); ?>
-			<?php if( isset( $row['url'] ) ): ?>
-				<strong><a class="title" href="<?php print htmlspecialchars($row['url']) ?>"><?php print htmlspecialchars($row['title'])  ?></a></strong>
+			<?php print FeedRenderer::getSprite($row);
+					if( isset( $row['url'] ) ):
+			 ?><strong><a class="title" href="<?php print htmlspecialchars($row['url']) ?>"><?php print htmlspecialchars($row['title'])  ?></a></strong>
 				<?php if( !empty($row['wall-title']) ): ?>
 					<span class="wall-owner">
 						<?php echo $row['wall-msg']; ?>

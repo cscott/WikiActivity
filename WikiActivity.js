@@ -18,6 +18,7 @@ var WikiActivity = {
 	},
 
 	ajax: function(method, params, callback) {
+		// FIXME: action=ajax is deprecated
 		$.getJSON(wgScript + '?action=ajax&rs=MyHomeAjax&method=' + method, params, callback);
 	},
 

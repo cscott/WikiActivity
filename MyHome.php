@@ -43,6 +43,7 @@ if (!empty($wgEnableActivityFeedApiFeed)) {
 	$wgAPIModules["feedactivityfeed"] = "ApiFeedActivityFeed";
 }
 
+// FIXME: wgAjaxExportList is deprecated
 // Ajax dispatcher
 $wgAjaxExportList[] = 'MyHomeAjax';
 function MyHomeAjax() {
