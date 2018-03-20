@@ -13,6 +13,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	}
 
 	function execute($par) {
+		global $wgHooks;
+
 		$out  = $this->getOutput();
 		$user = $this->getUser();
 
@@ -51,8 +53,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$feedProvider = new DataFeedProvider($feedProxy);
 
 		// haleyjd: use ResourceLoader for scripts and styles
-		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
 		$out->addModules('ext.SpecialWikiActivity.ajax');
+		$wgHooks['BeforePageDisplay'][] = 'SpecialWikiActivity::onBeforePageDisplay';
 
 		wfRunHooks( 'SpecialWikiActivityExecute', array( $out, $user ));
 
@@ -80,7 +82,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$out->addHTML($template->render('activityfeed.oasis'));
 
 		// page header: replace subtitle with navigation
-		global $wgHooks;
 		$wgHooks['PageHeaderIndexAfterExecute'][] = array($this, 'addNavigation');
 
 		if ($user->isAnon()) {
@@ -91,6 +92,15 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 			#	MyHome::getWikiActivitySurrogateKey()
 			#);
 		}
+	}
+	
+	/**
+	 * Add module style sheets at the end of processing
+	 *
+	 * @author haleyjd
+	 */
+	public static function onBeforePageDisplay(OutputPage &$out, Skin &$skin) {
+		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
 	}
 
 	/**
