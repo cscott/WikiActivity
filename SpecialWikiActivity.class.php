@@ -101,6 +101,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	 */
 	public static function onBeforePageDisplay(OutputPage &$out, Skin &$skin) {
 		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
+		return true;
 	}
 
 	/**
