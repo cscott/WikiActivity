@@ -9,19 +9,25 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $dir = dirname(__FILE__) . '/';
 
+// haleyjd: use ResourceLoader to load JavaScript
+$wgResourceModules['ext.SpecialWikiActivity.ajax'] = array(
+	'position'      => 'bottom',
+	'scripts'       => 'WikiActivity.js',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'WikiActivity',
+);
+
 // haleyjd: skinnable appearance
 $wgSpecialWikiActivitySkin = 'default';
 
-// haleyjd: use ResourceLoader to load JavaScript
-$wgResourceModules['ext.SpecialWikiActivity'] = array(
-	'position'      => 'bottom',
-	'scripts'       => 'WikiActivity.js',
+$wgResourceModules['ext.SpecialWikiActivity.styles'] = array(
+	'position'      => 'top',
 	'styles'        => array(
 		"skins/shared/sprite.css",
 		"skins/{$wgSpecialWikiActivitySkin}/ActivityFeed.css",
 	),
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'WikiActivity',
+	'remoteExtPath' => 'WikiActivity'
 );
 
 // Special:WikiActivity

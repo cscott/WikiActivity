@@ -51,7 +51,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$feedProvider = new DataFeedProvider($feedProxy);
 
 		// haleyjd: use ResourceLoader for scripts and styles
-		$out->addModules('ext.SpecialWikiActivity');
+		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
+		$out->addModules('ext.SpecialWikiActivity.ajax');
 
 		wfRunHooks( 'SpecialWikiActivityExecute', array( $out, $user ));
 
