@@ -5,7 +5,7 @@ if ( isset( $emptyMessage ) ) {
 <?php
 } else {
 ?>
-	<ul class="activityfeed reset shortlist" id="<?php print $tagid ?>">
+	<ul class="activityfeed shortlist" id="<?php print $tagid ?>">
 <?php
 	foreach( $data as $row ) {
 ?>

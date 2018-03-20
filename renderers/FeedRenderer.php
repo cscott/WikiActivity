@@ -732,7 +732,7 @@ class FeedRenderer {
 		}
 
 		// render thumbs
-		$html = '<ul class="activityfeed-inserted-media reset">' . implode("\n", $thumbs) . '</ul>';
+		$html = '<ul class="activityfeed-inserted-media">' . implode("\n", $thumbs) . '</ul>';
 
 		// wrap them
 		$html = self::formatDetailsRow('inserted-'.($type == 'images' ? 'image' : 'video'), $html, false, count($thumbs));

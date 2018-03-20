@@ -1,7 +1,7 @@
 <?php
 if (count($data)) {
 ?>
-	<ul id="myhome-user-contributions" class="activityfeed reset">
+	<ul id="myhome-user-contributions" class="activityfeed">
 <?php
 	foreach($data as $row) {
 ?>

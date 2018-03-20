@@ -1,4 +1,4 @@
-<?/*<div class="activityfeed reset clearfix">*/?>
+<?/*<div class="activityfeed clearfix">*/?>
 
 <h2 class="dark_text_2"><?= wfMessage("myhome-{$type}-feed")->text() ?></h2>
 
