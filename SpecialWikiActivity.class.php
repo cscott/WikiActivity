@@ -109,8 +109,18 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	 */
 	function getReturnToParam() {
 		$request  = $this->getRequest();
-		$returnTo = $request->getText( 'returnto' );
-		return $returnTo;
+		$page = Title::newFromURL( $request->getVal( 'title', '' ) );
+		$page = $request->getVal( 'returnto', $page );
+		if ( strval( $page ) !== '' ) {
+			$a['returnto'] = $page;
+			$query = $request->getVal( 'returntoquery', '' );
+			if( $query != '' ) {
+				$a['returntoquery'] = $query;
+			}
+		}
+		$returnto = wfArrayToCGI( $a );
+
+		return $returnto;
 	}
 
 	/**
