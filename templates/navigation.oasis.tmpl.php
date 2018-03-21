@@ -2,9 +2,9 @@
 	<ul>
 		<?php if ( $loggedIn ) {
 			if ( $type == 'watchlist' ){
-				?><li class="watchlist"><?= FeedRenderer::getSpecialPageLink('WikiActivity/activity', true, 'myhome-activity-feed') ?></li><?
+				?><li class="watchlist"><?= FeedRenderer::getSpecialPageLink('WikiActivity', 'activity', 'myhome-activity-feed') ?></li><?php
 			} else {
-				?><li class="watchlist"><?= FeedRenderer::getSpecialPageLink('WikiActivity/watchlist', true, 'oasis-button-wiki-activity-watchlist') ?></li><?
+				?><li class="watchlist"><?= FeedRenderer::getSpecialPageLink('WikiActivity', 'watchlist', 'oasis-button-wiki-activity-watchlist') ?></li><?php
 			}
 		} ?>
 		<li><?= FeedRenderer::getSpecialPageLink('RecentChanges', false, 'oasis-button-wiki-activity-feed') ?></li>

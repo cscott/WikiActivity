@@ -105,7 +105,7 @@ For example, you could:
 
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|one message|$1 messages}}',
 	'oasis-button-wiki-activity-feed' => 'See all activity &gt;',
-	'oasis-button-wiki-activity-watchlist' => ' Followed Pages only',
+	'oasis-button-wiki-activity-watchlist' => 'Followed Pages only',
 );
 
 /** Message documentation (Message documentation)
@@ -1165,7 +1165,7 @@ Si eres el fundador o un administrador de este wiki, puedes cambiar este mensaje
 	'activityfeed' => 'Lista de actividad',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|un mensaje|$1 mensajes}}',
 	'oasis-button-wiki-activity-feed' => 'Ver toda la actividad &gt;',
-	'oasis-button-wiki-activity-watchlist' => ' Solo páginas seguidas',
+	'oasis-button-wiki-activity-watchlist' => 'Solo páginas seguidas',
 );
 
 /** Estonian (eesti)
@@ -2194,7 +2194,7 @@ $messages['ja'] = array(
 	'activityfeed' => 'アクティビティフィード',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|$1件のメッセージ}}',
 	'oasis-button-wiki-activity-feed' => 'すべてのアクティビティを見る ＞',
-	'oasis-button-wiki-activity-watchlist' => ' フォロー中のページのみ',
+	'oasis-button-wiki-activity-watchlist' => 'フォロー中のページのみ',
 );
 
 /** Georgian (ქართული)
@@ -2319,7 +2319,7 @@ $messages['ko'] = array(
 	'myhome-default-view-checkbox' => '$1을 기본으로 보기',
 	'myhome-default-view-success' => '설정이 변경되었습니다.',
 	'oasis-button-wiki-activity-feed' => '모든 활동 내역 보기 &gt;',
-	'oasis-button-wiki-activity-watchlist' => ' 주시한 문서만 보기',
+	'oasis-button-wiki-activity-watchlist' => '주시한 문서만 보기',
 );
 
 /** Colognian (Ripoarisch)
@@ -3569,7 +3569,7 @@ $messages['ru'] = array(
 	'activityfeed' => 'Лента действий',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|одно сообщение|$1 сообщений}}',
 	'oasis-button-wiki-activity-feed' => 'Смотреть все правки &gt;',
-	'oasis-button-wiki-activity-watchlist' => ' Только отслеживаемые страницы',
+	'oasis-button-wiki-activity-watchlist' => 'Только отслеживаемые страницы',
 );
 
 /** Rusyn (русиньскый)
@@ -4398,7 +4398,7 @@ Ví dụ, bạn có thể:
 	'activityfeed' => 'Hoạt động nguồn cấp dữ liệu',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|Một thông điệp|$1 thông điệp}}',
 	'oasis-button-wiki-activity-feed' => 'Xem tất cả các hoạt động &gt;',
-	'oasis-button-wiki-activity-watchlist' => ' Chỉ những trang theo dõi',
+	'oasis-button-wiki-activity-watchlist' => 'Chỉ những trang theo dõi',
 );
 
 /** Chinese (中文)
@@ -4504,7 +4504,7 @@ $messages['zh-hans'] = array(
 	'activityfeed' => '活动供稿',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|一条信息|$1条信息}}',
 	'oasis-button-wiki-activity-feed' => '查看所有活动 &gt;',
-	'oasis-button-wiki-activity-watchlist' => ' 仅显示关注页面',
+	'oasis-button-wiki-activity-watchlist' => '仅显示关注页面',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
