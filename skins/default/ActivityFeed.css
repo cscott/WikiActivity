@@ -47,6 +47,15 @@
 	font-style: italic;
 }
 
+.activity-nav ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+.activity-nav input {
+	margin-left: 0;
+}
+
 .activityfeed em {
 	font-weight: bold;
 }
