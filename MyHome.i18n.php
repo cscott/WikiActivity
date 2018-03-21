@@ -104,6 +104,8 @@ For example, you could:
 	'activityfeed' => 'Activity feed',
 
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|one message|$1 messages}}',
+	'oasis-button-wiki-activity-feed' => 'See all activity &gt;',
+	'oasis-button-wiki-activity-watchlist' => ' Followed Pages only',
 );
 
 /** Message documentation (Message documentation)
@@ -567,6 +569,8 @@ Ma'z oc'h diazezer ar wiki-mañ pe unan eus merourien anezhañ e c'hallit kemma�
 	'tooltip-pt-myhome' => "Mont d'am Degemer",
 	'activityfeed' => 'Gwazh obererezh',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|ur gemennadenn|$1 kemennadenn}}',
+	'oasis-button-wiki-activity-feed' => 'Gwelet an oberiantiz klok &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Pajennoù heuliet hepken &gt;',
 );
 
 /** Catalan (català)
@@ -657,6 +661,8 @@ Per exemple, pots:
 	'tooltip-pt-myhome' => 'Anar a la meva pàgina',
 	'activityfeed' => "Llista d'activitat",
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|un missatge|$1 missatges}}',
+	'oasis-button-wiki-activity-feed' => "Veure tota l'activitat &gt;",
+	'oasis-button-wiki-activity-watchlist' => 'Pàgines seguides',
 );
 
 /** Chechen (нохчийн)
@@ -765,6 +771,8 @@ Administrátoři do ní mohou psát:
 	'tooltip-pt-myhome' => 'Jít na Mou domovskou stránku',
 	'activityfeed' => 'Informační kanál aktivity',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|jedna zpráva|$1 zpráv(y)}}',
+	'oasis-button-wiki-activity-feed' => 'Zobrazit všechnu aktivitu &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Pouze sledované stránky',
 );
 
 /** Welsh (Cymraeg)
@@ -881,6 +889,8 @@ Wenn du der Gründer oder ein Admin dieses Wikis bist, kannst du diese Nachricht
 	'tooltip-pt-myhome' => 'Gehe zu meiner Startseite',
 	'activityfeed' => 'Aktivitäten-Feed',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|eine Nachricht|$1 Nachrichten}}',
+	'oasis-button-wiki-activity-feed' => 'Alle Aktivitäten ansehen &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Aktivität in verfolgten Seiten',
 );
 
 /** German (formal address) (Deutsch (Sie-Form)‎)
@@ -1154,6 +1164,8 @@ Si eres el fundador o un administrador de este wiki, puedes cambiar este mensaje
 	'tooltip-pt-myhome' => 'Ir a mi página',
 	'activityfeed' => 'Lista de actividad',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|un mensaje|$1 mensajes}}',
+	'oasis-button-wiki-activity-feed' => 'Ver toda la actividad &gt;',
+	'oasis-button-wiki-activity-watchlist' => ' Solo páginas seguidas',
 );
 
 /** Estonian (eesti)
@@ -1346,6 +1358,8 @@ $messages['fa'] = array(
 	'tooltip-pt-myhome' => 'برگشت به خانهٔ خودم',
 	'activityfeed' => 'اشتراک فعالیت',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|یک پیام|$1 پیام}}',
+	'oasis-button-wiki-activity-feed' => 'مشاهدهٔ تمام فعالیت‌ها &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'تنها صفحات پیگیری‌شده',
 );
 
 /** Finnish (suomi)
@@ -1445,6 +1459,8 @@ Jos olet tämän wikin perustaja tai olet ylläpitäjänä tässä wikissä, voi
 	'tooltip-pt-myhome' => 'Palaa kotisivulle',
 	'activityfeed' => 'Toimintasyöte',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|viesti|$1 viestiä}}',
+	'oasis-button-wiki-activity-feed' => 'Katso kaikki muutokset',
+	'oasis-button-wiki-activity-watchlist' => 'Vain seuratut sivut',
 );
 
 /** French (français)
@@ -1541,6 +1557,8 @@ Si vous êtes le fondateur ou bien un administrateur de ce wiki, vous pouvez cha
 	'tooltip-pt-myhome' => 'Aller à Mon Accueil',
 	'activityfeed' => 'Flux d’activité',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|un message|$1 messages}}',
+	'oasis-button-wiki-activity-feed' => "Voir toute l'activité &gt;",
+	'oasis-button-wiki-activity-watchlist' => 'Pages suivies uniquement',
 );
 
 /** Western Frisian (Frysk)
@@ -1637,6 +1655,8 @@ Se vostede é o fundador ou un administrador desde wiki, pode cambiar esta mensa
 	'tooltip-pt-myhome' => 'Ir á miña páxina de inicio',
 	'activityfeed' => 'Fonte de novas da actividade',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|unha mensaxe|$1 mensaxes}}',
+	'oasis-button-wiki-activity-feed' => 'Ollar toda a actividade &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Só as páxinas seguidas',
 );
 
 /** Hausa (Hausa)
@@ -1721,6 +1741,8 @@ $messages['he'] = array(
 	'myhome-default-view-success' => 'אוקיי, זאת ברירת המחדל שלך עכשיו',
 	'tooltip-pt-myhome' => 'עבור אל הבית שלי',
 	'activityfeed' => 'הזנת פעילות',
+	'oasis-button-wiki-activity-feed' => 'כל הפעילות &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'מעקב דפים בלבד',
 );
 
 /** Hungarian (magyar)
@@ -1814,6 +1836,7 @@ Ha te vagy a wiki alapítója vagy egyik adminisztrátora, megváltoztathatod ez
 	'tooltip-pt-myhome' => 'Kezdőlapom megtekintése',
 	'activityfeed' => 'Tevékenység hírcsatornája',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|egy|$1}} üzenet',
+	'oasis-button-wiki-activity-watchlist' => 'Csak a követett lapokon',
 );
 
 /** Armenian (Հայերեն)
@@ -1905,6 +1928,8 @@ Si tu es le fundator o un administrator de iste wiki, tu pote cambiar iste messa
 	'tooltip-pt-myhome' => 'Ir a mi pagina initial',
 	'activityfeed' => 'Summario de activitate',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|un message|$1 messages}}',
+	'oasis-button-wiki-activity-feed' => 'Vider tote le activitate &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Paginas sub observation solmente',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -1989,6 +2014,8 @@ Sebagai contoh, Anda bisa:
 	'myhome-default-view-success' => 'Baiklah, sekarang ini baku Anda',
 	'tooltip-pt-myhome' => 'Tuju ke Halaman Depan Saya',
 	'activityfeed' => 'Asupan kegiatan',
+	'oasis-button-wiki-activity-feed' => 'Lihat semua aktivitas &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Halaman yang hanya diikuti',
 );
 
 /** Igbo (Igbo)
@@ -2083,6 +2110,8 @@ Se sei il fondatore o un admin di questa wiki, puoi modificare questo messaggio 
 	'tooltip-pt-myhome' => 'Vai a My Home',
 	'activityfeed' => 'Attività recenti',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|un messaggio|$1 messaggi}}',
+	'oasis-button-wiki-activity-feed' => "Vedi tutta l'attività &gt;",
+	'oasis-button-wiki-activity-watchlist' => 'Solo le pagine seguite',
 );
 
 /** Japanese (日本語)
@@ -2164,6 +2193,8 @@ $messages['ja'] = array(
 	'tooltip-pt-myhome' => 'My Home',
 	'activityfeed' => 'アクティビティフィード',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|$1件のメッセージ}}',
+	'oasis-button-wiki-activity-feed' => 'すべてのアクティビティを見る ＞',
+	'oasis-button-wiki-activity-watchlist' => ' フォロー中のページのみ',
 );
 
 /** Georgian (ქართული)
@@ -2287,6 +2318,8 @@ $messages['ko'] = array(
 	'myhome-hot-spots-definition' => '$1일 동안에 편집이 가장 많은 문서들의 목록입니다.',
 	'myhome-default-view-checkbox' => '$1을 기본으로 보기',
 	'myhome-default-view-success' => '설정이 변경되었습니다.',
+	'oasis-button-wiki-activity-feed' => '모든 활동 내역 보기 &gt;',
+	'oasis-button-wiki-activity-watchlist' => ' 주시한 문서만 보기',
 );
 
 /** Colognian (Ripoarisch)
@@ -2460,6 +2493,8 @@ $messages['mk'] = array(
 	'tooltip-pt-myhome' => 'Оди на Мојата домашна страница',
 	'activityfeed' => 'Лента на активности',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|една порака|$1 пораки}}',
+	'oasis-button-wiki-activity-feed' => 'Сите активности &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Само следени страници',
 );
 
 /** Malayalam (മലയാളം)
@@ -2495,6 +2530,7 @@ $messages['ml'] = array(
 	'myhome-community-corner-header' => 'സമൂഹ സന്ദേശങ്ങൾ',
 	'oasis-myhome-community-corner-edit' => 'സന്ദേശം തിരുത്തുക &gt;',
 	'myhome-community-corner-edit' => 'സന്ദേശം തിരുത്തുക',
+	'oasis-button-wiki-activity-feed' => 'എല്ലാ പ്രവർത്തനങ്ങളും കാണുക &gt;',
 );
 
 /** Malay (Bahasa Melayu)
@@ -2585,6 +2621,8 @@ Misalnya, anda boleh:
 	'tooltip-pt-myhome' => 'Pergi ke Laman Utama Saya',
 	'activityfeed' => 'Suapan kegiatan',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|satu pesanan|$1 pesanan}}',
+	'oasis-button-wiki-activity-feed' => 'Lihat semua kegiatan &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Laman yang Dipantau sahaja',
 );
 
 /** Maltese (Malti)
@@ -2710,6 +2748,8 @@ For eksempel kan du:
 	'tooltip-pt-myhome' => 'Gå til Mitt hjem',
 	'activityfeed' => 'Aktivitetsfeed',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|én melding|$1 meldinger}}',
+	'oasis-button-wiki-activity-feed' => 'Se all aktivitet &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Kun fulgte sider',
 );
 
 /** Nepali (नेपाली)
@@ -3053,6 +3093,8 @@ Jeśli jesteś założycielem lub administratorem tej wiki, możesz zmienić tą
 	'tooltip-pt-myhome' => 'Przejdź do Strony domowej',
 	'activityfeed' => 'Aktywność',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|jedna wiadomość|$1 wiadomości}}',
+	'oasis-button-wiki-activity-feed' => 'Zobacz całą aktywność &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Tylko obserwowane',
 );
 
 /** Piedmontese (Piemontèis)
@@ -3299,6 +3341,8 @@ Podes, por exemplo:
 	'tooltip-pt-myhome' => 'Ir para A Minha Casa',
 	'activityfeed' => 'Atividade recente',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|uma mensagem|$1 mensagens}}',
+	'oasis-button-wiki-activity-feed' => 'Ver todas as atividades &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Páginas que você está seguindo apenas',
 );
 
 /** Brazilian Portuguese (português do Brasil)
@@ -3524,6 +3568,8 @@ $messages['ru'] = array(
 	'tooltip-pt-myhome' => 'Перейти в личный кабинет',
 	'activityfeed' => 'Лента действий',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|одно сообщение|$1 сообщений}}',
+	'oasis-button-wiki-activity-feed' => 'Смотреть все правки &gt;',
+	'oasis-button-wiki-activity-watchlist' => ' Только отслеживаемые страницы',
 );
 
 /** Rusyn (русиньскый)
@@ -3651,6 +3697,8 @@ $messages['sr-ec'] = array(
 	'myhome-default-view-success' => 'Ово је сада ваш подразумевани приказ.',
 	'tooltip-pt-myhome' => 'Пређите у Мој Дом',
 	'activityfeed' => 'Активности',
+	'oasis-button-wiki-activity-feed' => 'Прикажи целу активност &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Само праћене странице',
 );
 
 /** Swedish (svenska)
@@ -3744,6 +3792,8 @@ Om du är grundaren eller en administratör på denna wiki kan du ändra detta b
 	'tooltip-pt-myhome' => 'Gå till Mitt Hem',
 	'activityfeed' => 'Aktivitetsflöde',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|ett meddelande|$1 meddelanden}}',
+	'oasis-button-wiki-activity-feed' => 'Se all aktivitet &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'endast Bevakade Sidor',
 );
 
 /** Swahili (Kiswahili)
@@ -3922,6 +3972,8 @@ Halimbawa, maaari kang:
 	'tooltip-pt-myhome' => 'Pumunta sa Tahanan Ko',
 	'activityfeed' => 'Pakain ng paggalaw',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|isang mensahe|$1 mga mensahe}}',
+	'oasis-button-wiki-activity-feed' => 'Tingnan ang lahat ng gawain &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Sinusundang mga Pahina lamang',
 );
 
 /** Talysh (толышә зывон)
@@ -4104,6 +4156,8 @@ $messages['tt-cyrl'] = array(
 	'tooltip-pt-myhome' => 'Шәхси кабинетка күчү',
 	'activityfeed' => 'Гамәлләр тасмасы',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|бер хәбәр|$1 хәбәр}}',
+	'oasis-button-wiki-activity-feed' => 'Бөтен активлык &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Бары күзәтелә торган битләр генә',
 );
 
 /** Central Atlas Tamazight (ⵜⴰⵎⴰⵣⵉⵖⵜ)
@@ -4246,6 +4300,8 @@ $messages['uk'] = array(
 	'tooltip-pt-myhome' => 'На мою домашню сторінку',
 	'activityfeed' => 'Останні зміни',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|одне повідомлення|$1 повідомлення|$1 повідомлень}}',
+	'oasis-button-wiki-activity-feed' => 'Показати всю активність &gt;',
+	'oasis-button-wiki-activity-watchlist' => 'Тільки сторінки зі списку спостереження',
 );
 
 /** Vietnamese (Tiếng Việt)
@@ -4341,6 +4397,8 @@ Ví dụ, bạn có thể:
 	'tooltip-pt-myhome' => 'Đi đến nhà của tôi',
 	'activityfeed' => 'Hoạt động nguồn cấp dữ liệu',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|Một thông điệp|$1 thông điệp}}',
+	'oasis-button-wiki-activity-feed' => 'Xem tất cả các hoạt động &gt;',
+	'oasis-button-wiki-activity-watchlist' => ' Chỉ những trang theo dõi',
 );
 
 /** Chinese (中文)
@@ -4445,6 +4503,8 @@ $messages['zh-hans'] = array(
 	'tooltip-pt-myhome' => '转到我的主页',
 	'activityfeed' => '活动供稿',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|一条信息|$1条信息}}',
+	'oasis-button-wiki-activity-feed' => '查看所有活动 &gt;',
+	'oasis-button-wiki-activity-watchlist' => ' 仅显示关注页面',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -4540,6 +4600,8 @@ $messages['zh-hant'] = array(
 	'tooltip-pt-myhome' => '轉到我的首頁',
 	'activityfeed' => '活動 Feed',
 	'wiki-activity-message-wall-messages-count' => '{{PLURAL:$1|1 則訊息|$1 則訊息}}',
+	'oasis-button-wiki-activity-feed' => '查看所有動態 &gt;',
+	'oasis-button-wiki-activity-watchlist' => '只顯示關注頁面',
 );
 
 /** Chinese (Taiwan) (中文（台灣）‎)

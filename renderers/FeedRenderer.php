@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Class FeedRenderer
  */
@@ -359,6 +361,31 @@ class FeedRenderer {
 		}
 
 		return $html;
+	}
+	
+	/**
+	 * Returns link pointing to a special page
+	 *
+	 * @param $pageName
+	 * @param $subpage
+	 * @param $message
+	 * @return string
+	 * 
+	 * @author haleyjd
+	 */
+	public static function getSpecialPageLink( $pageName, $subpage = false, $message = '' ) {
+		$title = SpecialPage::getTitleFor( $pageName, $subpage );
+		if ( $message != '') {
+			$message = wfMessage($message)->parse();
+		}
+		// must use LinkRenderer for MediaWiki 1.28 and up
+		// TODO: remove alternate codepath once this is the minimum version supported.
+		if ( class_exists( '\\MediaWiki\\MediaWikiServices' ) && method_exists( '\\MediaWiki\\MediaWikiServices', 'getLinkRenderer' ) ) {
+			$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+			return $linkRenderer->makeLink( $title, new HtmlArmor( $message ) );
+		} else {
+			return Linker::link( $title, $message );
+		}
 	}
 
 	/**

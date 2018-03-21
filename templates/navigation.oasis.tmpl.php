@@ -2,12 +2,12 @@
 	<ul>
 		<?php if ( $loggedIn ) {
 			if ( $type == 'watchlist' ){
-				?><li class="watchlist"><?= Wikia::specialPageLink('WikiActivity/activity', 'myhome-activity-feed') ?></li><?
+				?><li class="watchlist"><?= FeedRenderer::getSpecialPageLink('WikiActivity/activity', true, 'myhome-activity-feed') ?></li><?
 			} else {
-				?><li class="watchlist"><?= Wikia::specialPageLink('WikiActivity/watchlist', 'oasis-button-wiki-activity-watchlist') ?></li><?
+				?><li class="watchlist"><?= FeedRenderer::getSpecialPageLink('WikiActivity/watchlist', true, 'oasis-button-wiki-activity-watchlist') ?></li><?
 			}
 		} ?>
-		<li><?= Wikia::specialPageLink('RecentChanges', 'oasis-button-wiki-activity-feed') ?></li>
+		<li><?= FeedRenderer::getSpecialPageLink('RecentChanges', false, 'oasis-button-wiki-activity-feed') ?></li>
 	</ul>
 <?php
 	// render checkbox select default view

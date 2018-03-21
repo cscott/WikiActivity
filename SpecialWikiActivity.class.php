@@ -11,7 +11,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	function __construct() {
 		parent::__construct('WikiActivity', '' /* no restriction */, true /* listed */);
 	}
-
+	
 	function execute($par) {
 		global $wgHooks;
 
@@ -66,6 +66,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$template = new EasyTemplate(dirname(__FILE__).'/templates');
 		$template->set('data', $data['results']);
 
+		// FIXME: old-style query continuation
 		$showMore = isset($data['query-continue']);
 		if ($showMore) {
 			$template->set('query_continue', $data['query-continue']);
@@ -79,10 +80,9 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 			'type' => $this->feedSelected,
 		));
 
+		// haleyjd: add navigation header here, now
+		$this->addNavigation();
 		$out->addHTML($template->render('activityfeed.oasis'));
-
-		// page header: replace subtitle with navigation
-		$wgHooks['PageHeaderIndexAfterExecute'][] = array($this, 'addNavigation');
 
 		if ($user->isAnon()) {
 			// FIXME / TODO: Method is deprecated in 1.27; removed in 1.30
@@ -109,7 +109,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	 *
 	 * @author macbre
 	 */
-	function addNavigation(&$moduleObject, &$params) {
+	function addNavigation() {
+		$out  = $this->getOutput();
 		$user = $this->getUser();
 
 		$template = new EasyTemplate(dirname(__FILE__).'/templates');
@@ -126,7 +127,8 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		));
 
 		// replace subtitle with navigation for WikiActivity
-		$moduleObject->pageSubtitle = $template->render('navigation.oasis');
+		//$moduleObject->pageSubtitle = $template->render('navigation.oasis');
+		$out->addHTML($template->render('navigation.oasis'));
 
 		return true;
 	}
