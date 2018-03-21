@@ -36,7 +36,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 
 			// not available for anons
 			if($user->isAnon()) {
-				$out->wrapWikiMsg( '<div id="myhome-log-in">$1</div>', array('myhome-log-in', wfGetReturntoParam()) );
+				$out->wrapWikiMsg( '<div id="myhome-log-in">$1</div>', array('myhome-log-in', $this->getReturntoParam()) );
 				return;
 			} else {
 				$this->feedSelected = 'watchlist';
@@ -102,6 +102,15 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	public static function onBeforePageDisplay(OutputPage &$out, Skin &$skin) {
 		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
 		return true;
+	}
+	
+	/**
+	 *
+	 */
+	function getReturnToParam() {
+		$request  = $this->getRequest();
+		$returnTo = $request->getText( 'returnto' );
+		return $returnTo;
 	}
 
 	/**

@@ -68,7 +68,7 @@ Try it out!',
 	'myhome-hours-ago' => '$1 {{PLURAL:$1|hour|hours}} ago',
 	'myhome-days-ago' => '$1 {{PLURAL:$1|day|days}} ago',
 
-	'myhome-log-in' => "<center>The My Home feature is only available if you're logged in.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Please log in to see this page!]'''</big></center>",
+	'myhome-log-in' => "<center>The My Home feature is only available if you're logged in.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Please log in to see this page!]'''</big></center>",
 	'myhome-switch-to-monaco' => "The WikiActivity feature is only available if you're using the Wikia skin.
 If you'd like to see My Home, please visit '''[[Special:Preferences|your Preferences]]''' to change your skin.",
 
@@ -194,7 +194,7 @@ $messages['af'] = array(
 	'myhome-minutes-ago' => "{{PLURAL:$1|'n minuut|$1 minute}} gelede",
 	'myhome-seconds-ago' => "'n minuut gelede",
 	'myhome-log-in' => "<center>Die ''My Tuisblad''-funksie is slegs beskikbaar as u aangemeld is.<br /><br />
-<big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Meld asseblief aan om hierdie bladsy te wys!]</span>'''</big></center>",
+<big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Meld asseblief aan om hierdie bladsy te wys!]</span>'''</big></center>",
 	'myhome-namespace-blog' => 'Blog',
 	'myhome-community-corner-header' => 'Geselshoekie', # Fuzzy
 	'myhome-community-corner-edit' => 'wysig boodskap',
@@ -266,7 +266,7 @@ $messages['ar'] = array(
 	'myhome-hours-ago' => 'منذ {{PLURAL:$1|صفر ساعات|ساعة واحدة|ساعتان|$1 ساعات|$1 ساعة}}',
 	'myhome-minutes-ago' => 'منذ {{PLURAL:$1|صفر دقائق|دقيقة واحدة|دقيقتان|$1 دقائق|$1 دقيقة}}',
 	'myhome-seconds-ago' => 'قبل دقيقة',
-	'myhome-log-in' => "<center>خاصية \"صفحتي الرئيسية\" غير متوفرة إلا إذا سجلت الدخول. <br /><br /><big>'''[{{fullurl:خاص:Signup|\$1}} الرجاء التسجيل لرؤية هذه الصفحة.]''' </big></center>",
+	'myhome-log-in' => "<center>خاصية \"صفحتي الرئيسية\" غير متوفرة إلا إذا سجلت الدخول. <br /><br /><big>'''[{{fullurl:خاص:UserLogin|\$1}} الرجاء التسجيل لرؤية هذه الصفحة.]''' </big></center>",
 	'myhome-switch-to-monaco' => 'خاصية نشاط الويكي متوفرة فقط لمستخدمي مظهر ويكيا.
 إذا كنت ترغب في رؤية "صفحتي الرئيسية"، يرجى زيارة [[Special:Preferences|تفضيلاتك]] لتغيير المظهر.',
 	'myhome-namespace-blog' => 'مدونة',
@@ -443,7 +443,7 @@ $messages['bg'] = array(
 	'myhome-hours-ago' => 'преди {{PLURAL:$1|един час|$1 часа}}',
 	'myhome-minutes-ago' => 'преди {{PLURAL:$1|една минута|$1 минути}}',
 	'myhome-seconds-ago' => 'преди една минута',
-	'myhome-log-in' => "<center>Функцията Моята начална страница е достъпна само ако сте влезли.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Моля влезте за да видите тази страница!]'''</big></center>",
+	'myhome-log-in' => "<center>Функцията Моята начална страница е достъпна само ако сте влезли.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Моля влезте за да видите тази страница!]'''</big></center>",
 	'myhome-namespace-blog' => 'Блог',
 	'oasis-myhome-community-corner-edit' => 'редактиране на съобщението &gt;',
 	'myhome-community-corner-edit' => 'редактиране на съобщението',
@@ -542,7 +542,7 @@ Klaskit eta !",
 	'myhome-hours-ago' => '{{PLURAL:$1|un eurvezh|$1 eurvezh}} zo',
 	'myhome-minutes-ago' => '{{PLURAL:$1|ur vunutenn|$1 munutenn}} zo',
 	'myhome-seconds-ago' => 'ur vunutenn zo',
-	'myhome-log-in' => "<center>An arc'hwel Ma Degemer a c'hallit kaout nemet e vefec'h kevreet.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Kevreit, mar plij, evit gwelet ar  bajenn-mañ]</span>'''</big></center>",
+	'myhome-log-in' => "<center>An arc'hwel Ma Degemer a c'hallit kaout nemet e vefec'h kevreet.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Kevreit, mar plij, evit gwelet ar  bajenn-mañ]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "Ne c'haller kaout an Arc'hwel Ma Degemer nemet e vefe implijet ar fichadenn Monaco ganeoc'h. M'ho peus c'hoant da vont war Ma Degemer, gweladennit'''[[Special:Preferences|ho Tibaboù gwellañ]]''', mar plij, evit kemmañ ho fichadenn.", # Fuzzy
 	'myhome-namespace-blog' => 'Blog',
 	'myhome-community-corner-header' => 'Kemennadennoù ar gumuniezh',
@@ -633,7 +633,7 @@ Proveu-ho!',
 	'myhome-hours-ago' => 'fa {{PLURAL:$1|una hora|$1 hores}}',
 	'myhome-minutes-ago' => 'fa {{PLURAL:$1|un minut|$1 minuts}}',
 	'myhome-seconds-ago' => 'fa un minut',
-	'myhome-log-in' => "<center>La Pàgina d'Inici només està disponible si esteu registrats.<br /><br /><big>'' [{{fullurl:Special:Signup| $1 }} Si us plau iniciau la sessió per poder veure aquesta pàgina!]''</big></center>",
+	'myhome-log-in' => "<center>La Pàgina d'Inici només està disponible si esteu registrats.<br /><br /><big>'' [{{fullurl:Special:UserLogin| $1 }} Si us plau iniciau la sessió per poder veure aquesta pàgina!]''</big></center>",
 	'myhome-switch-to-monaco' => "La funció ViquiActivitat només està disponible si esteu usant l'aparença Wikia. Si voleu veure la pàgina d'inici, activeu-ho a '''[[Special:Preferences|la vostra pàgina de preferències]]'''",
 	'myhome-namespace-blog' => 'Bloc',
 	'myhome-community-corner-header' => 'Missatges de la Comunitat',
@@ -743,7 +743,7 @@ Zkuste to!',
 	'myhome-hours-ago' => 'před {{PLURAL:$1|hodinou|$1 hodinami}}',
 	'myhome-minutes-ago' => 'před {{PLURAL:$1|1 minutou|$1 minutami}}',
 	'myhome-seconds-ago' => 'před minutou',
-	'myhome-log-in' => "<center>Funkce Moje domovská stránka je k dispozici jen přihlášeným uživatelům.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Přihlašte se!]'''</big></center>",
+	'myhome-log-in' => "<center>Funkce Moje domovská stránka je k dispozici jen přihlášeným uživatelům.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Přihlašte se!]'''</big></center>",
 	'myhome-switch-to-monaco' => 'Aktivita na Wiki je zobrazena pouze v případě, že používáte motiv Wikia.
 Změnu můžete provést v [[Special:Preferences|nastavení]].',
 	'myhome-namespace-blog' => 'Blog',
@@ -861,7 +861,7 @@ Probier es einfach aus!',
 	'myhome-minutes-ago' => 'vor $1 {{PLURAL:$1|Minute|Minuten}}',
 	'myhome-hours-ago' => 'vor $1 {{PLURAL:$1|Stunde|Stunden}}',
 	'myhome-days-ago' => 'vor $1 {{PLURAL:$1|Tag|Tagen}}',
-	'myhome-log-in' => "<center>Die Startseiten-Funktion ist nur verfügbar wenn du eingeloggt bist.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Bitte melde dich an um diese Seite zu sehen!]'''</big></center>",
+	'myhome-log-in' => "<center>Die Startseiten-Funktion ist nur verfügbar wenn du eingeloggt bist.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Bitte melde dich an um diese Seite zu sehen!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Die Wikiaktivitäten-Funktion ist nur für die Wikia-Benutzeroberfläche verfügbar.
 Wenn du deine Startseite sehen möchtest, gehe bitte zu '''[[Special:Preferences|deinen Einstellungen]],''' um deine Benutzeroberfläche zu wechseln.",
 	'myhome-namespace-blog' => 'Benutzer-Blog',
@@ -910,7 +910,7 @@ Klicken Sie auf '''[[Special:CreatePage|Neue Seite]]''' um mit dem Schreiben zu 
 Jeder kann Seiten ändern, Informationen hinzufügen oder Fehler berichtigen.
 Das Wiki wird durch die Gemeinschaft der Nutzer erstellt, und durch den Klick auf den Bearbeiten-Link werden Sie selbst zum Teil dieser Gemeinschaft.
 Probieren Sie es einfach aus!',
-	'myhome-log-in' => "<center>Die Startseiten-Funktion ist nur verfügbar wenn Sie eingeloggt sind.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Bitte melden Sie sich an um diese Seite zu sehen!]'''</big></center>",
+	'myhome-log-in' => "<center>Die Startseiten-Funktion ist nur verfügbar wenn Sie eingeloggt sind.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Bitte melden Sie sich an um diese Seite zu sehen!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Die Wikiaktivitäten-Funktion ist nur für die Wikia-Benutzeroberfläche verfügbar.
 Wenn Sie Ihre Startseite sehen möchten, gehen Sie bitte zu '''[[Special:Preferences|Ihren Einstellungen]],''' um Ihre Benutzeroberfläche zu wechseln.",
 	'community-corner' => "'''Willkommen auf Ihrer Startseite!'''
@@ -1022,7 +1022,7 @@ $messages['el'] = array(
 	'myhome-feed-inserted-category-details' => '{{PLURAL:$1|Προσθεμένη κατηγορία|Προσθεμένες κατηγορίες}}',
 	'myhome-user-contributions-empty' => 'Μπορείς να συμετάσχεις σε αυτό το wiki πατώντας στο κουμπί "{{int:editthispage}}" σε οποιοδήποτε άρθρο, προσθέτωντας ό,τι ξέρεις. Όλοι μπορούν να κάνουν αλλαγές, να προσθέσουν πληροφορίες ή να διορθώσουν λάθη. Το wiki χτίζεται από την κοινώτητα και γίνεσαι μέλος της μόλις πατήσεις το κουμπί "επεξεργασία".', # Fuzzy
 	'myhome-hot-spots-number-of-editors' => 'συντάκτες',
-	'myhome-log-in' => "<center>Το χαρακτηριστικό ''Αρχική σελίδα'' είναι διαθέσιμο μόνο αν έχετε συνδεθεί.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Παρακαλώ συνδεθείτε για να δείτε αυτή τη σελίδα!]'''</big></center>",
+	'myhome-log-in' => "<center>Το χαρακτηριστικό ''Αρχική σελίδα'' είναι διαθέσιμο μόνο αν έχετε συνδεθεί.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Παρακαλώ συνδεθείτε για να δείτε αυτή τη σελίδα!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Το χαρακτηριστικό ''Η αρχική μου σελίδα'' είναι διαθέσιμη μόνο εάν χρησιμοποιείτε το θέμα Monaco.
 Αν θέλετε να δείτε την ''Αρχική μου σελίδα'', παρακαλώ επισκεφθείτε '''[[Special:Preferences|τις Προτιμήσεις σας]]''' για να αλλάξετε το θέμα σας.", # Fuzzy
 	'myhome-namespace-blog' => 'Blog',
@@ -1225,7 +1225,7 @@ Kõik saavad redigeerida, lisada informatsiooni või parandada vigu.
 Viki on loodud kogukonna poolt. Klõpsates redigeerimise nuppu, ühined kogukonnaga.
 Osale!',
 	'myhome-hot-spots-number-of-editors' => 'redigeerijad',
-	'myhome-log-in' => '<center>Viki logi funktsioon on saadaval ainult juhul, kui oled sisse loginud.<br /><br /><big>"\'[{{fullurl:Special:Signup|$1}} Logi sisse, et näha seda lehte!]"\'</big></center>',
+	'myhome-log-in' => '<center>Viki logi funktsioon on saadaval ainult juhul, kui oled sisse loginud.<br /><br /><big>"\'[{{fullurl:Special:UserLogin|$1}} Logi sisse, et näha seda lehte!]"\'</big></center>',
 	'myhome-switch-to-monaco' => 'Wiki aktiivsuse funktsioon on saadaval ainult juhul, kui kasutad Wikia välimuse kesta.
 Kui soovid Viki logi näha ja muuta välimuse kesta, külasta "\'[[Special:Preferences|oma eelistuste lehte]]"\'.',
 	'myhome-namespace-blog' => 'Blogi',
@@ -1329,7 +1329,7 @@ $messages['fa'] = array(
 بیازمایید!',
 	'myhome-hot-spots-number-of-editors' => 'ویرایشگران',
 	'myhome-seconds-ago' => 'یک دقیقه پیش',
-	'myhome-log-in' => "<center>امکانات خانهٔ من تنها در صورتی در دسترس خواهد بود که وارد شوید.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} لطفاً وارد شوید تا صفحه را ببینید!]'''</big></center>",
+	'myhome-log-in' => "<center>امکانات خانهٔ من تنها در صورتی در دسترس خواهد بود که وارد شوید.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} لطفاً وارد شوید تا صفحه را ببینید!]'''</big></center>",
 	'myhome-switch-to-monaco' => "ویژگی فعالیت‌ویکی تنها در صورتی در دسترس خواهد بود که شما از پوستهٔ ویکیا (wikia) استفاده کنید.
 اگر دوست دارید صفحهٔ خانگی من را ببینید، لطفاً از '''[[Special:Preferences|ترجیحاتتان]]''' برای تغییر پوسته‌تان استفاده کنید.",
 	'myhome-namespace-blog' => 'وبلاگ',
@@ -1431,7 +1431,7 @@ Kokeile!',
 	'myhome-hours-ago' => '{{PLURAL:$1|tunti|$1 tuntia}} sitten',
 	'myhome-minutes-ago' => '{{PLURAL:$1|minuutti|$1 minuuttia}} sitten',
 	'myhome-seconds-ago' => 'minuutti sitten',
-	'myhome-log-in' => "<center>Kotisivutoiminto on saatavilla vain, kun olet kirjautunut sisään.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Ole hyvä ja kirjaudu sisään nähdäksesi tämän sivun!]'''</big></center>",
+	'myhome-log-in' => "<center>Kotisivutoiminto on saatavilla vain, kun olet kirjautunut sisään.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Ole hyvä ja kirjaudu sisään nähdäksesi tämän sivun!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Viimeisimmät tapahtumat ominaisuus on käytössä vain jos käytät Wikian teemaa.
 Jos haluat nähdä My Homen, käy '''[[Special:Preferences|asetuksissasi]]''' vaihtaaksesi teemaa.",
 	'myhome-namespace-blog' => 'Blogi',
@@ -1529,7 +1529,7 @@ Essayez donc !",
 	'myhome-minutes-ago' => 'il y a $1 {{PLURAL:$1|minute|minutes}}',
 	'myhome-hours-ago' => 'il y a $1 {{PLURAL:$1|heure|heures}}',
 	'myhome-days-ago' => 'il y a $1 {{PLURAL:$1|jour|jours}}',
-	'myhome-log-in' => "<center>La fonction Mon Accueil n'est disponible que si vous êtes connecté{{GENDER:||e|}}.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Veuillez vous connecter pour voir cette page !]</span>'''</big></center>",
+	'myhome-log-in' => "<center>La fonction Mon Accueil n'est disponible que si vous êtes connecté{{GENDER:||e|}}.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Veuillez vous connecter pour voir cette page !]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "La fonction « Activité du wiki » n'est disponible que si vous utilisez l'apparence Wikia.
 Si vous voulez accéder à Mon Accueil, veuillez modifier '''[[Special:Preferences|vos Préférences]]''' pour changer l'apparence.",
 	'myhome-namespace-blog' => 'Blog',
@@ -1627,7 +1627,7 @@ Anímese a intentalo!',
 	'myhome-hours-ago' => 'hai {{PLURAL:$1|unha hora|$1 horas}}',
 	'myhome-minutes-ago' => 'hai {{PLURAL:$1|un minuto|$1 minutos}}',
 	'myhome-seconds-ago' => 'hai un minuto',
-	'myhome-log-in' => "<center>A función \"A miña páxina de inicio\" só está dispoñible se antes accedeu ao sistema.<br /><br /><big>'''[{{fullurl:Special:Signup|\$1}} Por favor, conéctese para ollar esta páxina!]'''</big></center>",
+	'myhome-log-in' => "<center>A función \"A miña páxina de inicio\" só está dispoñible se antes accedeu ao sistema.<br /><br /><big>'''[{{fullurl:Special:UserLogin|\$1}} Por favor, conéctese para ollar esta páxina!]'''</big></center>",
 	'myhome-switch-to-monaco' => "A función \"Actividade do wiki\" só está dispoñible se emprega a aparencia Wikia.
 Se quere ver \"A miña páxina de inicio\", visite as '''[[Special:Preferences|súas preferencias]]''' para cambiar a súa aparencia.",
 	'myhome-namespace-blog' => 'Blogue',
@@ -1722,7 +1722,7 @@ $messages['he'] = array(
 אתר ויקי זה נבנה על ידי הקהילה, וברגע הלחיצה על "עריכה", תהפוך לחלק מהקהילה.
 מאוד מומלץ לנסות!',
 	'myhome-hot-spots-number-of-editors' => 'עורכים',
-	'myhome-log-in' => "<center>הבית שלי זמין רק אם אתה מחובר.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} אנא התחבר כדי לראות את העמוד!]'''</big></center>",
+	'myhome-log-in' => "<center>הבית שלי זמין רק אם אתה מחובר.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} אנא התחבר כדי לראות את העמוד!]'''</big></center>",
 	'myhome-switch-to-monaco' => "פיצ'ר \"הבית שלי\" זמין אך ורק אם אתה משתמש בסקין \"מונקו\".
 אם ברצונך להשתמש בפיצ'ר \"הבית שלי\", אנא היכנס ל'''[[Special:Preferences|your Preferences]]''' כדי לשנות את הסקין שלך.", # Fuzzy
 	'myhome-namespace-blog' => 'בלוג',
@@ -1808,7 +1808,7 @@ Próbáld ki!',
 	'myhome-hours-ago' => '{{PLURAL:$1|egy|$1}} órával ezelőtt',
 	'myhome-minutes-ago' => '{{PLURAL:$1|egy|$1}} perccel ezelőtt',
 	'myhome-seconds-ago' => 'egy perccel ezelőtt',
-	'myhome-log-in' => "<center>A \"Kezdőlapom\" szolgáltatás csak akkor érhető el, ha bejelentkeztél.<br /><br /><big>'''[{{fullurl:Special:Signup| \$1 }} Kérlek, jelentkezz be ezen az oldalon!]'' '</big></center>",
+	'myhome-log-in' => "<center>A \"Kezdőlapom\" szolgáltatás csak akkor érhető el, ha bejelentkeztél.<br /><br /><big>'''[{{fullurl:Special:UserLogin| \$1 }} Kérlek, jelentkezz be ezen az oldalon!]'' '</big></center>",
 	'myhome-switch-to-monaco' => "A Wiki tevékenység szolgáltatás csak a Wikia felületstílusban érhető el.
 Amennyiben szeretnéd látni, változtasd meg az alapértelmezett felületedet '''[[Special:Preferences|a beállításaidban]]'''.",
 	'myhome-namespace-blog' => 'Blog',
@@ -1900,7 +1900,7 @@ $messages['ia'] = array(
 	'myhome-hours-ago' => '{{PLURAL:$1|un hora|$1 horas}} retro',
 	'myhome-minutes-ago' => '{{PLURAL:$1|un minuta|$1 minutas}} retro',
 	'myhome-seconds-ago' => 'un minuta retro',
-	'myhome-log-in' => "<center>Tu pagina initial es solmente disponibile si tu es authenticate.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Aperi un session pro vider iste pagina!]'''</big></center>",
+	'myhome-log-in' => "<center>Tu pagina initial es solmente disponibile si tu es authenticate.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Aperi un session pro vider iste pagina!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Le function WikiActivity es solmente disponibile si tu usa le apparentia \"Wikia\".
 Si tu vole vider \"Mi pagina initial\", visita le '''[[Special:Preferences|preferentias]]''' pro cambiar de apparentia.",
 	'myhome-namespace-blog' => 'Blog',
@@ -1990,7 +1990,7 @@ Setiap orang dapat membuat perubahan, menambahkan informasi atau memperbaiki kes
 Wiki dibangun oleh komunitas, dan setiap anda klik tombol sunting, Anda merupakan bagian dari komunitas.
 Cobalah!',
 	'myhome-hot-spots-number-of-editors' => 'penyunting',
-	'myhome-log-in' => "<center>Fitur Rumah Saya hanya tersedia jika Anda masuk log.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Harap masuk log untuk melihat halaman ini!]'''</big></center>",
+	'myhome-log-in' => "<center>Fitur Rumah Saya hanya tersedia jika Anda masuk log.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Harap masuk log untuk melihat halaman ini!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Fitur Rumah Saya  hanya tersedia jika Anda menggunakan kulit 'Wikia.
 Jika Anda ingin melihat Rumah Saya, gunakan ''''[[Special:Preferences|your Preferences]]''' untuk mengubah tampilan kulit Anda.",
 	'myhome-namespace-blog' => 'Blog',
@@ -2171,7 +2171,7 @@ $messages['ja'] = array(
 	'myhome-hours-ago' => '$1時間前',
 	'myhome-minutes-ago' => '$1分前',
 	'myhome-seconds-ago' => '1分前',
-	'myhome-log-in' => "<center>My Home を利用するにはログインする必要があります。<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} このページを閲覧するためにログインしてください！]'''</big></center>",
+	'myhome-log-in' => "<center>My Home を利用するにはログインする必要があります。<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} このページを閲覧するためにログインしてください！]'''</big></center>",
 	'myhome-switch-to-monaco' => 'ウィキアクティビティはウィキアのスキンでのみ利用できます。ウィキアクティビティを閲覧したいのであれば、[[Special:Preferences|スキンの設定を変更]]してください。',
 	'myhome-namespace-blog' => 'Blog',
 	'myhome-community-corner-header' => 'コミュニティメッセージ',
@@ -2309,7 +2309,7 @@ $messages['ko'] = array(
 	'myhome-hours-ago' => '$1시간 전',
 	'myhome-minutes-ago' => '$1분 전',
 	'myhome-seconds-ago' => '방금',
-	'myhome-log-in' => "<center>마이 홈 기능은 로그인한 상태에서만 이용하실 수 있습니다.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} 먼저 로그인해 주세요!]'''</big></center>",
+	'myhome-log-in' => "<center>마이 홈 기능은 로그인한 상태에서만 이용하실 수 있습니다.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} 먼저 로그인해 주세요!]'''</big></center>",
 	'myhome-switch-to-monaco' => "위키 활동 내역 기능은 위키아 스킨을 사용 중일 때만 사용할 수 있습니다.
 마이 홈을 보고 싶으실 땐 '''[[Special:Preferences|환경설정]]'''에서 스킨을 변경해 주세요.",
 	'myhome-namespace-blog' => '블로그',
@@ -2465,7 +2465,7 @@ $messages['mk'] = array(
 	'myhome-hours-ago' => 'пред {{PLURAL:$1|еден час|$1 часа}}',
 	'myhome-minutes-ago' => 'пред {{PLURAL:$1|една минута|$1 минути}}',
 	'myhome-seconds-ago' => 'пред една минута',
-	'myhome-log-in' => "<center>Функцијата „Мојата домашна страница“ е достапна само ако сте најавени.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Најавете се за да ја видите страницата!]'''</big></center>",
+	'myhome-log-in' => "<center>Функцијата „Мојата домашна страница“ е достапна само ако сте најавени.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Најавете се за да ја видите страницата!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Функцијата ВикиАктивност е достапна само ако го користите рувото „Викија“.
 Ако сакате да ја погледате Мојата домашна страница, одете на '''[[Special:Preferences|нагодувањата]]''' и сменете го рувото.",
 	'myhome-namespace-blog' => 'Блог',
@@ -2593,7 +2593,7 @@ Cubalah!',
 	'myhome-hours-ago' => '{{PLURAL:$1|sejam|$1 jam}} lalu',
 	'myhome-minutes-ago' => '{{PLURAL:$1|seminit|$1 minit}} yang lalu',
 	'myhome-seconds-ago' => 'seminit lalu',
-	'myhome-log-in' => "<center>Ciri My Home hanya untuk yang log masuk.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Sila log masuk untuk melihat laman ini!]'''</big></center>",
+	'myhome-log-in' => "<center>Ciri My Home hanya untuk yang log masuk.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Sila log masuk untuk melihat laman ini!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Ciri Kegiatan Wiki hanya tersedia jika anda menggunakan kulit Wikia. Jika anda ingin melihat My Home, sila ke '''[[Special:Preferences|Keutamaan anda]]''' untuk menukarkan kulit anda.",
 	'myhome-namespace-blog' => 'Blog',
 	'myhome-community-corner-header' => 'Pesanan Komuniti',
@@ -2719,7 +2719,7 @@ Prøv det!',
 	'myhome-hours-ago' => 'for {{PLURAL:$1|én time|$1 timer}} siden',
 	'myhome-minutes-ago' => 'for {{PLURAL:$1|ett minutt|$1 minutter}} siden',
 	'myhome-seconds-ago' => 'for et øyeblikk siden',
-	'myhome-log-in' => "<center>Mitt hjem-funksjonen er kun tilgjengelig om du er logget inn.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Logg inn for å se denne siden.]'''</big></center>",
+	'myhome-log-in' => "<center>Mitt hjem-funksjonen er kun tilgjengelig om du er logget inn.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Logg inn for å se denne siden.]'''</big></center>",
 	'myhome-switch-to-monaco' => "WikiAktivitet-funksjonen er bare tilgjengelig om du bruker Wikia-utseendet.
 Hvis du vil se Mitt hjem, vennligst gå til '''[[Special:Preferences|innstillingene dine]]''' for å endre utseendet.",
 	'myhome-namespace-blog' => 'Blogg',
@@ -2822,7 +2822,7 @@ Probeer het maar!',
 	'myhome-minutes-ago' => '$1 {{PLURAL:$1|minuut|minuten}} geleden',
 	'myhome-hours-ago' => '$1 {{PLURAL:$1|uur|uur}} geleden',
 	'myhome-days-ago' => '$1 {{PLURAL:$1|dag|dagen}} geleden',
-	'myhome-log-in' => "<center>De functie Mijn Startpagina is alleen beschikbaar als u bent aangemeld.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Meld u aan om deze pagina te bekijken!]</span>'''</big></center>",
+	'myhome-log-in' => "<center>De functie Mijn Startpagina is alleen beschikbaar als u bent aangemeld.<br /><br /><big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Meld u aan om deze pagina te bekijken!]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "De functie \"Mijn startpagina\" is alleen beschikbaar als uw de Wikia-vormgeving gebruikt.
 Als u \"Mijn startpagina\" wilt bekijken, wijzig in '''[[Special:Preferences|uw voorkeuren]]''' het siteuiterlijk.",
 	'myhome-namespace-blog' => 'Blog',
@@ -2864,7 +2864,7 @@ De wiki is gebouwd door de gemeenschap, en zo gauw je op de knop "bewerken" klik
 onderdeel uit van de gemeenschap.
 Probeer het maar!',
 	'myhome-log-in' => "<center>De functie Mijn Startpagina is alleen beschikbaar als je bent aangemeld.<br /><br />
-<big>'''<span class=\"plainlinks\">[{{fullurl:Special:Signup|\$1}} Meld je aan om deze pagina te bekijken!]</span>'''</big></center>",
+<big>'''<span class=\"plainlinks\">[{{fullurl:Special:UserLogin|\$1}} Meld je aan om deze pagina te bekijken!]</span>'''</big></center>",
 	'myhome-switch-to-monaco' => "De functie \"Mijn startpagina\" is alleen beschikbaar als je de Wikia-vormgeving gebruikt.
 Als je \"Mijn startpagina\" wilt bekijken, wijzig in '''[[Special:Preferences|uw voorkeuren]]''' het siteuiterlijk.",
 	'community-corner' => "'''Welkom bij Mijn startpagina!'''
@@ -3065,7 +3065,7 @@ Spróbuj!',
 	'myhome-hours-ago' => '{{PLURAL:$1|godzinę|$1 godziny|$1 godzin}} temu',
 	'myhome-minutes-ago' => '{{PLURAL:$1|minutę|$1 minuty|$1 minut}} temu',
 	'myhome-seconds-ago' => 'minutę temu',
-	'myhome-log-in' => "<center>Funkcjonalność Twojej strony domowej dostępna jest wyłącznie gdy jesteś zalogowany.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Zaloguj się aby zobaczyć tę stronę!]'''</big></center>",
+	'myhome-log-in' => "<center>Funkcjonalność Twojej strony domowej dostępna jest wyłącznie gdy jesteś zalogowany.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Zaloguj się aby zobaczyć tę stronę!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Funkcjonalność WikiActivity dostępna jest wyłącznie jeśli używasz skórki Wikia.
 Jeśli chcesz widzieć swoją własną stronę startową zmień '''[[Special:Preferences|w preferencjach]]''' używaną skórkę.",
 	'myhome-namespace-blog' => 'Blog',
@@ -3154,7 +3154,7 @@ La wiki a l'é fàita da la comunità, e na vira ch'a sgnaca ël boton ëd modì
 	'myhome-hours-ago' => "{{PLURAL:$1|n'ora|$1 ore}} fà",
 	'myhome-minutes-ago' => '{{PLURAL:$1|na minuta|$1 minute}} fà',
 	'myhome-seconds-ago' => 'na minuta fà',
-	'myhome-log-in' => "<center>La funsion Mia Intrada a l'é disponìbil mach s'a l'é intrà ant ël sistema.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Ch'a intra ant ël sistema për vëdde sta pàgina-sì!]'''</big></center>",
+	'myhome-log-in' => "<center>La funsion Mia Intrada a l'é disponìbil mach s'a l'é intrà ant ël sistema.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Ch'a intra ant ël sistema për vëdde sta pàgina-sì!]'''</big></center>",
 	'myhome-switch-to-monaco' => "La funsion WikiActivity a l'é mach disponìbil s'a deuvra la pel Wikia. S'a vorèissa vardé Mia Intrada, për piasì ch'a vìsita ij '''[[Special:Preferences|sò Gust]]''' për cangé soa pel.",
 	'myhome-namespace-blog' => 'Scartari',
 	'myhome-community-corner-header' => 'Mëssagi ëd la Comunità',
@@ -3312,7 +3312,7 @@ Experimente!',
 	'myhome-hours-ago' => '{{PLURAL:$1|uma hora|$1 horas}} atrás',
 	'myhome-minutes-ago' => '{{PLURAL:$1|um minuto|$1 minutos}} atrás',
 	'myhome-seconds-ago' => 'um minuto atrás',
-	'myhome-log-in' => "<center>A funcionalidade A Minha Casa só fica disponível se estiver autenticado.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Autentique-se para ver esta página!]'''</big></center>",
+	'myhome-log-in' => "<center>A funcionalidade A Minha Casa só fica disponível se estiver autenticado.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Autentique-se para ver esta página!]'''</big></center>",
 	'myhome-switch-to-monaco' => "A funcionalidade Atividade na Wiki só fica disponível se estiver a usar o tema da Wikia.
 Se quer ver A Minha Casa, visite '''[[Special:Preferences|as suas Preferências]]''' para mudar de tema, por favor.",
 	'myhome-namespace-blog' => 'Blogue',
@@ -3405,7 +3405,7 @@ Todos podem fazer alterações, adicionar informação ou corrigir um erro.
 Esta wiki é criada pela comunidade e, ao clicar o botão para editar, você torna-se parte desta comunidade.
 Experimente!',
 	'myhome-hot-spots-number-of-editors' => 'editores',
-	'myhome-log-in' => "<center>As opções da Minha Página Inícial estão disponíveis apenas quando você está logado.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Por favor, faça o login para visualizar essa página!]'''</big></center>",
+	'myhome-log-in' => "<center>As opções da Minha Página Inícial estão disponíveis apenas quando você está logado.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Por favor, faça o login para visualizar essa página!]'''</big></center>",
 	'myhome-switch-to-monaco' => "As opções da Minha Página Inicial estão disponíveis apenas se você estiver usando a estilo (skin) Monaco. Se você deseja visualizar a Minha Página Inicial, por favor visite '''[[Special:Preferences|suas preferências]]''' e mude o seu estilo (skin).",
 	'myhome-namespace-blog' => 'Blog',
 	'myhome-community-corner-header' => 'Mensagens Comunitárias',
@@ -3669,7 +3669,7 @@ $messages['sr-ec'] = array(
 	'myhome-days-ago' => 'Пре {{PLURAL:$1|један дан|$1 дана|$1 дана}}',
 	'myhome-hours-ago' => 'Пре {{PLURAL:$1|сат времена|$1 сата|$1 сати}}',
 	'myhome-seconds-ago' => 'пре минут',
-	'myhome-log-in' => "<center>Мој Дом је доступан само пријављеним корисницима.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Пријавите се да бисте видели ову страницу!]'''</big></center>",
+	'myhome-log-in' => "<center>Мој Дом је доступан само пријављеним корисницима.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Пријавите се да бисте видели ову страницу!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Активност на викији је доступна само ако користите пресвлаку Викија.
 Ако желите да погледајте Мој Дом, посетите '''[[Special:Preferences|подешавања]]''' и промените пресвлаку.",
 	'myhome-namespace-blog' => 'Блог',
@@ -3943,7 +3943,7 @@ Subukan ito!',
 	'myhome-hours-ago' => '{{PLURAL:$1|isang horas|$1 mga oras}} na ang nakalilipas',
 	'myhome-minutes-ago' => '{{PLURAL:$1|isang minuto|$1 mga minuto}} na ang nakalipas',
 	'myhome-seconds-ago' => 'isang minuto na ang nakalipas',
-	'myhome-log-in' => "<center>Makukuha lamang ang kasangkapang-katangiang Tahanan Ko kung nakalagda ka.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Mangyaring lumagda upang makitang ang pahinang ito!]'''</big></center>",
+	'myhome-log-in' => "<center>Makukuha lamang ang kasangkapang-katangiang Tahanan Ko kung nakalagda ka.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Mangyaring lumagda upang makitang ang pahinang ito!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Makukuha lamang ang tampok na Gawain ng Wiki kung ginagamit mo ang pabalat na Wikia.
 Kung nais mong makita ang Tahanan Ko, mangyaring dumalaw sa '''[[Special:Preferences|mga Nais mo]]''' upang mabago ang pabalat mo.",
 	'myhome-namespace-blog' => 'Blog',
@@ -4048,7 +4048,7 @@ Herkesin değişiklik yaparak eklediği bilgilerdeki hataları düzeltebilirsini
 Wiki topluluğu tarafından üretilen ve adı düzenle olan butonu bir defa tıkladığınızda, sizde artık bu topluluğun bir parçası olacaksınız.
 Bunu bir deneyin!',
 	'myhome-hot-spots-number-of-editors' => 'editörler',
-	'myhome-log-in' => "<center>Eğer giriş yaparsanız Evim kullanılabilir.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Lütfen bu sayfayı görmek için giriş yapın!]'''</big></center>",
+	'myhome-log-in' => "<center>Eğer giriş yaparsanız Evim kullanılabilir.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Lütfen bu sayfayı görmek için giriş yapın!]'''</big></center>",
 	'myhome-switch-to-monaco' => "WikiActivity özelliği yalnızca Wikia teması kullandığınızda aktif olur.
 Eğer Evim sayfasını görmek isterseniz, lütfen '''[[Special:Preferences|Tercihlerinizden]]''' temanızı değiştirin.",
 	'myhome-namespace-blog' => 'Günlük',
@@ -4130,7 +4130,7 @@ $messages['tt-cyrl'] = array(
 	'myhome-user-contributions-empty' => 'Сез теләсә кайсы биттәге «{{int:editthispage}}»  сылтамасына басып, бу викины төзәтүдә катнаша аласыз. Һәркем үзгәртү ясарга, мәгълүмат өстәргә һәм хаталар төзәтергә хокуклы. Вики катнашучылар җәмгыяте тарафыннан ясалган, һәм сез, әгәр үзгәртү сылтамасына бассагыз, бу җәмгыятьнең бер әгъзасы булачаксыз. Эшләп карагыз әле!',
 	'myhome-hot-spots-number-of-editors' => 'үзгәртүләр',
 	'myhome-minutes-ago' => '{{PLURAL:$1|$1 минут|$1 минут|$1 минут}} элек',
-	'myhome-log-in' => "<center>Шәхси кабинет функционалы сез системага кергәч кенә мөмкин булачак. <br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Бу битне ачыр өчен, системага керергә кирәк!]'''</big></center>",
+	'myhome-log-in' => "<center>Шәхси кабинет функционалы сез системага кергәч кенә мөмкин булачак. <br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Бу битне ачыр өчен, системага керергә кирәк!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Вики-эшчәнлек сәхифәсе Викия тышлыгын кулланганда гына мөмкин булачак. 
 Әгәр шәхси кабинетыгызны күресегез килсә, '''[[Special:Preferences|шәхси көйләнмәләр]]''' битенә керегез һәм тышлыкны төзәтегез.",
 	'myhome-namespace-blog' => 'Блог',
@@ -4272,7 +4272,7 @@ $messages['uk'] = array(
 	'myhome-hours-ago' => '{{PLURAL:$1|годину|$1 години|$1 годин}} тому',
 	'myhome-minutes-ago' => '{{PLURAL:$1|хвилину|$1 хвилини|$1 хвилин}} тому',
 	'myhome-seconds-ago' => 'хвилину тому',
-	'myhome-log-in' => "<center>Можливості \"Моєї домашньої сторінки\" доступні тільки після входу в систему.<br /><br /><big>'''[{{fullurl:Special:Signup|\$1}} Будь ласка, увійдіть, щоб побачити цю сторінку!]'''</big></center>",
+	'myhome-log-in' => "<center>Можливості \"Моєї домашньої сторінки\" доступні тільки після входу в систему.<br /><br /><big>'''[{{fullurl:Special:UserLogin|\$1}} Будь ласка, увійдіть, щоб побачити цю сторінку!]'''</big></center>",
 	'myhome-switch-to-monaco' => "Сторінка вікі-діяльності доступна тільки при використанні оболонки Вікія.
 Якщо ви хочете побачити особистий кабінет, будь ласка, відвідайте сторінку '''[[Special:Preferences|ваших налаштувань]]''' і змініть оболонку.",
 	'myhome-namespace-blog' => 'Блог',
@@ -4368,7 +4368,7 @@ Hãy thử xem!',
 	'myhome-hours-ago' => '{{PLURAL:$1|một giờ|$1 giờ}} trước',
 	'myhome-minutes-ago' => '{{PLURAL:$1|một phút|$1 phút}} trước',
 	'myhome-seconds-ago' => 'một phút trước',
-	'myhome-log-in' => "<center>Tính năng My Home là chỉ khả dụng nếu bạn đang đăng nhập.<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} Xin vui lòng đăng nhập để xem trang này!]'' '</big></center>",
+	'myhome-log-in' => "<center>Tính năng My Home là chỉ khả dụng nếu bạn đang đăng nhập.<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} Xin vui lòng đăng nhập để xem trang này!]'' '</big></center>",
 	'myhome-switch-to-monaco' => "Tính năng WikiActivity là chỉ khả dụng nếu bạn đang sử dụng giao diện Wikia.
 Nếu bạn muốn xem My Home, vui lòng truy cập '''[[Special:Preferences|tùy chọn của bạn]]'' ' để thay đổi giao diện của bạn.",
 	'myhome-namespace-blog' => 'Blog',
@@ -4474,7 +4474,7 @@ $messages['zh-hans'] = array(
 	'myhome-hours-ago' => '{{PLURAL:$1|1个小时|$1个小时}}前',
 	'myhome-minutes-ago' => '{{PLURAL:$1|1分钟|$1分钟}}前',
 	'myhome-seconds-ago' => '1分钟前',
-	'myhome-log-in' => "<center>“我的主页”功能仅在您登录后可用。<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} 请登录后查看本页！]'''</big></center>",
+	'myhome-log-in' => "<center>“我的主页”功能仅在您登录后可用。<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} 请登录后查看本页！]'''</big></center>",
 	'myhome-switch-to-monaco' => "“维基活动”功能仅在使用 Wikia 皮肤时可用。
 如果想看“我的主页”，请访问'''[[Special:Preferences|您的首选项]]'''改变皮肤。",
 	'myhome-namespace-blog' => '博客',
@@ -4571,7 +4571,7 @@ $messages['zh-hant'] = array(
 	'myhome-hours-ago' => '{{PLURAL:$1|1小時|$1小時}}前',
 	'myhome-minutes-ago' => '{{PLURAL:$1|1分鐘|$1分鐘}}前',
 	'myhome-seconds-ago' => '1分鐘前',
-	'myhome-log-in' => "<center>我的首頁功能只有在登入後才可使用。<br /><br /><big>'''[{{fullurl:Special:Signup|$1}} 請登入後查看本頁！]'''</big></center>",
+	'myhome-log-in' => "<center>我的首頁功能只有在登入後才可使用。<br /><br /><big>'''[{{fullurl:Special:UserLogin|$1}} 請登入後查看本頁！]'''</big></center>",
 	'myhome-switch-to-monaco' => "WikiActivity 功能只在您使用 Wikia 外觀時可使用。
 若您希望看到我的首頁，請至 '''[[Special:Preferences|您的偏好設定]]''' 更改您所使用的外觀。",
 	'myhome-namespace-blog' => '部落格',
