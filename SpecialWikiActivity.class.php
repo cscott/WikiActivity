@@ -108,6 +108,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	 *
 	 */
 	function getReturnToParam() {
+		$a = array();
 		$request  = $this->getRequest();
 		$page = Title::newFromURL( $request->getVal( 'title', '' ) );
 		$page = $request->getVal( 'returnto', $page );
