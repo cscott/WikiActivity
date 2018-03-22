@@ -80,13 +80,14 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 			'type' => $this->feedSelected,
 		));
 
+		// haleyjd: add navigation header here, now
+		$this->addNavigation();
+
 		if ( $wgSpecialWikiActivityEnableRail ) {
 			// haleyjd: if rail is enabled, write an opening div for flow control
 			$out->addHTML('<div class="activityfeed-flex">');
 		}
 
-		// haleyjd: add navigation header here, now
-		$this->addNavigation();
 		$out->addHTML($template->render('activityfeed.oasis'));
 		
 		// haleyjd: if modules are enabled, add the rail and render the modules
