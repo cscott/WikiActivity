@@ -6,6 +6,7 @@ class CommunityCornerRenderer extends FeedRenderer {
 	}
 
 	public function render($data, $wrap = true, $parameters = array()) {
+		global $wgUser;
 		$isAdmin = $wgUser->isAllowed('editinterface');
 		$this->template->set('data', $data);
 		$this->template->set('isAdmin', $isAdmin);
