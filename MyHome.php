@@ -22,6 +22,7 @@ $wgAutoloadClasses['ActivityFeedForAnonsRenderer'] = $dir.'renderers/ActivityFee
 $wgAutoloadClasses['WatchlistFeedRenderer'] = $dir.'renderers/WatchlistRenderer.php';
 
 $wgAutoloadClasses['HotSpotsRenderer'] = $dir.'renderers/HotSpotsRenderer.php';
+$wgAutoloadClasses['CommunityCornerRenderer'] = $dir . 'renderers/CommunityCornerRenderer.php';
 $wgAutoloadClasses['UserContributionsRenderer'] = $dir.'renderers/UserContributionsRenderer.php';
 
 // EasyTemplate

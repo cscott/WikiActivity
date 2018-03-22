@@ -95,6 +95,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 			$out->addModuleStyles('ext.SpecialWikiActivity.modules');
 			$out->addHTML('<div id="ActivityRailWrapper" class="ActivityRail"><div id="ActivityRail" class="activity-rail-inner">');
 			$this->addHotSpots();
+			$this->addCommunityCorner();
 			$out->addHTML('</div></div></div>');
 		}
 
@@ -172,5 +173,16 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 
 		$hotSpotsRenderer = new HotSpotsRenderer();
 		$out->addHTML($hotSpotsRenderer->render($data, false));
+	}
+	
+	/**
+	 * Add the community corner rail module when enabled.
+	 *
+	 * @author haleyjd
+	 */
+	function addCommunityCorner() {
+		$out = $this->getOutput();
+		$ccRenderer = new CommunityCornerRenderer();
+		$out->addHTML($ccRenderer->render(null, false));
 	}
 }
