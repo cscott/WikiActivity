@@ -1,0 +1,51 @@
+/*
+	Default styling for Hot Spots module
+*/
+
+.HotSpotsModule li {
+	border-top: 1px sold #cccccc;
+}
+
+.HotSpotsModule li:first-child {
+	border-top: none;
+}
+
+.HotSpotsModule li::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.HotSpotsModule li div div {
+	border-radius: 5px;
+	color: white;
+	float: left;
+	text-align: center;
+	margin: 10px 10px 10px 0;
+	padding: 3px 15px;
+}
+
+.HotSpotsModule li big, .HotSpotsModule li small {
+	display: inline-block;
+	line-height: 25px;
+	vertical-align: middle;
+}
+
+.HotSpotsModule li big {
+	font-size: 22px;
+	margin-right: 5px;
+}
+
+.HotSpotsModule li span {
+	display: block;
+	padding: 9px 0;
+}
+
+.HotSpotsModule li.hot-spot-severity-1 { background-color: #cc0033; }
+.HotSpotsModule li.hot-spot-severity-2 { background-color: #ff9900; }
+.HotSpotsModule li.hot-spot-severity-3 { background-color: #ffcc00; }
+.HotSpotsModule li.hot-spot-severity-4 { background-color: #339900; }
+.HotSpotsModule li.hot-spot-severity-5 { background-color: #006699; }

@@ -1,0 +1,54 @@
+/*
+	Default module styling
+*/
+
+.ActivityRail {
+	padding: 0 10px;
+	width: 300px;
+	display: inline-flex;
+}
+
+.activity-rail-inner {
+	width: 100%;
+}
+
+.activity-rail-inner section {
+	display: block;
+}
+
+.ActivityRail .module {
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	margin-bottom: 30px;
+	padding: 20px 15px 15px;
+	position: relative;
+	word-wrap: break-word;
+}
+
+.ActivityRail .module::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.ActivityRail h2 {
+	line-height: 30px;
+}
+
+.ActivityRail .module h2 {
+	border: 0;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top:  0;
+	margin-bottom: 25px;
+	padding-left: 2px;
+}
+
+.ActivityRail .module p {
+	line-height: 21px;
+	margin: 0;
+	padding: 0;
+}
