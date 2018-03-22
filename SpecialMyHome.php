@@ -36,6 +36,7 @@ $wgResourceModules['ext.SpecialWikiActivity.modules'] = array(
 	'styles'        => array(
 		"skins/{$wgSpecialWikiActivitySkin}/Module.css",
 		"skins/{$wgSpecialWikiActivitySkin}/HotSpots.css",
+		"skins/{$wgSpecialWikiActivitySkin}/CommunityCorner.css",
 	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'WikiActivity'
