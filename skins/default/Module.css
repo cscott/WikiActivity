@@ -2,10 +2,18 @@
 	Default module styling
 */
 
+.activityfeed-flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#wikiactivity-main {
+	flex: 3 1 320px;
+}
+
 .ActivityRail {
 	padding: 0 10px;
 	width: 300px;
-	display: inline-flex;
 }
 
 .activity-rail-inner {

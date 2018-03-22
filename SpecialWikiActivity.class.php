@@ -13,7 +13,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	}
 	
 	function execute($par) {
-		global $wgHooks;
+		global $wgHooks, $wgSpecialWikiActivityEnableRail;
 
 		$out  = $this->getOutput();
 		$user = $this->getUser();
@@ -80,17 +80,21 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 			'type' => $this->feedSelected,
 		));
 
+		if ( $wgSpecialWikiActivityEnableRail ) {
+			// haleyjd: if rail is enabled, write an opening div for flow control
+			$out->addHTML('<div class="activityfeed-flex">');
+		}
+
 		// haleyjd: add navigation header here, now
 		$this->addNavigation();
 		$out->addHTML($template->render('activityfeed.oasis'));
 		
 		// haleyjd: if modules are enabled, add the rail and render the modules
-		global $wgSpecialWikiActivityEnableRail;
-		if ( $wgSpecialWikiActivityEnableRail === true ) {
+		if ( $wgSpecialWikiActivityEnableRail ) {
 			$out->addModuleStyles('ext.SpecialWikiActivity.modules');
 			$out->addHTML('<div id="ActivityRailWrapper" class="ActivityRail"><div id="ActivityRail" class="activity-rail-inner">');
 			$this->addHotSpots();
-			$out->addHTML('</div></div>');
+			$out->addHTML('</div></div></div>');
 		}
 
 		if ($user->isAnon()) {
