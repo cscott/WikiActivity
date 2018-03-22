@@ -1,5 +1,5 @@
 <section class="CommunityCornerModule module">
-	<h2 class="dark_text_2"><?=wfMessage('myhome-community-corner-header')->text()?></h2>
+	<h2><?=wfMessage('myhome-community-corner-header')->text()?></h2>
 	<div id="myhome-community-corner-content"><?=wfMessage('community-corner')->inContentLanguage()->parse()?></div>
 
 <?php if ( $isAdmin ) { ?>
