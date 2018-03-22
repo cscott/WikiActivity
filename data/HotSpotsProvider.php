@@ -51,35 +51,41 @@ class HotSpotsProvider {
 			}
 		}
 
-		$results2 = array();
-		$res = $dbr->query("select rc1.rc_title, rc2.rc_user_text from recentchanges rc2, recentchanges rc1 where substring_index(rc2.rc_title, '/', 2) = rc1.rc_title and rc1.rc_namespace = 500 and rc2.rc_namespace = 501 and rc1.rc_id >= $rc_id and rc2.rc_id >= $rc_id group by rc2.rc_title");
-		while($row = $dbr->fetchObject($res)) {
-			if(isset($results2[$row->rc_title])) {
-				if(!isset($results2[$row->rc_title][$row->rc_user_text])) {
-					$results2[$row->rc_title][$row->rc_user_text] = 1;
+		// haleyjd: this code is only relevant to wikia's blogs extension which uses namespaces 500 and 501.
+		// The closest thing to a public version of this extension is Extension:BlogPage - I do not guarantee
+		// the below code works with it however; you might need to tweak stuff in here if you use it.
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlogPage' ) ) {
+			$results2 = array();
+			$res = $dbr->query("select rc1.rc_title, rc2.rc_user_text from recentchanges rc2, recentchanges rc1 where substring_index(rc2.rc_title, '/', 2) = rc1.rc_title and rc1.rc_namespace = 500 and rc2.rc_namespace = 501 and rc1.rc_id >= $rc_id and rc2.rc_id >= $rc_id group by rc2.rc_title");
+			while($row = $dbr->fetchObject($res)) {
+				if(isset($results2[$row->rc_title])) {
+					if(!isset($results2[$row->rc_title][$row->rc_user_text])) {
+						$results2[$row->rc_title][$row->rc_user_text] = 1;
+					} else {
+						$results2[$row->rc_title][$row->rc_user_text]++;
+					}
 				} else {
-					$results2[$row->rc_title][$row->rc_user_text]++;
+					$results2[$row->rc_title] = array();
+					$results2[$row->rc_title][$row->rc_user_text] = 1;
 				}
-			} else {
-				$results2[$row->rc_title] = array();
-				$results2[$row->rc_title][$row->rc_user_text] = 1;
 			}
-		}
-		$results3 = array();
-		foreach($results2 as $key => $val) {
-			$title = Title::newFromText($key, 500 /* NS_BLOG_ARTICLE */);
-			if($title && $title->exists() && count($val) > 1) {
-				$results3[] = array(
-					'title' => end(explode('/', $title->getPrefixedText(), 2)),
-					'url' => $title->getLocalUrl(),
-					'count' => count($val),
-				);
+			$results3 = array();
+			foreach($results2 as $key => $val) {
+				$title = Title::newFromText($key, 500); // NS_BLOG_ARTICLE
+				if($title && $title->exists() && count($val) > 1) {
+					$results3[] = array(
+						'title' => end(explode('/', $title->getPrefixedText(), 2)),
+						'url' => $title->getLocalUrl(),
+						'count' => count($val),
+					);
+				}
 			}
+
+			usort($results3, "HotSpotsProvider::sort");
+			$results3 = array_slice($results3, 0, 2);
+			$results = array_merge($results, $results3);
 		}
 
-		usort($results3, "HotSpotsProvider::sort");
-		$results3 = array_slice($results3, 0, 2);
-		$results = array_merge($results, $results3);
 		usort($results, "HotSpotsProvider::sort");
 		$results = array_slice($results, 0, 5);
 
@@ -123,7 +129,5 @@ class HotSpotsProvider {
 		if($data && count($data) == 5) {
 			return $data;
 		}
-
 	}
-
 }

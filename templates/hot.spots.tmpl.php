@@ -1,8 +1,9 @@
+<section class="HotSpotsModule module">
 <?php
 if(count($data) == 5) {
-	echo wfMessage('myhome-hot-spots-newest')->text()
+	echo '<h2>' . wfMessage('myhome-hot-spots-newest')->text() . '</h2>';
 ?>
-<ul class="clearfix" style="margin-top: 5px;">
+<ul>
 <?php foreach($data as $item) { ?>
 	<li>
 		<span><a href="<?= htmlspecialchars($item['url']) ?>" class="title" rel="nofollow"><?= htmlspecialchars($item['title'])  ?></a></span>
@@ -10,7 +11,8 @@ if(count($data) == 5) {
 <?php } ?>
 </ul>
 <?php } else if(count($data) == 2) {
-	echo '<p style="margin-bottom: 5px">'.wfMessage('myhome-hot-spots-definition', $data['interval'])->text().'</p>';
+	echo '<h2>' . wfMessage('myhome-hot-spots-feed')->text() . '</h2>';
+	echo '<p>' . wfMessage('myhome-hot-spots-definition', $data['interval'])->text() . '</p>';
 	$hotSpotSeverity = 1; //used to set background color heat level. 1 (hottest) - 5 (coolest).
 	$hotSpotLast = Array(); //used to compare the last rendered item to current.
 	$hotSpotFire = '';
@@ -43,4 +45,7 @@ if(count($data) == 5) {
 		$hotSpotSeverity++;
 	}
 	echo '</ul>';
+} else {
+	echo wfMessage('myhome-hot-spots-feed-empty')->parse();
 } ?>
+</section>

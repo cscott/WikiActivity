@@ -54,7 +54,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 
 		// haleyjd: use ResourceLoader for scripts and styles
 		$out->addModules('ext.SpecialWikiActivity.ajax');
-		$wgHooks['BeforePageDisplay'][] = 'SpecialWikiActivity::onBeforePageDisplay';
+		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
 
 		wfRunHooks( 'SpecialWikiActivityExecute', array( $out, $user ));
 
@@ -83,6 +83,15 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		// haleyjd: add navigation header here, now
 		$this->addNavigation();
 		$out->addHTML($template->render('activityfeed.oasis'));
+		
+		// haleyjd: if modules are enabled, add the rail and render the modules
+		global $wgSpecialWikiActivityEnableRail;
+		if ( $wgSpecialWikiActivityEnableRail === true ) {
+			$out->addModuleStyles('ext.SpecialWikiActivity.modules');
+			$out->addHTML('<div id="ActivityRailWrapper" class="ActivityRail"><div id="ActivityRail" class="activity-rail-inner">');
+			$this->addHotSpots();
+			$out->addHTML('</div></div>');
+		}
 
 		if ($user->isAnon()) {
 			// FIXME / TODO: Method is deprecated in 1.27; removed in 1.30
@@ -95,17 +104,10 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 	}
 	
 	/**
-	 * Add module style sheets at the end of processing
+	 * Obtain the proper returnto parameter to use to create a link that gets
+	 * the user back here after logging in.
 	 *
 	 * @author haleyjd
-	 */
-	public static function onBeforePageDisplay(OutputPage &$out, Skin &$skin) {
-		$out->addModuleStyles('ext.SpecialWikiActivity.styles');
-		return true;
-	}
-	
-	/**
-	 *
 	 */
 	function getReturnToParam() {
 		$a = array();
@@ -115,7 +117,7 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		if ( strval( $page ) !== '' ) {
 			$a['returnto'] = $page;
 			$query = $request->getVal( 'returntoquery', '' );
-			if( $query != '' ) {
+			if ( $query != '' ) {
 				$a['returntoquery'] = $query;
 			}
 		}
@@ -147,9 +149,23 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		));
 
 		// replace subtitle with navigation for WikiActivity
-		//$moduleObject->pageSubtitle = $template->render('navigation.oasis');
 		$out->addHTML($template->render('navigation.oasis'));
 
 		return true;
+	}
+	
+	/**
+	 * Query and render hot spots on the side rail when enabled.
+	 *
+	 * @author haleyjd
+	 */
+	function addHotSpots() {
+		$out  = $this->getOutput();
+
+		$hotSpotsProvider = new HotSpotsProvider();
+		$data = $hotSpotsProvider->get();
+
+		$hotSpotsRenderer = new HotSpotsRenderer();
+		$out->addHTML($hotSpotsRenderer->render($data));
 	}
 }

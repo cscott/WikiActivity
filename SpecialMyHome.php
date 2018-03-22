@@ -19,12 +19,23 @@ $wgResourceModules['ext.SpecialWikiActivity.ajax'] = array(
 
 // haleyjd: skinnable appearance
 $wgSpecialWikiActivitySkin = 'default';
+$wgSpecialWikiActivityEnableRail = false;
 
 $wgResourceModules['ext.SpecialWikiActivity.styles'] = array(
 	'position'      => 'top',
 	'styles'        => array(
 		"skins/shared/sprite.css",
 		"skins/{$wgSpecialWikiActivitySkin}/ActivityFeed.css",
+	),
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'WikiActivity'
+);
+
+$wgResourceModules['ext.SpecialWikiActivity.modules'] = array(
+	'position'      => 'top',
+	'styles'        => array(
+		"skins/{$wgSpecialWikiActivitySkin}/Module.css",
+		"skins/{$wgSpecialWikiActivitySkin}/HotSpots.css",
 	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'WikiActivity'
