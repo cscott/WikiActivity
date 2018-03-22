@@ -166,6 +166,6 @@ class SpecialWikiActivity extends UnlistedSpecialPage {
 		$data = $hotSpotsProvider->get();
 
 		$hotSpotsRenderer = new HotSpotsRenderer();
-		$out->addHTML($hotSpotsRenderer->render($data));
+		$out->addHTML($hotSpotsRenderer->render($data, false));
 	}
 }
