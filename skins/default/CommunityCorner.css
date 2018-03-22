@@ -1,0 +1,26 @@
+/*
+	Default styling for Community Corner module
+*/
+
+.CommunityCornerModule {
+	font-size: 13px;
+	line-height: 21px;
+}
+
+.CommunityCornerModule .dark_text_2 {
+	color: #0148c2;
+}
+
+.CommunityCornerModule a.more {
+	clear: both;
+}
+
+.CommunityCornerModule p {
+	font-size: 13px;
+	margin: 0.4em 0 0 0.5em;
+}
+
+.CommunityCornerModule ul {
+	list-style-type: disc;
+	margin: 0.4em 0 0.5em 2.5em;
+}
