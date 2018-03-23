@@ -613,7 +613,7 @@ class FeedRenderer {
 		$html .= Xml::openElement('tr');
 		$html .= Xml::openElement('td');
 		$html .= Xml::openElement('pre');
-		$html .= htmlspecialchars(json_encode($row));
+		$html .= htmlspecialchars(json_encode($row, JSON_PRETTY_PRINT));
 		$html .= Xml::closeElement('pre');
 		$html .= Xml::closeElement('td');
 		$html .= Xml::closeElement('tr');
