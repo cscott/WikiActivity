@@ -607,6 +607,18 @@ class FeedRenderer {
 			' width="16" height="16" />';
 		return $r;
 	}
+	
+	static function addRowDebug( $row ) {
+		$html = '';
+		$html .= Xml::openElement('tr');
+		$html .= Xml::openElement('td');
+		$html .= Xml::openElement('pre');
+		$html .= htmlspecialchars(json_encode($row));
+		$html .= Xml::closeElement('pre');
+		$html .= Xml::closeElement('td');
+		$html .= Xml::closeElement('tr');
+		return $html;
+	}
 
 	/**
 	 * Returns 3rd row (with details) for given feed item
@@ -687,6 +699,12 @@ class FeedRenderer {
 
 		// added video)s)
 		$html .= self::getAddedMediaRow($row, 'videos');
+
+		// haleyjd: debugging
+		global $wgSpecialWikiActivityFeedDebug;
+		if ( $wgSpecialWikiActivityFeedDebug ) {
+			$html .= self::addRowDebug($row);
+		}
 
 		return $html;
 	}

@@ -33,6 +33,7 @@ class WatchlistFeedAPIProxy implements iAPIProxy {
 			$out['results'] = $res['query']['watchlist'];
 		}
 
+		// FIXME: old-style query continuation
 		if(isset($res['query-continue'])) {
 			$out['query-continue'] = $res['query-continue']['watchlist']['wlstart'];
 		}
