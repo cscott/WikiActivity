@@ -8,7 +8,7 @@ class WatchlistFeedAPIProxy implements iAPIProxy {
 		$this->APIparams = array();
 		$this->APIparams['action'] = 'query';
 		$this->APIparams['list'] = 'watchlist';
-		$this->APIparams['wlprop'] = 'ids|title|flags|user|comment|timestamp|sizes|wikiamode';
+		$this->APIparams['wlprop'] = 'ids|title|flags|user|comment|timestamp|sizes|loginfo';
 	}
 
 	public function get($limit, $start = null) {
