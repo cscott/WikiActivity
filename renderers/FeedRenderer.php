@@ -704,7 +704,7 @@ class FeedRenderer {
 			$imageInfo = [];
 			$imageInfo['name'] = $row['title'];
 			$imageInfo['html'] = $row['thumbnail'];
-			if ( !isset($row['new_images']) ) ) {
+			if ( !isset($row['new_images']) ) {
 				$row['new_images'] = [];
 			}
 			$row['new_images'][] = $imageInfo;
