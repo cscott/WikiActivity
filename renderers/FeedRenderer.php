@@ -608,6 +608,11 @@ class FeedRenderer {
 		return $r;
 	}
 	
+	/**
+	 * Add JSON-encoded expansion of $row as a table cell in the output for debugging purposes.
+	 *
+	 * @author haleyjd
+	 */
 	static function addRowDebug( $row ) {
 		$html = '';
 		$html .= Xml::openElement('tr');
@@ -694,6 +699,17 @@ class FeedRenderer {
 			$html .= self::formatDetailsRow('inserted-category', implode(', ', $categories), false, count($categories));
 		}
 
+		// haleyjd: if entry has type upload, add the thumbnail as an image
+		if ( isset($row['type']) && $row['type'] == 'upload' ) {
+			$imageInfo = [];
+			$imageInfo['name'] = $row['title'];
+			$imageInfo['html'] = $row['thumbnail'];
+			if ( !is_array( $row['new_images'] ) ) {
+				$row['new_images'] = [];
+			}
+			$row['new_images'][] = $imageInfo;
+		}
+
 		// added image(s)
 		$html .= self::getAddedMediaRow($row, 'images');
 
@@ -729,50 +745,17 @@ class FeedRenderer {
 		$namespace = NS_FILE;
 
 		foreach ( $row[$key] as $item ) {
-
-			// localised title for popup
-			$popupTitle = $wgContLang->getNsText($namespace) . ':' . $item['name'];
-
-			$titleObj = Title::newFromText($item['name'], NS_FILE);
-			if (!$titleObj) {
-				continue;
-			}
-			
-			$fileName = $titleObj->getText(); // Pass display version of title to Lightbox
-
-			// wrapper for thumbnail
-			$attribs = array(
-				'class' => 'lightbox',
-				'rel' => 'nofollow',
-				'ref' => 'File:' . $item['name'], /* TODO: check that name doesn't have NS prefix */
-				'data-' . ($type == 'videos' ? 'video-name' : 'image-name') => $fileName,
-				'title' => $popupTitle,
-			);
-
-			// get URL to file / video page
-			$title = Title::newFromText($item['name'], $namespace);
-			if ( !empty($title) ) {
-				$attribs['href'] = $title->getLocalUrl();
-			}
-
-			$hookDummy = new DummyLinker;
-			$hookFile = false;
-			$hookFrameParams = [];
-			$hookHandlerParams = [];
-			$hookTime = false;
-			$hookRes = null;
-
-			if ( !wfRunHooks( 'ImageBeforeProduceHTML',
-				array( &$hookDummy, &$title, &$hookFile, &$hookFrameParams, &$hookHandlerParams, &$hookTime, &$hookRes ) ) ) {
-				$thumbs[] = "<li>$hookRes</li>";
+			$thumb = $item['html'];
+			// Only wrap the line in an anchor if it doesn't already include one
+			if ( preg_match('/<a[^>]+href/', $thumb) ) {
+				$thumbs[] = "<li>$thumb</li>";
 			} else {
-				$thumb = $item['html'];
-				// Only wrap the line in an anchor if it doesn't already include one
-				if ( preg_match('/<a[^>]+href/', $thumb) ) {
-					$thumbs[] = "<li>$thumb</li>";
-				} else {
-					$thumbs[] = "<li><a data-image-link href=\"{$title->getLocalUrl()}\">$thumb</a></li>";
+				// get URL to file / video page
+				$title = Title::newFromText($item['name'], $namespace);
+				if (!$title) {
+					continue;
 				}
+				$thumbs[] = "<li><a data-image-link href=\"{$title->getLocalUrl()}\">$thumb</a></li>";
 			}
 		}
 
