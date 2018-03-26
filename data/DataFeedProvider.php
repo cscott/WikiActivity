@@ -228,7 +228,7 @@ class DataFeedProvider {
 	private function resolveCategoryAdditions() {
 		foreach ( $this->addedCategories as $addedCat ) {
 			foreach ( $this->results as $result ) {
-				if ( isset($result['revid'] && $result['revid'] == $addedCat['revid'] ) {
+				if ( isset($result['revid']) && $result['revid'] == $addedCat['revid'] ) {
 					if ( !isset($result['new_categories']) ) {
 						$result['new_categories'] = [];
 					}
