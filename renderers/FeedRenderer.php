@@ -614,14 +614,13 @@ class FeedRenderer {
 	 * @author haleyjd
 	 */
 	static function addRowDebug( $row ) {
-		$html = '';
-		$html .= Xml::openElement('tr');
-		$html .= Xml::openElement('td');
-		$html .= Xml::openElement('pre');
-		$html .= htmlspecialchars(json_encode($row, JSON_PRETTY_PRINT));
-		$html .= Xml::closeElement('pre');
-		$html .= Xml::closeElement('td');
-		$html .= Xml::closeElement('tr');
+		$html = Xml::openElement('tr')
+			. Xml::openElement('td')
+			. Xml::openElement('pre')
+			. htmlspecialchars(json_encode($row, JSON_PRETTY_PRINT))
+			. Xml::closeElement('pre')
+			. Xml::closeElement('td')
+			. Xml::closeElement('tr');
 		return $html;
 	}
 

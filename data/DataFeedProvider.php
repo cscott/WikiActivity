@@ -187,6 +187,23 @@ class DataFeedProvider {
 		return;
 	}
 
+	/**
+	 * Split a section edit autocomment and the edit description
+	 *
+	 * @param string $comment Comment from recentchanges entry
+	 * @return array Pair of section, comment keys; section is an empty string if unmatched
+	 * @author haleyjd
+	 */
+	private function splitComment( $comment ) {
+		$ptn = "!(?:(?<=(.)))?/\*\s*(.*?)\s*\*/(?:(?=(.)))?!";
+		$result = preg_split( $ptn, $comment, -1, PREG_SPLIT_DELIM_CAPTURE );
+		if( count($result) >= 5 ) {
+			return [ 'section' => $result[2], 'comment' => trim( $result[4] ) ];
+		} else {
+			return [ 'section' => '', 'comment' => $comment ];
+		}
+	}
+
 	private function filterEdit( DataFeedProviderItemResult $itemResult, $res, Title $title ) {
 		global $wgContentNamespaces;
 
@@ -214,14 +231,15 @@ class DataFeedProvider {
 			$item['url'] = $title->getLocalURL();
 			$item['diff'] = $title->getLocalURL( 'diff=' . $res['revid'] . '&oldid=' . $res['old_revid'] );
 
-			// FIXME / TODO: rc_params
-			/*if ( isset( $res['rc_params']['sectionName'] ) ) {
-				$item['section'] = $res['rc_params']['sectionName'];
-				if ( isset( $res['rc_params']['summary'] ) ) {
-					$item['comment'] = $res['rc_params']['summary'];
+			if ( $res['comment'] != '' && ( defined( 'NS_TOPLIST' ) ? $res['ns'] != NS_TOPLIST : true ) ) {
+				// haleyjd: split section autocomments here based on saved comment
+				$parts = $this->splitComment( $res['comment'] );
+				if ( $parts['section'] != '' ) {
+					$item['section'] = $parts['section'];
+					$item['comment'] = $parts['comment'];
+				} else {
+					$item['comment'] = $res['comment'];
 				}
-			} else*/if ( $res['comment'] != '' && ( defined( 'NS_TOPLIST' ) ? $res['ns'] != NS_TOPLIST : true ) ) {
-				$item['comment'] = $res['comment'];
 			}
 
 			if ( class_exists( 'ArticleComment' ) && ArticleComment::isTitleComment( $title ) ) {
