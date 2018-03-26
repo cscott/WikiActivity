@@ -26,6 +26,7 @@ class DataFeedProvider {
 	private $invisibleRevisions = [];
 	private $onePerTitle = false;
 	private $parameters = [];
+	private $addedCategories = []; // haleyjd: for categorize-type recentchanges entries
 
 	public function __construct( iAPIProxy $proxy, $removeDuplicatesType = 0, $parameters = [ ] ) {
 		$this->proxy = $proxy;
@@ -95,6 +96,9 @@ class DataFeedProvider {
 				$this->results[$key] = $itemResult->getResult();
 			}
 		}
+
+		// haleyjd: put added categories into their parent revisions
+		$this->resolveCategoryAdditions();
 	}
 
 	private function filterOne( DataFeedProviderItemResult $itemResult, $res ) {
@@ -131,6 +135,9 @@ class DataFeedProvider {
 							$this->filterNew( $itemResult, $res, $title );
 						} elseif ( $res['type'] == 'edit' ) {
 							$this->filterEdit( $itemResult, $res, $title );
+						} elseif ( $res['type'] == 'categorize' ) {
+							// haleyjd: handle category watch events 
+							$this->filterCategorize( $itemResult, $res, $title );
 						}
 					/*}*/
 				}
@@ -171,6 +178,32 @@ class DataFeedProvider {
 		return $categories;
 	}
 
+	/**
+	 * If categorize events occur in the recentchanges stream, remember them here for later association
+	 * with their corresponding edit.
+	 *
+	 * @author haleyjd
+	 */
+	private function filterCategorize( DataFeedProviderItemResult $itemResult, $res, Title $title ) {
+		$targetTitle = Title::newFromID( $res['pageid'] );
+		if ( !$targetTitle ) {
+			return;
+		}
+		$prefixedText = $targetTitle->getPrefixedText();
+
+		// we don't know which kind of category add event it was, so we need to check against both possible messages
+		$addedMsg1 = wfMessage( 'recentchanges-page-added-to-category',         $prefixedText )->inContentLanguage()->text();
+		$addedMsg2 = wfMessage( 'recentchanges-page-added-to-category-bundled', $prefixedText )->inContentLanguage()->text();
+		if ( $res['comment'] == $addedMsg1 || $res['comment'] == $addedMsg2 )
+		{
+			$addedCat = [
+				'category' => $res['title' ], // category which was added
+				'revid'    => $res['revid' ]  // revision ID in which the categorization occurred
+			];
+			$this->addedCategories[] = $addedCat; // remember this one
+		}
+	}
+
 	private function filterRedirect( DataFeedProviderItemResult $itemResult, $res, Title $title ) {
 		$article = new Article( $title );
 		$this->add(
@@ -185,6 +218,26 @@ class DataFeedProvider {
 			$res );
 
 		return;
+	}
+
+	/**
+	 * Loop over the $addedCategories array and turn any of those change entries
+	 * that were found into category additions for their corresponding edits, if
+	 * those edits otherwise appear in the feed.
+	 */
+	private function resolveCategoryAdditions() {
+		foreach ( $this->addedCategories as $addedCat ) {
+			foreach ( $this->results as $result ) {
+				if ( isset($result['revid'] && $result['revid'] == $addedCat['revid'] ) {
+					if ( !isset($result['new_categories']) ) {
+						$result['new_categories'] = [];
+					}
+					$result['new_categories'][] = str_replace( ' ', '_', $addedCat['category'] );
+					$result['new_categories'] = array_unique( $result['new_categories'] );
+					break;
+				}
+			}
+		}
 	}
 
 	/**
@@ -262,11 +315,11 @@ class DataFeedProvider {
 		$hidecategories = !empty( $this->parameters['flags'] ) && in_array( 'hidecategories', $this->parameters['flags'] );
 
 		if ( in_array( $res['ns'], $wgContentNamespaces )
-			|| $res['ns'] == 110
+			|| $res['ns'] == 110 // DPLForum NS_FORUM
 			|| $res['ns'] == NS_PROJECT
 			|| ( $res['ns'] == NS_CATEGORY && !$hidecategories )
 			|| in_array( ( $res['ns'] - 1 ), $wgContentNamespaces )
-			|| ( $res['ns'] - 1 ) == 110
+			|| ( $res['ns'] - 1 ) == 110 // DPLForum NS_FORUM_TALK
 			|| ( $res['ns'] - 1 ) == NS_PROJECT
 			|| ( ( $res['ns'] - 1 ) == NS_CATEGORY && !$hidecategories )
 		) {
@@ -359,9 +412,26 @@ class DataFeedProvider {
 					$res );
 				return;
 			}
-
+		} elseif ( $res['logtype'] == 'upload' ) { // haleyjd: allow uploads to show up on the activity feed
+			$title = Title::newFromText( $res['title'] );
+			if ( $title && $title->exists() ) {
+				$file = wfFindFile( $title );
+				if ( $file ) {
+					$this->add(
+						$itemResult,
+						[
+							'type' => 'upload',
+							'title' => $title->getPrefixedText(),
+							'url' => $title->getLocalURL(),
+							'thumbnail' => $file->transform( [ 'width' => self::IMAGE_THUMB_WIDTH ] )->toHtml(),
+						],
+						$res );
+					return;
+				}
+			}
 		}
 
+		// watchlist-only log entries
 		if ( $this->proxyType == self::WATCHLIST_FEED ) {
 			if ( $res['logtype'] == 'delete' ) {
 				$this->add(
@@ -372,23 +442,6 @@ class DataFeedProvider {
 					],
 					$res );
 				return;
-			} elseif ( $res['logtype'] == 'upload' ) {
-				$title = Title::newFromText( $res['title'] );
-				if ( $title && $title->exists() ) {
-					$file = wfFindFile( $title );
-					if ( $file ) {
-						$this->add(
-							$itemResult,
-							[
-								'type' => 'upload',
-								'title' => $title->getPrefixedText(),
-								'url' => $title->getLocalURL(),
-								'thumbnail' => $file->transform( [ 'width' => self::IMAGE_THUMB_WIDTH ] )->toHtml(),
-							],
-							$res );
-						return;
-					}
-				}
 			}
 		}
 	}
@@ -401,6 +454,7 @@ class DataFeedProvider {
 
 		$item['user'] = $this->getUserLink( $res['user'], isset( $res['anon'] ) );
 		$item['username'] = $res['user'];
+		$item['revid'] = $itemResult->getRevisionId();
 
 		// FIXME / TODO: rc_params stuff
 		/*
