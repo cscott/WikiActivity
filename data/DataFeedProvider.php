@@ -197,8 +197,8 @@ class DataFeedProvider {
 		if ( $res['comment'] == $addedMsg1 || $res['comment'] == $addedMsg2 )
 		{
 			$addedCat = [
-				'category' => $res['title' ], // category which was added
-				'revid'    => $res['revid' ]  // revision ID in which the categorization occurred
+				'category' => $res['title'], // category which was added
+				'revid'    => $res['revid']  // revision ID in which the categorization occurred
 			];
 			$this->addedCategories[] = $addedCat; // remember this one
 		}
@@ -221,13 +221,13 @@ class DataFeedProvider {
 	}
 
 	/**
-	 * Loop over the $addedCategories array and turn any of those change entries
+	 * Loop over the addedCategories array and turn any of those change entries
 	 * that were found into category additions for their corresponding edits, if
 	 * those edits otherwise appear in the feed.
 	 */
 	private function resolveCategoryAdditions() {
 		foreach ( $this->addedCategories as $addedCat ) {
-			foreach ( $this->results as $result ) {
+			foreach ( $this->results as &$result ) {
 				if ( isset($result['revid']) && $result['revid'] == $addedCat['revid'] ) {
 					if ( !isset($result['new_categories']) ) {
 						$result['new_categories'] = [];
