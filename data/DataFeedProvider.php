@@ -126,11 +126,6 @@ class DataFeedProvider {
 						$itemResult->setRevisionId( $res['revid'] );
 						$hidenewpages = !empty( $this->parameters['flags'] ) && in_array( 'hidenewpages', $this->parameters['flags'] );
 
-						// FIXME / TODO: rc_params crap
-						//do not show hidden categories (see RT#32015)
-						/*if ( isset( $res['rc_params']['categoryInserts'] ) ) {
-							$res['rc_params']['categoryInserts'] = $this->filterHiddenCategories( $res['rc_params']['categoryInserts'] );
-						}*/
 						if ( $res['type'] == 'new' && !$hidenewpages ) {
 							$this->filterNew( $itemResult, $res, $title );
 						} elseif ( $res['type'] == 'edit' ) {
@@ -143,39 +138,6 @@ class DataFeedProvider {
 				}
 			}
 		}
-	}
-
-	/**
-	 * Get list of hidden categories (cached in memcached using WikiaDataAccess).
-	 *
-	 * Using WikiaDataAccess to limit number of processes regenerating cache and prevent delay when other
-	 * process is already regenerating data. The stalled data is returned in the latter case.
-	 *
-	 * @see https://wikia-inc.atlassian.net/browse/PLATFORM-615
-	 *
-	 * @return array
-	 */
-	private function getHiddenCategories() {
-		$fname = __METHOD__;
-		if ( !is_array( self::$hiddenCategories ) ) {
-			self::$hiddenCategories = WikiaDataAccess::cacheWithLock( wfMemcKey( 'hidden-categories-v2' ), WikiaResponse::CACHE_SHORT /* 3 hours */,
-				function () use ( $fname ) {
-					$dbr = wfGetDB( DB_SLAVE );
-					$res = $dbr->query( "SELECT page_title FROM page JOIN page_props ON page_id=pp_page AND pp_propname='hiddencat' LIMIT " . self::HIDDEN_CATEGORIES_LIMIT, $fname );
-					$hiddenCategories = [ ];
-					while ( $row = $dbr->fetchObject( $res ) ) {
-						$hiddenCategories[] = $row->page_title;
-					}
-					return $hiddenCategories;
-				} );
-		}
-
-		return self::$hiddenCategories;
-	}
-
-	private function filterHiddenCategories( $categories ) {
-		$categories = array_values( array_diff( $categories, $this->getHiddenCategories() ) );
-		return $categories;
 	}
 
 	/**
@@ -224,6 +186,8 @@ class DataFeedProvider {
 	 * Loop over the addedCategories array and turn any of those change entries
 	 * that were found into category additions for their corresponding edits, if
 	 * those edits otherwise appear in the feed.
+	 *
+	 * @author haleyjd
 	 */
 	private function resolveCategoryAdditions() {
 		foreach ( $this->addedCategories as $addedCat ) {
