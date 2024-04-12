@@ -7,8 +7,8 @@ class MyHomeTest extends WikiaBaseTest {
 		$this->setupFile = __DIR__ . "/../MyHome.php";
 		parent::setUp();
 
-		if ( empty($wgParser->mOptions) ) {
-			$wgParser->Options(new ParserOptions());
+		if ( $wgParser->getOptions() === null ) {
+			$wgParser->setOptions(new ParserOptions());
 		}
 	}
 
